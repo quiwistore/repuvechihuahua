@@ -1,0 +1,170 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { pagesCentrales, getPageBySlug, getRelatedPages, site, iconForCategory } from '../data/datos.js';
+
+export function getStaticPaths() {
+  return pagesCentrales.map(p => ({
+    params: { slug: p.slug },
+    props: { page: p },
+  }));
+}
+
+const { page } = Astro.props;
+const related = getRelatedPages(page.slug, 7);
+
+// Build FAQ schema if has faqs
+const schemas = [];
+if (page.faqs && page.faqs.length > 0) {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": page.faqs.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  });
+}
+
+// WebPage / Article schema
+schemas.push({
+  "@context": "https://schema.org",
+  "@type": page.category === 'Informacion' ? "Article" : "WebPage",
+  "headline": page.h1,
+  "name": page.h1,
+  "description": page.meta,
+  "url": `https://${site.domain}/${page.slug}/`,
+  "inLanguage": "es-MX",
+  ...(page.category === 'Informacion' && {
+    "author": { "@type": "Organization", "name": "REPUVE Chihuahua (sitio informativo)" },
+    "publisher": { "@type": "Organization", "name": "REPUVE Chihuahua (sitio informativo)" }
+  })
+});
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: page.category || 'Información', href: undefined },
+  { label: page.h1 }
+];
+---
+
+<Base
+  title={page.title}
+  description={page.meta}
+  schema={schemas}
+>
+  <div class="container">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="page-header">
+      <div class="eyebrow">
+        <i class={`fa-solid ${iconForCategory(page.category)}`} aria-hidden="true"></i>
+        {page.category || 'Información'}
+      </div>
+      <h1>{page.h1}</h1>
+      {page.status_chip && <span class="status-chip">{page.status_chip}</span>}
+      <p class="lede" set:html={page.intro} />
+
+      <div class="cta-row">
+        <a href="/consulta-ciudadana/" class="btn btn-primary">
+          <i class="fa-solid fa-magnifying-glass"></i> Consulta gratis
+        </a>
+        <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`} class="btn btn-secondary">
+          <i class="fa-solid fa-phone"></i> {site.phone_repuve}
+        </a>
+      </div>
+    </header>
+
+    <div class="article-grid">
+      <article class="article-main">
+        {page.sections && page.sections.map(s => (
+          <section>
+            <h2>{s.heading}</h2>
+            {s.body && s.body.map(p => (
+              <p set:html={p} />
+            ))}
+          </section>
+        ))}
+
+        {page.faqs && page.faqs.length > 0 && (
+          <section>
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-list">
+              {page.faqs.map(f => (
+                <details class="faq-item">
+                  <summary>{f.q}</summary>
+                  <p class="faq-answer" set:html={f.a} />
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div class="tip-box" style="margin-top:2.5rem">
+          <p>
+            <i class="fa-solid fa-circle-info"></i>
+            <span>
+              <strong>Importante:</strong> Este sitio es informativo y no está afiliado al REPUVE oficial.
+              Para trámites oficiales visita <a href={site.official_site} rel="noopener nofollow">repuve.gob.mx</a>
+              o llama al <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`}>{site.phone_repuve}</a>.
+            </span>
+          </p>
+        </div>
+      </article>
+
+      <aside class="sidebar-stack">
+        <div class="quick-info-card">
+          <h3><i class="fa-solid fa-phone"></i> Contacto rápido</h3>
+          <dl>
+            <dt>Teléfono nacional REPUVE</dt>
+            <dd><a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`}>{site.phone_repuve}</a></dd>
+            <dt>Gobierno de Chihuahua</dt>
+            <dd><a href={`tel:${site.state_govt_phone.replace(/\s/g,'')}`}>{site.state_govt_phone}</a></dd>
+            <dt>Portal oficial</dt>
+            <dd><a href={site.official_site} rel="noopener nofollow">repuve.gob.mx</a></dd>
+          </dl>
+          <a href="/agendar-cita/" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-calendar-check"></i> Agendar cita
+          </a>
+        </div>
+
+        <div class="related-card">
+          <h3>Páginas relacionadas</h3>
+          <ul>
+            {related.map(r => (
+              <li>
+                <a href={`/${r.slug}/`}>
+                  <span>{r.h1}</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="related-card">
+          <h3>Oficinas principales</h3>
+          <ul>
+            <li><a href="/oficinas/chihuahua-capital/"><span>Chihuahua capital</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/oficinas/ciudad-juarez/"><span>Ciudad Juárez</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/oficinas/cuauhtemoc/"><span>Cuauhtémoc</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/oficinas/delicias/"><span>Delicias</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/oficinas/hidalgo-del-parral/"><span>Hidalgo del Parral</span><i class="fa-solid fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- CTA final -->
+    <section class="cta-section">
+      <div>
+        <h2>¿Necesitas verificar un vehículo?</h2>
+        <p>Consulta gratis el estatus REPUVE de cualquier auto o moto en menos de 2 minutos.</p>
+        <a href="/consulta-ciudadana/" class="btn btn-white btn-large">
+          <i class="fa-solid fa-magnifying-glass"></i> Consultar ahora
+        </a>
+      </div>
+    </section>
+  </div>
+</Base>

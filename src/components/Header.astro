@@ -1,0 +1,57 @@
+---
+const path = Astro.url.pathname;
+const isActive = (prefix) => path === prefix || path.startsWith(prefix);
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="REPUVE Chihuahua inicio">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="2" width="24" height="24" rx="6" fill="#b91c1c"/>
+        <path d="M9 9h10v10H9z M9 14h10 M14 9v10" stroke="#fff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo-text">REPUVE <strong>Chihuahua</strong></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Navegacion principal">
+      <ul>
+        <li><a href="/consulta-ciudadana/" class={isActive('/consulta-ciudadana') ? 'active' : ''}>Consultar</a></li>
+        <li><a href="/oficinas/chihuahua-capital/" class={isActive('/oficinas') ? 'active' : ''}>Oficinas</a></li>
+        <li><a href="/agendar-cita/" class={isActive('/agendar-cita') ? 'active' : ''}>Agendar Cita</a></li>
+        <li><a href="/requisitos/" class={isActive('/requisitos') ? 'active' : ''}>Requisitos</a></li>
+        <li><a href="/preguntas-frecuentes/" class={isActive('/preguntas-frecuentes') ? 'active' : ''}>FAQs</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.main-nav');
+  toggle?.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+
+<style>
+  .site-header { background: var(--color-surface); border-bottom: 1px solid var(--color-border); position: sticky; top: 0; z-index: 50; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding-top: var(--space-3); padding-bottom: var(--space-3); }
+  .logo { display: flex; align-items: center; gap: var(--space-2); text-decoration: none; color: var(--color-text); }
+  .logo-text { font-size: 1.1rem; font-weight: 600; }
+  .logo-text strong { color: var(--color-primary); }
+  .main-nav ul { display: flex; gap: var(--space-4); list-style: none; margin: 0; padding: 0; }
+  .main-nav a { text-decoration: none; color: var(--color-text-muted); font-size: 0.95rem; font-weight: 500; padding: var(--space-2) 0; transition: color 0.15s ease; }
+  .main-nav a:hover, .main-nav a.active { color: var(--color-primary); }
+  .menu-toggle { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: 6px; }
+  .menu-toggle span { width: 22px; height: 2px; background: var(--color-text); border-radius: 2px; }
+  @media (max-width: 720px) {
+    .menu-toggle { display: flex; }
+    .main-nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: var(--space-3) var(--space-4); display: none; }
+    .main-nav.open { display: block; }
+    .main-nav ul { flex-direction: column; gap: var(--space-2); }
+  }
+</style>

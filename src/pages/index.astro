@@ -1,0 +1,329 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, oficinas, getOficinaCapital, pagesCentrales } from '../data/datos.js';
+
+const capital = getOficinaCapital();
+const description = `Consulta REPUVE Chihuahua: verifica placas, NIV y reporte de robo gratis. Oficinas en Chihuahua capital, Ciudad Juárez, Cuauhtémoc, Delicias, Parral. Trámites, citas, requisitos 2026.`;
+
+// Schema Organization
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "REPUVE Chihuahua (sitio informativo)",
+  "url": `https://${site.domain}`,
+  "telephone": site.phone_repuve,
+  "areaServed": {
+    "@type": "State",
+    "name": "Chihuahua",
+    "containedInPlace": { "@type": "Country", "name": "México" }
+  }
+};
+
+// ItemList schema con las oficinas
+const officesListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Oficinas REPUVE en Chihuahua",
+  "itemListElement": oficinas.map((o, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": `REPUVE ${o.ciudad}`,
+    "url": `https://${site.domain}/oficinas/${o.slug}/`
+  }))
+};
+
+// FAQs de home
+const faqs = [
+  { q: "¿Cómo consulto el REPUVE en Chihuahua gratis?", a: "Puedes consultar el REPUVE gratis en línea ingresando el número de placa o NIV en el portal oficial repuve.gob.mx, o llamando al 800 737 8831. La consulta es 100% gratuita y disponible las 24 horas." },
+  { q: "¿Dónde están las oficinas REPUVE en Chihuahua?", a: "Hay oficinas en Chihuahua capital (Av. Deportiva Sur 8403), Ciudad Juárez (Blvd. Oscar Flores 3920), Cuauhtémoc, Delicias, Hidalgo del Parral, Nuevo Casas Grandes y Camargo. Consulta horarios y ubicaciones específicas." },
+  { q: "¿El REPUVE es obligatorio para autos y motos en Chihuahua?", a: "Sí, la inscripción en el REPUVE es obligatoria para todos los vehículos automotores que circulan en México, incluyendo Chihuahua, según la Ley del Registro Público Vehicular." },
+  { q: "¿Cuánto cuesta inscribir mi auto en el REPUVE Chihuahua?", a: "La inscripción al REPUVE es gratuita. Los costos relacionados son de Control Vehicular del estado (placas, refrendo, tenencia). La regularización de autos chocolate cuesta $2,500 MXN." },
+  { q: "¿Cómo agendo una cita en el REPUVE Chihuahua?", a: "Puedes agendar tu cita en línea en regularizaauto.sspc.gob.mx (para regularización) o directamente en la oficina REPUVE de tu localidad. También puedes llamar al 800 737 8831." }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+---
+
+<Base
+  title="REPUVE Chihuahua 2026 — Consulta de Placas, NIV y Reporte de Robo"
+  description={description}
+  schema={[orgSchema, officesListSchema, faqSchema]}
+>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-meta">
+        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        Sitio informativo de Chihuahua
+      </span>
+      <h1>REPUVE Chihuahua: Consulta de Placas, NIV y Reporte de Robo</h1>
+      <p class="hero-subtitle">
+        Verifica el estatus legal de cualquier vehículo en Chihuahua de forma <strong>gratuita</strong>.
+        Encuentra oficinas, horarios, requisitos, costos y trámites del Registro Público Vehicular en toda la entidad.
+      </p>
+      <div class="hero-buttons">
+        <a href="/consulta-ciudadana/" class="btn btn-white"><i class="fa-solid fa-magnifying-glass"></i> Consultar ahora</a>
+        <a href="/agendar-cita/" class="btn btn-secondary" style="color:white;border-color:white"><i class="fa-solid fa-calendar-check"></i> Agendar cita</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO CARDS (3 servicios principales) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">¿Qué necesitas hacer en el REPUVE?</h2>
+      <p class="section-subtitle">Las consultas y trámites más comunes en Chihuahua, paso a paso.</p>
+
+      <div class="info-cards-grid">
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Consultar un vehículo</h3>
+          <p>Verifica si un auto o moto tiene reporte de robo, adeudos o restricciones legales antes de comprarlo.</p>
+          <a href="/consulta-ciudadana/" class="btn btn-primary">Iniciar consulta</a>
+        </div>
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3>Agendar una cita</h3>
+          <p>Reserva tu turno en línea para trámites presenciales: inscripción, chip, regularización de autos chocolate.</p>
+          <a href="/agendar-cita/" class="btn btn-primary">Agendar</a>
+        </div>
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fa-solid fa-file-shield"></i></div>
+          <h3>Reportar un robo</h3>
+          <p>Pasos completos si te robaron el auto en Chihuahua: denuncia, REPUVE y aseguradora.</p>
+          <a href="/auto-robado/" class="btn btn-primary">Ver pasos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFICINAS POR CIUDAD -->
+  <section class="section section-bg-alt">
+    <div class="container">
+      <h2 class="section-title">Oficinas REPUVE en Chihuahua</h2>
+      <p class="section-subtitle">Direcciones, horarios y servicios disponibles en cada municipio.</p>
+
+      <div class="cities-grid">
+        {oficinas.map(o => (
+          <a href={`/oficinas/${o.slug}/`} class="city-card">
+            <span class="city-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            <span class="city-eyebrow">
+              {o.es_capital ? 'Capital del estado' : (o.es_frontera ? 'Frontera' : 'Municipio')}
+            </span>
+            <span class="city-name">{o.ciudad}</span>
+            <span class="city-population">{o.poblacion} habitantes</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS / TRÁMITES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Trámites más solicitados en Chihuahua</h2>
+      <p class="section-subtitle">Todo lo que puedes hacer en el REPUVE y Control Vehicular.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card-header">
+            <i class="fa-solid fa-car"></i>
+            <h3>Inscripción al REPUVE</h3>
+          </div>
+          <p>Registra tu vehículo nuevo o usado en el Registro Público Vehicular Nacional.</p>
+          <ul>
+            <li>Auto particular o moto</li>
+            <li>Documentos requeridos</li>
+            <li>Trámite presencial con cita</li>
+          </ul>
+          <a href="/inscribir-vehiculo/" class="btn btn-secondary">Ver detalles</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-header">
+            <i class="fa-solid fa-passport"></i>
+            <h3>Regularización de autos chocolate</h3>
+          </div>
+          <p>Trámite federal para autos de procedencia extranjera. Especialmente común en Cd. Juárez.</p>
+          <ul>
+            <li>$2,500 MXN costo único</li>
+            <li>Decreto vigente hasta 19/oct/2021</li>
+            <li>Módulos itinerantes en Chihuahua</li>
+          </ul>
+          <a href="/regularizacion-autos-chocolate/" class="btn btn-secondary">Ver guía</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-header">
+            <i class="fa-solid fa-microchip"></i>
+            <h3>Chip REPUVE</h3>
+          </div>
+          <p>Identificador electrónico que se coloca en tu parabrisas. Instalación gratuita.</p>
+          <ul>
+            <li>Sin costo</li>
+            <li>Instalado en oficina REPUVE</li>
+            <li>Tecnología RFID pasiva</li>
+          </ul>
+          <a href="/chip-repuve/" class="btn btn-secondary">Más información</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-header">
+            <i class="fa-solid fa-id-card"></i>
+            <h3>Cambio de propietario</h3>
+          </div>
+          <p>Trámite imprescindible al comprar o vender un auto usado en Chihuahua.</p>
+          <ul>
+            <li>30 días para realizarlo tras venta</li>
+            <li>$1,500–$2,200 MXN</li>
+            <li>En Control Vehicular del estado</li>
+          </ul>
+          <a href="/cambio-propietario/" class="btn btn-secondary">Ver pasos</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-header">
+            <i class="fa-solid fa-motorcycle"></i>
+            <h3>REPUVE Motocicletas</h3>
+          </div>
+          <p>Trámite específico para motos en Chihuahua. Requisitos y oficinas habilitadas.</p>
+          <ul>
+            <li>Mismos costos que autos</li>
+            <li>Inscripción obligatoria</li>
+            <li>Chip para parabrisas/manubrio</li>
+          </ul>
+          <a href="/repuve-motos/" class="btn btn-secondary">Ver guía</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-header">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <h3>Baja vehicular</h3>
+          </div>
+          <p>Da de baja tu vehículo para liberar obligaciones fiscales y legales.</p>
+          <ul>
+            <li>$250–$400 MXN</li>
+            <li>Por robo, siniestro o desuso</li>
+            <li>Trámite mismo día</li>
+          </ul>
+          <a href="/baja-vehicular/" class="btn btn-secondary">Ver detalles</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA + CONTACTO (oficina principal Chihuahua capital) -->
+  <section class="section section-bg-alt">
+    <div class="container">
+      <h2 class="section-title">Oficina Principal REPUVE Chihuahua</h2>
+      <p class="section-subtitle">Ubicación de la sede central en la capital del estado.</p>
+
+      <div class="map-contact-grid">
+        <div>
+          <div class="map-wrapper">
+            <iframe
+              src={`https://www.google.com/maps?q=${capital.latitude},${capital.longitude}&z=15&output=embed`}
+              title={`Mapa de ${capital.ciudad}`}
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="map-address">
+            <p><i class="fa-solid fa-location-dot"></i> <strong>{capital.direccion}</strong></p>
+            <p style="margin-top:0.5rem;color:var(--color-text-muted);font-size:0.9rem">
+              Lunes a viernes de 08:00 a 17:00. Sábado y domingo cerrado.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-buttons">
+          <h3>Contacto rápido</h3>
+          <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`} class="cta-button">
+            <i class="fa-solid fa-phone"></i> {site.phone_repuve}
+          </a>
+          <a href="/agendar-cita/" class="cta-button">
+            <i class="fa-solid fa-calendar-check"></i> Agendar cita
+          </a>
+          <a href="/consulta-ciudadana/" class="cta-button">
+            <i class="fa-solid fa-magnifying-glass"></i> Consulta gratis
+          </a>
+          <a href={`/oficinas/${capital.slug}/`} class="cta-button">
+            <i class="fa-solid fa-building"></i> Ver más sobre esta oficina
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES (4 razones) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">¿Por qué usar el REPUVE?</h2>
+      <p class="section-subtitle">El Registro Público Vehicular protege tu patrimonio y combate el robo de vehículos en México.</p>
+
+      <div class="features-grid">
+        <div class="feature">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Seguridad jurídica</h3>
+          <p>Verifica la legalidad de cualquier vehículo antes de comprarlo. Evita estafas y autos robados.</p>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <h3>Historial completo</h3>
+          <p>Consulta el estatus legal, reportes de robo y recuperaciones del vehículo de tu interés.</p>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-gauge-high"></i>
+          <h3>Consulta inmediata</h3>
+          <p>Sistema online disponible 24/7. Resultados al instante ingresando placa o NIV.</p>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <h3>100% gratuito</h3>
+          <p>La consulta ciudadana del REPUVE no tiene costo. Solo el trámite presencial de inscripción.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-bg-alt">
+    <div class="container container-narrow">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <p class="section-subtitle">Dudas comunes sobre el REPUVE en Chihuahua.</p>
+
+      <div class="faq-list">
+        {faqs.map(f => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <p class="faq-answer">{f.a}</p>
+          </details>
+        ))}
+      </div>
+
+      <p style="text-align:center;margin-top:2rem">
+        <a href="/preguntas-frecuentes/" class="btn btn-primary">Ver todas las preguntas frecuentes</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Verifica tu vehículo ahora mismo</h2>
+      <p>La consulta ciudadana es gratuita y toma menos de 2 minutos. Ingresa el número de placa o NIV.</p>
+      <a href="/consulta-ciudadana/" class="btn btn-white btn-large">
+        <i class="fa-solid fa-magnifying-glass"></i> Consultar REPUVE gratis
+      </a>
+    </div>
+  </section>
+</Base>

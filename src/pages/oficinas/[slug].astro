@@ -1,0 +1,276 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { oficinas, getOtrasOficinas, site, getDayKeys, getDayNames } from '../../data/datos.js';
+
+export function getStaticPaths() {
+  return oficinas.map(o => ({
+    params: { slug: o.slug },
+    props: { oficina: o },
+  }));
+}
+
+const { oficina } = Astro.props;
+const otras = getOtrasOficinas(oficina.slug, 6);
+const dayKeys = getDayKeys();
+const dayNames = getDayNames();
+
+// Build opening hours specification array for schema
+const openingHoursSchema = dayKeys
+  .filter(d => oficina.horario[d] && oficina.horario[d] !== 'Cerrado')
+  .map(d => {
+    const range = oficina.horario[d];
+    const [opens, closes] = range.split('-');
+    const dayCap = { lunes:'Monday', martes:'Tuesday', miercoles:'Wednesday', jueves:'Thursday', viernes:'Friday', sabado:'Saturday', domingo:'Sunday' };
+    return {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": dayCap[d],
+      "opens": opens.trim(),
+      "closes": closes.trim()
+    };
+  });
+
+const officeSchema = {
+  "@context": "https://schema.org",
+  "@type": "GovernmentOffice",
+  "name": `REPUVE ${oficina.ciudad_completa}`,
+  "description": oficina.intro,
+  "url": `https://${site.domain}/oficinas/${oficina.slug}/`,
+  "telephone": oficina.telefono,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": oficina.direccion_corta,
+    "addressLocality": oficina.ciudad,
+    "addressRegion": "Chihuahua",
+    "postalCode": oficina.cp,
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": oficina.latitude,
+    "longitude": oficina.longitude
+  },
+  "openingHoursSpecification": openingHoursSchema,
+  "parentOrganization": {
+    "@type": "GovernmentOrganization",
+    "name": "Registro Público Vehicular (REPUVE)",
+    "url": "https://www.repuve.gob.mx"
+  },
+  "hasMap": `https://www.google.com/maps?q=${oficina.latitude},${oficina.longitude}`,
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": `${oficina.ciudad} y municipios aledaños`
+  }
+};
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Oficinas', href: '/oficinas/chihuahua-capital/' },
+  { label: oficina.ciudad }
+];
+
+const title = `REPUVE ${oficina.ciudad_completa}: Dirección, Horarios, Teléfono y Trámites`;
+const description = `Oficina REPUVE en ${oficina.ciudad}, Chihuahua. Dirección: ${oficina.direccion_corta}. Teléfono ${oficina.telefono}. Horarios, requisitos y trámites disponibles. Cómo agendar cita.`;
+---
+
+<Base title={title} description={description} schema={officeSchema}>
+  <div class="container">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="page-header">
+      <div class="eyebrow">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        {oficina.es_capital ? 'Capital del estado' : (oficina.es_frontera ? 'Frontera con EE.UU.' : 'Municipio de Chihuahua')}
+      </div>
+      <h1>REPUVE {oficina.ciudad_completa}</h1>
+      <span class="status-chip">
+        Población: {oficina.poblacion} habitantes
+      </span>
+      <p class="lede">{oficina.intro}</p>
+
+      <div class="cta-row">
+        <a href={`tel:${oficina.telefono.replace(/\s/g,'')}`} class="btn btn-primary">
+          <i class="fa-solid fa-phone"></i> {oficina.telefono}
+        </a>
+        <a href={`https://www.google.com/maps?q=${oficina.latitude},${oficina.longitude}`} target="_blank" rel="noopener" class="btn btn-secondary">
+          <i class="fa-solid fa-route"></i> Cómo llegar
+        </a>
+        <a href="/agendar-cita/" class="btn btn-accent">
+          <i class="fa-solid fa-calendar-check"></i> Agendar cita
+        </a>
+      </div>
+    </header>
+
+    <div class="article-grid">
+      <article class="article-main">
+        <section>
+          <h2>Ubicación y mapa</h2>
+          <p><strong>Dirección completa:</strong> {oficina.direccion}</p>
+          <div class="map-wrapper" style="margin-top:1rem">
+            <iframe
+              src={`https://www.google.com/maps?q=${oficina.latitude},${oficina.longitude}&z=15&output=embed`}
+              title={`Mapa de REPUVE ${oficina.ciudad}`}
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+
+        <section>
+          <h2>Horarios de atención</h2>
+          <table class="hours-table">
+            <thead>
+              <tr><th>Día</th><th>Horario</th></tr>
+            </thead>
+            <tbody>
+              {dayKeys.map(d => (
+                <tr>
+                  <td>{dayNames[d]}</td>
+                  <td>
+                    {oficina.horario[d] === 'Cerrado'
+                      ? <span class="hours-closed">Cerrado</span>
+                      : oficina.horario[d]
+                    }
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div class="tip-box">
+            <p>
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Horarios sujetos a cambios. Antes de acudir, verifica llamando al <strong>{oficina.telefono}</strong> o al teléfono nacional REPUVE <strong>{site.phone_repuve}</strong>.</span>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Trámites y servicios disponibles</h2>
+          <p>Esta oficina REPUVE en {oficina.ciudad} ofrece los siguientes servicios:</p>
+          <ul>
+            {oficina.servicios.map(s => (
+              <li><i class="fa-solid fa-check icon-good"></i> {s}</li>
+            ))}
+          </ul>
+
+          {oficina.es_frontera && (
+            <div class="warning-box">
+              <p>
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>
+                  Por su carácter fronterizo, esta oficina concentra la mayor cantidad de trámites de <a href="/regularizacion-autos-chocolate/">regularización de autos chocolate</a> en el estado.
+                  Si vas a regularizar, agenda cita previa con anticipación en regularizaauto.sspc.gob.mx.
+                </span>
+              </p>
+            </div>
+          )}
+        </section>
+
+        <section>
+          <h2>Municipios y ciudades cercanas</h2>
+          <p>Esta oficina atiende habitantes de {oficina.ciudad} y de los siguientes municipios aledaños:</p>
+          <ul>
+            {oficina.ciudades_cercanas.map(c => (
+              <li><i class="fa-solid fa-location-dot icon-info"></i> {c}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section>
+          <h2>¿Qué documentos llevar a esta oficina?</h2>
+          <p>Los documentos varían según el trámite, pero los más comunes son:</p>
+          <ul>
+            <li><strong>Identificación oficial vigente</strong> (INE o pasaporte)</li>
+            <li><strong>CURP</strong> del propietario</li>
+            <li><strong>Comprobante de domicilio</strong> reciente (luz, agua, gas, no mayor a 3 meses)</li>
+            <li><strong>Factura original</strong> del vehículo o título (para autos importados)</li>
+            <li><strong>Tarjeta de circulación</strong> vigente (si aplica)</li>
+            <li><strong>Cita previa impresa</strong> de la plataforma</li>
+            <li><strong>Comprobante de pago</strong> bancario (si el trámite tiene costo)</li>
+          </ul>
+          <p>Consulta los <a href="/requisitos/">requisitos completos por trámite</a>.</p>
+        </section>
+
+        <section>
+          <h2>Preguntas frecuentes sobre esta oficina</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>¿Necesito cita previa para acudir a la oficina de {oficina.ciudad}?</summary>
+              <p class="faq-answer">Sí, la mayoría de los trámites en esta oficina requieren cita previa. Puedes agendarla en línea en regularizaauto.sspc.gob.mx (para regularización de autos chocolate) o llamando al {site.phone_repuve}. Las consultas ciudadanas (verificar placa o NIV) son online y no requieren cita.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cuál es el teléfono directo de esta oficina?</summary>
+              <p class="faq-answer">El teléfono local es <strong>{oficina.telefono}</strong>. Para temas nacionales de REPUVE puedes llamar al 800 737 8831 (800 REPUVE).</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué hago si llego y la oficina está cerrada?</summary>
+              <p class="faq-answer">Verifica primero el horario (algunos días puede haber cierres por motivos administrativos). Si la oficina está cerrada, puedes usar la <a href="/consulta-ciudadana/">consulta ciudadana en línea</a> que funciona 24/7. Para trámites presenciales, reagenda tu cita y llama antes de acudir.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Puedo hacer trámites de otros vehículos que no son de Chihuahua aquí?</summary>
+              <p class="faq-answer">Sí, el REPUVE es una base de datos federal. Puedes consultar cualquier vehículo registrado en México sin importar el estado de origen. Para trámites presenciales como regularización, conviene hacerlos en tu estado de residencia, pero técnicamente puedes hacerlo en cualquier módulo habilitado.</p>
+            </details>
+          </div>
+        </section>
+      </article>
+
+      <aside class="sidebar-stack">
+        <div class="quick-info-card">
+          <h3><i class="fa-solid fa-circle-info"></i> Datos de la oficina</h3>
+          <dl>
+            <dt>Dirección</dt>
+            <dd>{oficina.direccion_corta}</dd>
+            <dt>CP</dt>
+            <dd>{oficina.cp}</dd>
+            <dt>Teléfono local</dt>
+            <dd><a href={`tel:${oficina.telefono.replace(/\s/g,'')}`}>{oficina.telefono}</a></dd>
+            <dt>REPUVE nacional</dt>
+            <dd><a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`}>{site.phone_repuve}</a></dd>
+            <dt>Población atendida</dt>
+            <dd>{oficina.poblacion}</dd>
+          </dl>
+          <a href={`https://www.google.com/maps?q=${oficina.latitude},${oficina.longitude}`} target="_blank" rel="noopener" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-route"></i> Cómo llegar
+          </a>
+        </div>
+
+        <div class="related-card">
+          <h3>Otras oficinas en Chihuahua</h3>
+          <ul>
+            {otras.map(o => (
+              <li>
+                <a href={`/oficinas/${o.slug}/`}>
+                  <span>{o.ciudad}</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="related-card">
+          <h3>Trámites comunes</h3>
+          <ul>
+            <li><a href="/consulta-ciudadana/"><span>Consulta ciudadana</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/inscribir-vehiculo/"><span>Inscribir vehículo</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/regularizacion-autos-chocolate/"><span>Regularización autos chocolate</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/cambio-propietario/"><span>Cambio de propietario</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/agendar-cita/"><span>Agendar cita</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/requisitos/"><span>Requisitos</span><i class="fa-solid fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <section class="cta-section">
+      <div>
+        <h2>Consulta REPUVE gratis antes de acudir</h2>
+        <p>Verifica el estatus de tu vehículo en línea, las 24 horas. Sin costo.</p>
+        <a href="/consulta-ciudadana/" class="btn btn-white btn-large">
+          <i class="fa-solid fa-magnifying-glass"></i> Consultar ahora
+        </a>
+      </div>
+    </section>
+  </div>
+</Base>

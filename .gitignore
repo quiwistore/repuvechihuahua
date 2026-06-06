@@ -1,0 +1,9 @@
+.astro/
+node_modules/
+npm-debug.log*
+.DS_Store
+.env
+.env.local
+
+# NOTA: dist/ NO está en gitignore porque RunCloud en Hetzner no tiene Node.js
+# Hacemos build local y commiteamos dist/ para que el server solo haga git pull

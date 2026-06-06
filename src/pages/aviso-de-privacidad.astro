@@ -1,0 +1,99 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/datos.js';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Aviso de privacidad' }
+];
+---
+
+<Base
+  title="Aviso de Privacidad"
+  description="Aviso de privacidad del sitio informativo REPUVE Chihuahua. Politica de tratamiento de datos personales y cookies."
+>
+  <div class="container container-narrow">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="page-header">
+      <div class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Legal</div>
+      <h1>Aviso de Privacidad</h1>
+      <p class="lede">Informacion sobre el tratamiento de datos personales en este sitio informativo.</p>
+    </header>
+
+    <article class="article-main">
+      <h2>Responsable del sitio</h2>
+      <p>
+        Este sitio web (<strong>{site.domain}</strong>) es un proyecto informativo independiente,
+        sin fines de lucro de informacion oficial, dedicado a recopilar y difundir informacion publica
+        sobre el Registro Publico Vehicular (REPUVE) en el estado de Chihuahua, Mexico.
+      </p>
+      <p>
+        <strong>No tenemos vinculo, afiliacion, asociacion, patrocinio ni representacion</strong> con el Gobierno de Mexico,
+        la Secretaria Ejecutiva del Sistema Nacional de Seguridad Publica (SESNSP), el REPUVE oficial,
+        el Gobierno del Estado de Chihuahua ni ningun organismo gubernamental.
+      </p>
+
+      <h2>Datos personales que recolectamos</h2>
+      <p>
+        Este sitio web es <strong>puramente informativo</strong> y no requiere registro ni recolecta datos personales
+        de los visitantes en formularios propios. No procesamos consultas vehiculares: para eso debes acudir
+        al portal oficial <a href={site.official_site} rel="noopener nofollow">repuve.gob.mx</a>.
+      </p>
+      <p>Los unicos datos que se generan automaticamente al visitar el sitio son los siguientes:</p>
+      <ul>
+        <li><strong>Logs de servidor:</strong> direccion IP, fecha y hora de visita, paginas visitadas, navegador y sistema operativo (datos tecnicos estandar de cualquier sitio web).</li>
+        <li><strong>Cookies de analisis:</strong> usamos herramientas analiticas (como Cloudflare Analytics) que pueden almacenar cookies para medir trafico anonimo y mejorar el contenido.</li>
+      </ul>
+
+      <h2>Finalidad del tratamiento</h2>
+      <p>Los datos tecnicos anteriores se utilizan exclusivamente para:</p>
+      <ul>
+        <li>Garantizar la seguridad y funcionamiento del sitio.</li>
+        <li>Estadisticas anonimas de visitas para mejorar el contenido.</li>
+        <li>Detectar y prevenir abusos o ataques al servidor.</li>
+      </ul>
+
+      <h2>Cookies</h2>
+      <p>
+        Este sitio puede usar cookies tecnicas y analiticas. Las cookies son archivos pequenos que tu navegador
+        almacena para mejorar tu experiencia. Puedes desactivarlas en la configuracion de tu navegador.
+        No utilizamos cookies de publicidad personalizada.
+      </p>
+
+      <h2>Comparticion de datos con terceros</h2>
+      <p>
+        <strong>No vendemos, compartimos ni transferimos datos personales a terceros</strong>. Los datos tecnicos
+        de logs se mantienen privados y se utilizan solo para los fines descritos arriba.
+      </p>
+
+      <h2>Derechos ARCO</h2>
+      <p>
+        Aunque no recolectamos datos personales sensibles, si crees que alguno de tus datos aparece en este sitio
+        y deseas ejercer derechos de Acceso, Rectificacion, Cancelacion u Oposicion (ARCO), puedes contactarnos
+        a traves del formulario de <a href="/contacto/">contacto</a>.
+      </p>
+
+      <h2>Cambios al aviso de privacidad</h2>
+      <p>
+        Este aviso de privacidad puede actualizarse periodicamente. La fecha de ultima actualizacion aparece
+        al final de este documento. Te recomendamos revisarlo periodicamente.
+      </p>
+
+      <h2>Tramites oficiales</h2>
+      <p>
+        Para realizar tramites oficiales del REPUVE (consultas, inscripciones, citas), siempre dirigete al
+        sitio oficial: <a href={site.official_site} rel="noopener nofollow">{site.official_site}</a> o llama al
+        <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`}>{site.phone_repuve}</a>.
+      </p>
+
+      <div class="tip-box">
+        <p>
+          <i class="fa-solid fa-circle-info"></i>
+          <span><strong>Ultima actualizacion:</strong> Junio de 2026.</span>
+        </p>
+      </div>
+    </article>
+  </div>
+</Base>

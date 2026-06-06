@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/datos.js';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Contacto' }
+];
+---
+
+<Base
+  title="Contacto"
+  description="Informacion de contacto para REPUVE Chihuahua. Telefonos oficiales, correos y portales gubernamentales para tramites vehiculares en Chihuahua."
+>
+  <div class="container container-narrow">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="page-header">
+      <div class="eyebrow"><i class="fa-solid fa-phone"></i> Contacto</div>
+      <h1>Contacto REPUVE Chihuahua</h1>
+      <p class="lede">Telefonos y portales oficiales para tus tramites del Registro Publico Vehicular en Chihuahua.</p>
+    </header>
+
+    <article class="article-main">
+      <div class="warning-box">
+        <p>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>
+            <strong>Este sitio es informativo y no procesa tramites.</strong> Si necesitas atencion oficial,
+            usa los canales gubernamentales listados a continuacion. No respondemos consultas individuales
+            sobre vehiculos especificos.
+          </span>
+        </p>
+      </div>
+
+      <h2>Canales oficiales REPUVE</h2>
+
+      <div class="info-cards-grid" style="margin-top:1.5rem">
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fa-solid fa-phone"></i></div>
+          <h3>Linea Nacional REPUVE</h3>
+          <p>Atencion gratuita 24 horas para consultas y tramites del Registro Publico Vehicular.</p>
+          <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`} class="btn btn-primary">{site.phone_repuve}</a>
+        </div>
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fa-solid fa-globe"></i></div>
+          <h3>Portal Oficial REPUVE</h3>
+          <p>Consulta ciudadana online, tramites y citas. Disponible 24/7.</p>
+          <a href={site.official_site} rel="noopener nofollow" class="btn btn-primary">repuve.gob.mx</a>
+        </div>
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fa-solid fa-building"></i></div>
+          <h3>Gobierno de Chihuahua</h3>
+          <p>Para temas estatales: Control Vehicular, placas, tenencia, refrendo.</p>
+          <a href={`tel:${site.state_govt_phone.replace(/\s/g,'')}`} class="btn btn-primary">{site.state_govt_phone}</a>
+        </div>
+      </div>
+
+      <h2>Para tramites especificos</h2>
+      <ul>
+        <li><strong>Consulta ciudadana online:</strong> <a href={site.official_consulta} rel="noopener nofollow">{site.official_consulta}</a></li>
+        <li><strong>Regularizacion de autos chocolate:</strong> <a href="https://regularizaauto.sspc.gob.mx" rel="noopener nofollow">regularizaauto.sspc.gob.mx</a></li>
+        <li><strong>Reporte de robo vehicular:</strong> Llama al 911 o a la Fiscalia Especializada en Robo de Vehiculos del Estado de Chihuahua.</li>
+        <li><strong>Atencion ciudadana del Gobierno:</strong> <a href={`mailto:${site.state_attorney_email}`}>{site.state_attorney_email}</a></li>
+      </ul>
+
+      <h2>Oficinas REPUVE en Chihuahua</h2>
+      <p>Visita la pagina de cada oficina para ver direccion, mapa, telefono local y horarios:</p>
+      <ul>
+        <li><a href="/oficinas/chihuahua-capital/">Chihuahua capital</a> - Av. Deportiva Sur 8403, Avalos</li>
+        <li><a href="/oficinas/ciudad-juarez/">Ciudad Juarez</a> - Blvd. Oscar Flores 3920</li>
+        <li><a href="/oficinas/cuauhtemoc/">Cuauhtemoc</a></li>
+        <li><a href="/oficinas/delicias/">Delicias</a></li>
+        <li><a href="/oficinas/hidalgo-del-parral/">Hidalgo del Parral</a></li>
+        <li><a href="/oficinas/nuevo-casas-grandes/">Nuevo Casas Grandes</a></li>
+        <li><a href="/oficinas/camargo/">Camargo</a></li>
+      </ul>
+
+      <h2>Sobre este sitio</h2>
+      <p>
+        Este es un sitio informativo independiente. Para conocer mas sobre nuestra mision y editores,
+        visita la pagina <a href="/sobre-nosotros/">sobre nosotros</a>.
+      </p>
+    </article>
+  </div>
+</Base>

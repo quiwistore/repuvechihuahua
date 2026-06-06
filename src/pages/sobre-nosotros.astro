@@ -1,0 +1,105 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/datos.js';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Sobre nosotros' }
+];
+---
+
+<Base
+  title="Sobre Nosotros"
+  description="Informacion sobre REPUVE Chihuahua: sitio informativo independiente con guias, oficinas, tramites y consultas del Registro Publico Vehicular en Chihuahua."
+>
+  <div class="container container-narrow">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="page-header">
+      <div class="eyebrow"><i class="fa-solid fa-circle-info"></i> Informacion</div>
+      <h1>Sobre REPUVE Chihuahua</h1>
+      <p class="lede">Quienes somos, que hacemos y por que creamos este sitio informativo.</p>
+    </header>
+
+    <article class="article-main">
+      <h2>Que es este sitio</h2>
+      <p>
+        <strong>REPUVE Chihuahua</strong> es un sitio informativo independiente dedicado a recopilar,
+        ordenar y difundir informacion publica sobre el Registro Publico Vehicular (REPUVE) en el
+        estado de Chihuahua, Mexico.
+      </p>
+      <p>
+        Nuestro objetivo es <strong>simplificar el acceso a la informacion oficial</strong> para que
+        los ciudadanos puedan realizar sus tramites vehiculares de forma rapida, sin perder tiempo
+        navegando entre portales gubernamentales fragmentados o desactualizados.
+      </p>
+
+      <h2>Que encontraras aqui</h2>
+      <ul>
+        <li><strong>Directorio de oficinas REPUVE</strong> en las principales ciudades de Chihuahua: capital, Ciudad Juarez, Cuauhtemoc, Delicias, Parral, Nuevo Casas Grandes y Camargo.</li>
+        <li><strong>Guias paso a paso</strong> para realizar consultas ciudadanas, agendar citas, inscribir vehiculos, regularizar autos chocolate y todos los tramites comunes.</li>
+        <li><strong>Informacion sobre requisitos, costos y horarios</strong> actualizada con base en fuentes oficiales y reportes ciudadanos.</li>
+        <li><strong>Respuestas a preguntas frecuentes</strong> sobre el REPUVE, NIV, chip vehicular, tarjeta de circulacion, cambio de propietario y mas.</li>
+      </ul>
+
+      <h2>Lo que NO somos</h2>
+      <div class="warning-box">
+        <p>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>
+            <strong>Este sitio NO es oficial.</strong> No tenemos vinculo, afiliacion, asociacion,
+            patrocinio ni representacion con el Gobierno de Mexico, la Secretaria Ejecutiva del Sistema
+            Nacional de Seguridad Publica (SESNSP), el REPUVE oficial, el Gobierno del Estado de Chihuahua
+            ni ningun organismo gubernamental. Tampoco procesamos tramites ni consultas vehiculares en
+            nombre de los usuarios.
+          </span>
+        </p>
+      </div>
+
+      <h2>Como trabajamos</h2>
+      <p>Nuestro contenido se elabora siguiendo estos principios:</p>
+      <ul>
+        <li><strong>Fuentes oficiales:</strong> toda la informacion se basa en datos publicos del REPUVE, gobierno de Chihuahua y reportes verificables.</li>
+        <li><strong>Actualizacion periodica:</strong> revisamos costos, horarios y direcciones de oficinas para mantenerlas vigentes.</li>
+        <li><strong>Claridad y accesibilidad:</strong> evitamos lenguaje tecnico innecesario. Explicamos los tramites como si fueramos un amigo que ya paso por ese proceso.</li>
+        <li><strong>Transparencia:</strong> siempre indicamos cuando la informacion es de referencia y recomendamos verificar en fuentes oficiales antes de cualquier tramite.</li>
+      </ul>
+
+      <h2>Para tramites oficiales, siempre acude a</h2>
+      <div class="info-cards-grid" style="margin-top:1.5rem">
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fa-solid fa-globe"></i></div>
+          <h3>Portal Oficial REPUVE</h3>
+          <p>{site.official_site}</p>
+          <a href={site.official_site} rel="noopener nofollow" class="btn btn-primary">Visitar</a>
+        </div>
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fa-solid fa-phone"></i></div>
+          <h3>Linea Nacional</h3>
+          <p>{site.phone_repuve}</p>
+          <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`} class="btn btn-primary">Llamar</a>
+        </div>
+      </div>
+
+      <h2>Contacto</h2>
+      <p>
+        Si tienes sugerencias, correcciones o aportes para mejorar este sitio, visita la
+        seccion de <a href="/contacto/">contacto</a>. Recibimos comentarios sobre contenido,
+        pero <strong>no procesamos tramites individuales</strong> ni respondemos consultas
+        de vehiculos especificos.
+      </p>
+
+      <div class="tip-box">
+        <p>
+          <i class="fa-solid fa-circle-info"></i>
+          <span>
+            <strong>Aviso legal:</strong> Los datos publicados (direcciones, telefonos, horarios) son
+            de referencia y pueden cambiar. Antes de cualquier tramite presencial, verifica llamando
+            al {site.phone_repuve} o consulta directamente al sitio oficial repuve.gob.mx.
+          </span>
+        </p>
+      </div>
+    </article>
+  </div>
+</Base>
