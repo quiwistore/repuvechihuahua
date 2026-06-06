@@ -7,3 +7,4 @@ npm-debug.log*
 
 # NOTA: dist/ NO está en gitignore porque RunCloud en Hetzner no tiene Node.js
 # Hacemos build local y commiteamos dist/ para que el server solo haga git pull
+data/*.bak
