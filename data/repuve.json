@@ -34,8 +34,8 @@
         "sabado": "Cerrado",
         "domingo": "Cerrado"
       },
-      "latitude": 28.5825,
-      "longitude": -106.07,
+      "latitude": 28.62304088451202,
+      "longitude": -106.02707132471815,
       "servicios": [
         "Consulta ciudadana",
         "Inscripción",
@@ -49,7 +49,8 @@
         "Aquiles Serdán",
         "Riva Palacio",
         "Santa Isabel"
-      ]
+      ],
+      "gmaps_embed_pb": "!1m18!1m12!1m3!1d3415.5806655545966!2d-106.02707132471815!3d28.62304088451202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea5b5674ad5563%3A0xbee22f19b394849d!2sRepuve%20Chihuahua!5e1!3m2!1ses-419!2sar!4v1780845042593!5m2!1ses-419!2sar"
     },
     {
       "slug": "ciudad-juarez",
@@ -72,8 +73,8 @@
         "sabado": "08:00-13:00",
         "domingo": "Cerrado"
       },
-      "latitude": 31.6904,
-      "longitude": -106.4245,
+      "latitude": 31.75257423387174,
+      "longitude": -106.45960588015951,
       "servicios": [
         "Consulta ciudadana",
         "Regularización autos chocolate",
@@ -93,7 +94,8 @@
         "Módulo Zaragoza",
         "Módulo Pueblito Mexicano",
         "Módulo El Paseo"
-      ]
+      ],
+      "gmaps_embed_pb": "!1m18!1m12!1m3!1d17898.8574928375!2d-106.45960588015951!3d31.75257423387174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e7591d6d1ac2c1%3A0xb481342b2c9d5adc!2sRepuve%20CD%20Juarez!5e1!3m2!1ses-419!2sar!4v1780845167036!5m2!1ses-419!2sar"
     },
     {
       "slug": "cuauhtemoc",
@@ -116,8 +118,8 @@
         "sabado": "Cerrado",
         "domingo": "Cerrado"
       },
-      "latitude": 28.4047,
-      "longitude": -106.8669,
+      "latitude": 28.413680793985336,
+      "longitude": -106.86017142454419,
       "servicios": [
         "Consulta ciudadana",
         "Inscripción vehicular",
@@ -129,7 +131,8 @@
         "Carichí",
         "Riva Palacio",
         "Cusihuiriachi"
-      ]
+      ],
+      "gmaps_embed_pb": "!1m18!1m12!1m3!1d3509.18477925645!2d-106.86017142454419!3d28.413680793985336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86c1cbb10cd8d1b3%3A0xc8dcc881d038d2e2!2sRecaudacion%20De%20Rentas!5e0!3m2!1ses!2sar!4v1780846392543!5m2!1ses!2sar"
     },
     {
       "slug": "delicias",
@@ -152,8 +155,8 @@
         "sabado": "Cerrado",
         "domingo": "Cerrado"
       },
-      "latitude": 28.1909,
-      "longitude": -105.4708,
+      "latitude": 28.26859280051458,
+      "longitude": -105.4822994245488,
       "servicios": [
         "Consulta ciudadana",
         "Inscripción vehicular",
@@ -165,7 +168,8 @@
         "Meoqui",
         "Rosales",
         "Julimes"
-      ]
+      ],
+      "gmaps_embed_pb": "!1m18!1m12!1m3!1d3513.981004822708!2d-105.4822994245488!3d28.26859280051458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86eb13ea741764b9%3A0x73fff0bea3f1193a!2sRecaudaci%C3%B3n%20de%20Rentas!5e0!3m2!1ses!2sar!4v1780846411163!5m2!1ses!2sar"
     },
     {
       "slug": "hidalgo-del-parral",
@@ -188,8 +192,8 @@
         "sabado": "Cerrado",
         "domingo": "Cerrado"
       },
-      "latitude": 26.9333,
-      "longitude": -105.6667,
+      "latitude": 26.931870259267363,
+      "longitude": -105.6676324247737,
       "servicios": [
         "Consulta ciudadana",
         "Inscripción vehicular",
@@ -200,7 +204,8 @@
         "Santa Bárbara",
         "Matamoros",
         "Allende"
-      ]
+      ],
+      "gmaps_embed_pb": "!1m18!1m12!1m3!1d3469.1041752300102!2d-105.6676324247737!3d26.931870259267363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e9c4ce31f68ef1%3A0x10400f02d1421485!2sM%C3%B3dulo%20de%20Recaudaci%C3%B3n%20de%20Rentas!5e1!3m2!1ses-419!2sar!4v1780845334936!5m2!1ses-419!2sar"
     },
     {
       "slug": "nuevo-casas-grandes",
@@ -223,8 +228,8 @@
         "sabado": "Cerrado",
         "domingo": "Cerrado"
       },
-      "latitude": 30.4167,
-      "longitude": -107.9167,
+      "latitude": 30.41607250086792,
+      "longitude": -107.92012412465522,
       "servicios": [
         "Consulta ciudadana",
         "Inscripción vehicular",
@@ -236,7 +241,8 @@
         "Ascensión",
         "Janos",
         "Buenaventura"
-      ]
+      ],
+      "gmaps_embed_pb": "!1m18!1m12!1m3!1d6711.169402287284!2d-107.92012412465522!3d30.41607250086792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86dcad91e2e9a143%3A0xabe52121a87a6388!2sREPUVE%20Nuevo%20Casas%20Grandes!5e1!3m2!1ses-419!2sar!4v1780845008123!5m2!1ses-419!2sar"
     },
     {
       "slug": "camargo",
@@ -259,8 +265,8 @@
         "sabado": "Cerrado",
         "domingo": "Cerrado"
       },
-      "latitude": 27.6833,
-      "longitude": -105.1667,
+      "latitude": 27.68300772656491,
+      "longitude": -105.18079872474951,
       "servicios": [
         "Consulta ciudadana",
         "Inscripción vehicular",
@@ -271,7 +277,8 @@
         "Coronado",
         "López",
         "San Francisco de Conchos"
-      ]
+      ],
+      "gmaps_embed_pb": "!1m18!1m12!1m3!1d3445.701925663314!2d-105.18079872474951!3d27.68300772656491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694aef899207b8f%3A0x39c8c8d20d11aa03!2sRegistro%20Civil%20de%20Ciudad%20Camargo!5e1!3m2!1ses-419!2sar!4v1780845381517!5m2!1ses-419!2sar"
     }
   ],
   "meta": {
@@ -284,252 +291,405 @@
   "pages_centrales": [
     {
       "slug": "consulta-ciudadana",
-      "h1": "Consulta Ciudadana REPUVE Chihuahua",
-      "title": "Consulta Ciudadana REPUVE Chihuahua - Verifica tu Vehículo Gratis 2026",
-      "meta": "Consulta gratuita del REPUVE en Chihuahua. Verifica si un auto tiene reporte de robo o adeudos. Ingresa placa o NIV. Servicio oficial del Registro Público Vehicular.",
-      "category": "Consultas",
-      "status_chip": "Servicio gratuito en línea",
-      "intro": "La <strong>Consulta Ciudadana del REPUVE</strong> es el servicio oficial y <strong>gratuito</strong> del Registro Público Vehicular que te permite verificar el estatus legal de cualquier vehículo en Chihuahua y en todo México. Con solo ingresar el número de placa o el NIV (Número de Identificación Vehicular) sabrás si el auto tiene reportes de robo, si está dado de alta, y si tiene historial limpio.",
+      "h1": "Consulta Ciudadana REPUVE Chihuahua: Cómo Verificar un Vehículo Gratis",
+      "title": "Consulta Ciudadana REPUVE Chihuahua 2026 - Verifica Placas, NIV, Reporte Robo",
+      "meta": "Consulta ciudadana REPUVE Chihuahua 100% gratis. Verifica placas, NIV o folio. Detecta vehículos con reporte de robo en Chihuahua antes de comprar. Tutorial paso a paso 2026.",
+      "category": "Consulta",
+      "status_chip": "Gratis · En línea · 2 minutos",
+      "intro": "La <strong>consulta ciudadana del REPUVE en Chihuahua</strong> es el servicio gratuito más importante para verificar el estatus legal de cualquier vehículo registrado en México. Ya sea que estés a punto de comprar un auto usado en Chihuahua capital, Ciudad Juárez o cualquier otro municipio del estado, esta consulta te dice <strong>en menos de 2 minutos</strong> si el vehículo tiene reporte de robo, restricciones legales o si está limpio para ser transferido a tu nombre. <br><br>El servicio lo opera la Secretaría Ejecutiva del Sistema Nacional de Seguridad Pública (SESNSP), organismo federal del Gobierno de México que mantiene la base de datos nacional vehicular. <strong>La consulta es 100% gratuita, sin registro y disponible 24/7.</strong> Si alguien te cobra por hacerla, es un fraude — denúncialo.",
       "sections": [
         {
-          "heading": "Cómo hacer la consulta paso a paso",
+          "heading": "Qué es la consulta ciudadana del REPUVE",
           "body": [
-            "<strong>1.</strong> Ingresa al sitio oficial: <a href='https://www2.repuve.gob.mx:8443/ciudadania/' target='_blank' rel='noopener'>repuve.gob.mx</a>",
-            "<strong>2.</strong> Selecciona el tipo de búsqueda: por <strong>placa</strong>, por <strong>NIV</strong> o por <strong>número de constancia</strong>",
-            "<strong>3.</strong> Captura el dato del vehículo (sin espacios ni guiones)",
-            "<strong>4.</strong> Completa el captcha de seguridad",
-            "<strong>5.</strong> Da clic en <strong>Buscar</strong> y revisa el resultado al instante"
+            "La <strong>consulta ciudadana REPUVE</strong> es una herramienta pública del Gobierno de México que permite a cualquier ciudadano verificar el estatus legal de un vehículo automotor registrado en territorio nacional. Está diseñada principalmente como mecanismo de defensa antes de comprar un auto usado: con una sola consulta, sabes si el vehículo está vinculado a un reporte de robo o si tiene alguna alerta judicial activa.",
+            "El REPUVE cruza información de <strong>tres fuentes oficiales</strong>: la base de datos federal del Registro Público Vehicular, los registros de las fiscalías estatales (en este caso la Fiscalía General del Estado de Chihuahua) y la base de la OCRA (Oficina Coordinadora de Riesgos Asegurados, que aglutina datos de las aseguradoras).",
+            "Cada consulta devuelve uno de cuatro estatus posibles: <strong>'sin reporte'</strong> (el vehículo está limpio), <strong>'con reporte de robo'</strong> (NO comprar), <strong>'recuperado'</strong> (fue robado pero ya recuperado, requiere validar situación legal), o <strong>'sin información'</strong> (el NIV o placa no figura en el registro nacional, lo que puede indicar un vehículo no inscrito o un dato mal ingresado)."
           ]
         },
         {
-          "heading": "Qué resultados puedes obtener",
+          "heading": "Cómo hacer la consulta REPUVE paso a paso en Chihuahua",
           "body": [
-            "<strong>Sin reporte de robo</strong>: el vehículo está limpio, no aparece reportado como robado ni con avisos vigentes.",
-            "<strong>Con reporte de robo</strong>: el vehículo aparece reportado como sustraído. NO compres este auto, repórtalo de inmediato.",
-            "<strong>Recuperado</strong>: el vehículo fue reportado robado pero ya recuperado por las autoridades.",
-            "<strong>Sin información</strong>: el vehículo no está en la base de datos. Puede ser un auto antiguo, en proceso de registro, o uno que requiere regularización."
+            "<strong>1. Acudí al portal oficial:</strong> ingresá a <a href='https://www2.repuve.gob.mx:8443/ciudadania/'>www2.repuve.gob.mx:8443/ciudadania/</a>. Es el único sitio oficial autorizado. Cualquier otra URL que te cobre por la consulta es fraudulenta.",
+            "<strong>2. Elegí el tipo de búsqueda.</strong> Podés consultar por uno de cuatro datos: número de placa (5-7 caracteres alfanuméricos), NIV (Número de Identificación Vehicular, 17 caracteres), folio de constancia de inscripción o NCI (Número de Constancia de Inscripción).",
+            "<strong>3. Ingresá el dato sin guiones ni espacios.</strong> El sistema es estricto con el formato: placas se escriben todas juntas (ejemplo: <code>ABC1234</code>, no <code>ABC-1234</code>), y el NIV se escribe completo en mayúsculas sin separadores.",
+            "<strong>4. Resolvé el captcha</strong> que aparece en pantalla (suelen ser caracteres deformados o una imagen). Esto previene consultas automatizadas masivas.",
+            "<strong>5. Pulsá 'Buscar' y esperá la respuesta.</strong> El sistema puede tardar entre 5 segundos y 1 minuto. En horarios pico (mediodía, fines de semana) puede ser más lento.",
+            "<strong>6. Revisá el resultado.</strong> El portal te muestra datos básicos del vehículo (marca, modelo, año, color, motor) y el estatus legal. Si todo está limpio, guardá una captura de pantalla con fecha visible."
           ]
         },
         {
-          "heading": "Qué necesitas para consultar",
+          "heading": "Qué información necesito para hacer la consulta",
           "body": [
-            "<strong>Número de placa vigente</strong> del vehículo (5-7 caracteres alfanuméricos)",
-            "<strong>O Número de Identificación Vehicular (NIV)</strong>: 17 caracteres ubicados en el parabrisas, marco de puerta, motor o documentos del auto",
-            "<strong>O Número de Constancia de Inscripción (NCI)</strong>: 8 caracteres del registro REPUVE",
-            "Conexión a internet desde computadora o celular"
+            "Para una <strong>consulta exitosa</strong> necesitás al menos uno de los siguientes datos del vehículo:",
+            "<strong>Número de placa:</strong> la matrícula vigente del vehículo, asignada por el estado donde fue emplacado. En Chihuahua suelen ser 7 caracteres alfanuméricos (ejemplo: <code>ABC1234</code>). No incluyas guiones ni espacios.",
+            "<strong>NIV (Número de Identificación Vehicular):</strong> también conocido como VIN. Son 17 caracteres alfanuméricos únicos por vehículo. Lo encontrás en el parabrisas (lado del conductor, visible desde afuera), en la puerta del piloto, en la tarjeta de circulación o en la factura. <strong>El NIV no contiene las letras I, O ni Q</strong> (para evitar confusión con 1 y 0).",
+            "<strong>Folio o NCI:</strong> número de la constancia de inscripción al REPUVE. Aparece en el documento emitido al momento de inscribir el vehículo.",
+            "<strong>Recomendación práctica:</strong> si vas a comprar un auto, <strong>pedí el NIV antes que la placa</strong>. Las placas se cambian al hacer cambio de propietario; el NIV es único e invariable durante toda la vida del vehículo. Si las placas y el NIV no coinciden con la factura, es señal de auto clonado o robado."
           ]
         },
         {
-          "heading": "Consulta REPUVE en Chihuahua presencial",
+          "heading": "Cuáles son los posibles resultados de la consulta",
           "body": [
-            "Si prefieres hacer la consulta de manera presencial en Chihuahua, puedes acudir a cualquiera de las <a href='/ubicacion/'>oficinas REPUVE en el estado</a>. En la <a href='/oficinas/chihuahua-capital/'>oficina central de Chihuahua</a> y en los <a href='/oficinas/ciudad-juarez/'>módulos de Ciudad Juárez</a> hay personal disponible para asistirte.",
-            "También puedes llamar al teléfono nacional REPUVE: <strong>800 737 8831</strong> de lunes a viernes de 9:00 a 18:00 horas."
+            "<strong>Sin reporte:</strong> el vehículo no tiene reporte de robo ni alertas judiciales. Es el resultado esperado para autos legales. Sigue todos los demás pasos de verificación antes de comprar (revisión mecánica, comparar NIV con la factura, etc.), pero al menos no hay alerta legal activa.",
+            "<strong>Con reporte de robo:</strong> el vehículo fue reportado como robado y está en la base de datos. <strong>NO compres bajo ningún concepto.</strong> Si ya lo tenés en tus manos (porque era una compra en proceso), suspendé la operación y denuncia a las autoridades.",
+            "<strong>Recuperado:</strong> el vehículo fue robado pero las autoridades lo recuperaron. Esto NO significa que sea libremente comerciable: puede estar en un depósito a la espera de entrega al dueño original, o tener algún proceso legal pendiente. Antes de comprar, exigí al vendedor que demuestre la cadena de custodia legal del vehículo desde su recuperación.",
+            "<strong>Sin información:</strong> el NIV o placa que ingresaste no aparece en la base nacional. Puede deberse a varios motivos: el vehículo no está inscrito en el REPUVE (común en autos chocolate sin regularizar), un dato mal ingresado, o que la base no esté actualizada con un registro reciente. Si el vendedor te dice que es porque el auto es nuevo, exigí ver la factura original con sello del fabricante.",
+            "<strong>Datos complementarios:</strong> además del estatus, la consulta te devuelve marca, modelo, año, color, número de motor, planta de ensamble, país de origen y fecha de inscripción al REPUVE. Compará todos esos datos con la factura del vehículo — si alguno no coincide, hay irregularidad."
+          ]
+        },
+        {
+          "heading": "Qué hacer si la consulta REPUVE no carga o da error",
+          "body": [
+            "El portal oficial del REPUVE <strong>está en proceso de modernización</strong> y por momentos presenta intermitencias. Si no carga, no significa que el sistema esté caído permanentemente — suele resolverse en minutos u horas.",
+            "<strong>Alternativas si el portal está caído:</strong>",
+            "<strong>1. Esperá 15-30 minutos y reintentá.</strong> La mayoría de las caídas son temporales.",
+            "<strong>2. Probá desde otro navegador o dispositivo.</strong> A veces el problema es de caché o cookies. Probá en modo incógnito.",
+            "<strong>3. Llamá a la línea nacional REPUVE: <a href='tel:8007378831'>800 737 8831</a></strong> (800 REPUVE 1). Atención gratuita 24 horas. El operador puede hacer la consulta por vos y darte el resultado verbalmente.",
+            "<strong>4. Acudí personalmente a la oficina REPUVE más cercana.</strong> En Chihuahua tenés 7 oficinas: capital, Ciudad Juárez, Cuauhtémoc, Delicias, Hidalgo del Parral, Nuevo Casas Grandes y Camargo. Ver <a href='/oficinas/'>directorio completo</a>.",
+            "<strong>5. Consulta en gob.mx</strong>: la página informativa <a href='https://www.gob.mx/sesnsp/acciones-y-programas/consulta-ciudadana-del-registro-publico-vehicular-repuve'>gob.mx/sesnsp</a> está alojada en infraestructura distinta y suele estar siempre disponible. Desde ahí podés acceder al portal de consulta."
+          ]
+        },
+        {
+          "heading": "Errores frecuentes al consultar el REPUVE",
+          "body": [
+            "<strong>Error: 'No se encontraron resultados'</strong> aunque el auto sí está inscrito. Generalmente es por formato: estás ingresando guiones, espacios o letras minúsculas. Reintentá escribiendo todo en mayúsculas, sin separadores.",
+            "<strong>Error: el captcha no se valida.</strong> El captcha es sensible a mayúsculas y minúsculas. Si las letras se ven borrosas, recargá la imagen del captcha con el botón de recarga.",
+            "<strong>Error: 'Servicio no disponible'.</strong> El sistema oficial tuvo caída temporal. Esperá 15-30 min y reintentá, o llamá al 800 REPUVE.",
+            "<strong>El vehículo aparece 'sin información' pero el vendedor jura que es legal.</strong> Pedile ver la factura original — si tiene factura legítima y el auto es de 2023+, puede ser que aún no esté en la base por demora administrativa del estado de emplacado. Pero verificá igualmente: <strong>compará el NIV de la factura con el grabado en el chasis y en el parabrisas</strong>.",
+            "<strong>El NIV en la factura no coincide con el del vehículo.</strong> Es un caso grave: posible auto clonado o NIV alterado. No completes la compra y denunciá al Ministerio Público."
           ]
         }
       ],
       "faqs": [
         {
-          "q": "¿La consulta REPUVE en Chihuahua tiene costo?",
-          "a": "No. La consulta ciudadana es <strong>completamente gratuita</strong>, tanto en línea como por teléfono o presencial. Si alguien te cobra por hacer una consulta REPUVE, es fraude."
+          "q": "¿La consulta ciudadana del REPUVE realmente es gratis?",
+          "a": "Sí, 100% gratis. El servicio es operado por el Gobierno de México como herramienta de seguridad pública. <strong>No hay ningún cobro oficial</strong>. Si un sitio web o tercero te cobra por hacer la consulta, es fraude — la consulta real solo se hace en el portal oficial <a href='https://www2.repuve.gob.mx:8443/ciudadania/'>www2.repuve.gob.mx:8443/ciudadania/</a> o llamando al 800 737 8831."
         },
         {
-          "q": "¿Puedo consultar un vehículo con placas de otro estado desde Chihuahua?",
-          "a": "Sí. El REPUVE es una base de datos federal. Puedes consultar autos con placas de cualquier estado mexicano desde Chihuahua o desde donde estés. La consulta funciona igual."
+          "q": "¿Puedo consultar el REPUVE desde mi celular?",
+          "a": "Sí, el portal oficial funciona en móviles. Si no carga, probá rotar el celular a horizontal (el captcha a veces se ve mejor) o usar un navegador distinto (Chrome o Firefox)."
         },
         {
-          "q": "¿Qué hago si el auto que voy a comprar aparece con reporte de robo?",
-          "a": "<strong>NO completes la compra</strong>. Repórtalo de inmediato al 911 o a la Fiscalía General del Estado de Chihuahua al 614 429 3300. Aporta toda la información del vehículo y del vendedor. Adquirir un auto robado es delito de encubrimiento."
+          "q": "¿Cuánto tiempo tarda en aparecer un robo recién reportado?",
+          "a": "Una vez que se levanta la denuncia ministerial, suele tardar entre <strong>24 y 72 horas</strong> en reflejarse en el REPUVE. Si denunciaste recién y querés que aparezca rápido, podés acelerar el proceso solicitando explícitamente al Ministerio Público la actualización al REPUVE — algunos estados lo hacen automáticamente, otros tardan."
+        },
+        {
+          "q": "¿La consulta REPUVE me dice si tiene adeudos de tenencia o multas?",
+          "a": "No. El REPUVE solo refleja <strong>reportes de robo y estatus legal federal</strong>. Para adeudos de tenencia, refrendo o multas, debés consultar el sistema fiscal del estado donde está emplacado el vehículo. En Chihuahua, eso se hace en el portal de la Secretaría de Hacienda del estado o llamando al 614 429 3300. Ver <a href='/adeudos-vehiculares/'>adeudos vehiculares</a>."
+        },
+        {
+          "q": "¿Sirve la consulta REPUVE para motocicletas?",
+          "a": "Sí, el REPUVE registra motos exactamente igual que autos. Podés consultar por placa o NIV de la moto. Ver <a href='/repuve-motos/'>REPUVE motos</a> para detalles específicos del trámite y oficinas."
+        },
+        {
+          "q": "¿Qué hago si el resultado dice 'recuperado' pero quiero comprar el auto?",
+          "a": "Procedé con extrema cautela. 'Recuperado' significa que fue robado y posteriormente recuperado por las autoridades, pero NO siempre significa que sea libremente comerciable. Exigí al vendedor: <strong>(1)</strong> denuncia ministerial original que activó el reporte, <strong>(2)</strong> acta o resolución de devolución por parte de la autoridad, <strong>(3)</strong> factura original con cadena de endosos clara desde la recuperación. Si falta alguno de esos documentos, NO compres."
+        },
+        {
+          "q": "¿Puedo hacer la consulta REPUVE desde Ciudad Juárez si el auto es de otro estado?",
+          "a": "Sí. El REPUVE es <strong>una base de datos federal</strong> que cubre los 32 estados de México. Podés consultar desde Cd. Juárez (o cualquier ciudad de Chihuahua) un auto emplacado en CDMX, Veracruz, Yucatán, etc. La consulta no tiene restricción geográfica."
+        },
+        {
+          "q": "¿Es lo mismo que hacer una verificación por la aseguradora?",
+          "a": "No, son complementarios. El REPUVE es público y gratuito, refleja reportes oficiales de robo. La aseguradora hace una verificación interna (a través de OCRA) que puede incluir datos adicionales como historial de siniestros, pero solo para sus clientes. <strong>Antes de comprar siempre hacé la consulta REPUVE</strong>; la aseguradora es una capa adicional para autos asegurados."
         }
       ]
     },
     {
       "slug": "consulta-por-placa",
-      "h1": "Consulta REPUVE por Placa en Chihuahua",
-      "title": "Consultar Auto por Placa REPUVE Chihuahua - Reporte de Robo Gratis",
-      "meta": "Consulta REPUVE por número de placa en Chihuahua. Verifica si un auto tiene reporte de robo de forma gratuita. Servicio oficial del Registro Público Vehicular.",
-      "category": "Consultas",
-      "status_chip": "Búsqueda por número de placa",
-      "intro": "La <strong>consulta REPUVE por placa</strong> es la forma más rápida de verificar un vehículo en Chihuahua. Solo necesitas el número de la placa vigente del auto o motocicleta para obtener su estatus legal completo: reportes de robo, registro vigente y avisos de autoridad. El servicio es gratuito y devuelve resultado inmediato.",
+      "h1": "Consulta REPUVE por Placa en Chihuahua: Verifica Cualquier Vehículo Gratis",
+      "title": "Consulta REPUVE por Placa Chihuahua - Gratis y Sin Registro (2026)",
+      "meta": "Cómo consultar el REPUVE por placa en Chihuahua paso a paso. Verificá reporte de robo, estatus legal y datos del vehículo gratis en menos de 2 minutos. Tutorial 2026.",
+      "category": "Consulta",
+      "status_chip": "Gratis · 5-7 caracteres · Sin registro",
+      "intro": "La <strong>consulta REPUVE por placa</strong> es la forma más rápida de verificar un vehículo en Chihuahua. Si vas a comprar un auto usado y solo tenés a la vista las placas (porque el vendedor todavía no te muestra la factura), con este dato podés saber en <strong>menos de 2 minutos</strong> si el vehículo tiene reporte de robo, alertas legales o si el estatus es 'limpio'.<br><br>En Chihuahua, las placas particulares son alfanuméricas con formato típico de 7 caracteres (ejemplo: <code>ABC1234</code>). El sistema del REPUVE acepta consultas con placas de cualquier estado de la República — no hay restricción geográfica, es una base federal.",
       "sections": [
         {
-          "heading": "Cómo consultar por placa paso a paso",
+          "heading": "Cómo consultar el REPUVE por placa paso a paso",
           "body": [
-            "<strong>1.</strong> Ingresa a <a href='https://www2.repuve.gob.mx:8443/ciudadania/' target='_blank' rel='noopener'>la consulta ciudadana del REPUVE</a>",
-            "<strong>2.</strong> Selecciona <strong>Búsqueda por placa</strong>",
-            "<strong>3.</strong> Captura las placas del vehículo sin espacios ni guiones (ejemplo: ABC1234 o GAT2068)",
-            "<strong>4.</strong> Selecciona el estado donde están registradas las placas (Chihuahua u otro)",
-            "<strong>5.</strong> Resuelve el captcha y da clic en <strong>Buscar</strong>"
+            "<strong>1. Andá al portal oficial</strong> en <a href='https://www2.repuve.gob.mx:8443/ciudadania/'>www2.repuve.gob.mx:8443/ciudadania/</a>. Es el único lugar autorizado. Cualquier sitio que te cobre por la consulta es fraude.",
+            "<strong>2. Elegí la opción 'Consulta por placa'</strong> en el formulario del portal. Es la primera opción y la más usada.",
+            "<strong>3. Escribí la placa SIN guiones ni espacios.</strong> El sistema es estricto: <code>ABC1234</code> es correcto, <code>ABC-1234</code> no funcionará. Usá mayúsculas siempre.",
+            "<strong>4. Resolvé el captcha</strong> que aparece debajo (caracteres deformados o imagen). Si no se entiende, podés recargar el captcha con el botón de refresh.",
+            "<strong>5. Pulsá 'Buscar'</strong> y esperá entre 5 y 30 segundos. En horarios pico el sistema puede tardar más.",
+            "<strong>6. Interpretá el resultado.</strong> Te mostrará datos básicos del vehículo (marca, modelo, año, color) y el estatus legal: 'sin reporte', 'con reporte de robo', 'recuperado' o 'sin información'."
           ]
         },
         {
-          "heading": "Información que obtienes con la consulta",
+          "heading": "Formato correcto de las placas mexicanas",
           "body": [
-            "<strong>Estatus de robo</strong>: sin reporte, con reporte vigente o recuperado",
-            "<strong>Marca, submarca, año y color</strong> registrados",
-            "<strong>Tipo de servicio</strong>: particular, transporte público, carga",
-            "<strong>Entidad de registro</strong>: estado donde están emplacadas",
-            "<strong>Fecha de último movimiento</strong> en el registro"
+            "Las placas vehiculares en México siguen formatos diferentes según el estado de emplacado y el tipo de vehículo:",
+            "<strong>Particulares estándar:</strong> 3 letras + 3 o 4 números (ejemplo: <code>ABC1234</code>, <code>XYZ123</code>). Es el formato más común en Chihuahua y otros estados.",
+            "<strong>Particulares antiguas:</strong> en algunos estados las placas viejas tienen formato 3 números + 3 letras (ejemplo: <code>123ABC</code>). El REPUVE acepta ambos formatos.",
+            "<strong>Servicio público (taxis, transporte):</strong> color verde, formato distinto. También consultables vía REPUVE.",
+            "<strong>Motocicletas:</strong> placas más pequeñas, formato similar a particulares.",
+            "<strong>Fronterizas (en Cd. Juárez, Tijuana, etc.):</strong> tienen códigos especiales que reflejan la franja fronteriza. También se pueden consultar en REPUVE normalmente.",
+            "<strong>Importante:</strong> al escribir la placa en el portal, no uses guiones, puntos ni espacios. Solo letras y números."
           ]
         },
         {
-          "heading": "Formato de placas en Chihuahua",
+          "heading": "Qué datos te devuelve la consulta por placa",
           "body": [
-            "Las placas particulares de Chihuahua actuales tienen el formato <strong>LLL-NN-NN</strong> (3 letras + 2 números + 2 números). Ejemplo: ABC-12-34.",
-            "Para hacer la consulta REPUVE, ingresa los caracteres <strong>sin guiones ni espacios</strong>: ABC1234.",
-            "Si tu auto tiene placas anteriores con formato diferente, también funciona — el sistema acepta todos los formatos históricos."
+            "Al hacer la consulta exitosa, el sistema te muestra los siguientes datos del vehículo asociado a la placa:",
+            "<strong>Datos identificatorios:</strong> NIV completo (17 caracteres), número de motor, número de serie, placa actual, color, marca, modelo, año del modelo, tipo de vehículo (sedán, SUV, pickup, moto), número de puertas, cilindrada, número de cilindros.",
+            "<strong>Datos de origen:</strong> país de origen del vehículo (México, EE.UU., Japón, Alemania, etc.), planta de ensamble.",
+            "<strong>Datos de registro:</strong> fecha y hora de registro en el REPUVE, entidad federativa donde está emplacado, fecha de expedición de las placas actuales, último movimiento administrativo registrado.",
+            "<strong>Estatus legal:</strong> el dato más importante. Indica si tiene reporte de robo, si está recuperado, o si está sin alerta.",
+            "<strong>Información que NO aparece en esta consulta:</strong> propietario actual (por privacidad), historial de propietarios anteriores, adeudos de tenencia o multas estatales, accidentes registrados (para eso necesitás servicios pagos como Carfax o consultar directamente al estado de emplacado)."
           ]
         },
         {
-          "heading": "Cuándo conviene consultar por placa vs. por NIV",
+          "heading": "Diferencias entre consultar por placa vs por NIV",
           "body": [
-            "Usa la <strong>consulta por placa</strong> cuando: tienes acceso visual al vehículo, vas a comprar un usado y el vendedor no te ha dado el NIV, o estás verificando un auto sospechoso.",
-            "Usa la <a href='/consulta-por-niv/'>consulta por NIV</a> cuando: no puedes ver las placas, el auto tiene placas en trámite, o quieres más precisión (el NIV es único e irrepetible)."
+            "Ambas consultas devuelven el mismo tipo de información, pero hay diferencias prácticas importantes:",
+            "<strong>Consulta por placa</strong> es más cómoda porque las placas están a la vista del vehículo. Si vas a ver un auto al lote o a casa del vendedor, es lo más fácil de copiar. <strong>Pero tiene un riesgo:</strong> las placas se cambian al hacer cambio de propietario o al cambiar de estado. Una placa puede haber estado asociada a un vehículo robado hace años y ahora estar en un auto totalmente distinto.",
+            "<strong>Consulta por NIV</strong> es más confiable porque <strong>el NIV es único e invariable</strong> durante toda la vida del vehículo. Si el NIV figura como robado, no hay manera de 'limpiarlo' cambiando datos. Para una verificación de máxima seguridad, siempre <strong>consultá por NIV</strong>.",
+            "<strong>Recomendación práctica:</strong> hacé ambas consultas. Primero por placa (rápido al ver el auto). Después por NIV (más profundo, antes de pagar). Si los resultados de ambas no coinciden — por ejemplo, la placa dice un modelo y el NIV otro — es señal de fraude. <a href='/consulta-por-niv/'>Consultá por NIV acá</a>."
+          ]
+        },
+        {
+          "heading": "Casos en que la consulta por placa puede fallar",
+          "body": [
+            "<strong>Vehículos importados sin regularizar:</strong> los autos 'chocolate' que aún no completaron la <a href='/regularizacion-autos-chocolate/'>regularización federal</a> no tienen placas mexicanas oficiales, por lo que no aparecen en el REPUVE. Para esos casos consultá por NIV.",
+            "<strong>Vehículos nuevos recién comprados:</strong> entre el momento de venta y el alta de placas pueden pasar 2-4 semanas. Durante ese periodo la consulta por placa puede no devolver datos. Usa el NIV o esperá unas semanas.",
+            "<strong>Placas dadas de baja:</strong> si las placas fueron canceladas por baja vehicular previa, la consulta puede devolver 'sin información'. Verificá con el NIV.",
+            "<strong>Placas de otra época:</strong> placas muy antiguas (de antes de la creación del REPUVE en 2005) pueden no estar digitalizadas.",
+            "<strong>Placas alteradas o falsas:</strong> si la consulta arroja un modelo o color distinto al vehículo que estás viendo, hay fraude. Por ejemplo, la placa de un Volkswagen Jetta 2018 aparece, pero el auto frente a vos es un Toyota Corolla 2015. <strong>No compres y reportá.</strong>"
           ]
         }
       ],
       "faqs": [
         {
-          "q": "¿Qué hago si la consulta por placa no devuelve resultados?",
-          "a": "Verifica primero que escribiste bien la placa, sin espacios ni guiones. Si sigue sin aparecer, intenta con el <a href='/consulta-por-niv/'>NIV del vehículo</a>. También puede ser un auto en proceso de regularización o muy antiguo no incluido en la base."
+          "q": "¿Puedo consultar placas de cualquier estado de México?",
+          "a": "Sí, el REPUVE es una base de datos federal nacional. Desde Chihuahua podés consultar placas de CDMX, Nuevo León, Yucatán, Veracruz o cualquier otro estado. No hay restricción geográfica."
         },
         {
-          "q": "¿Puedo consultar placas de Ciudad Juárez desde la capital?",
-          "a": "Sí. La consulta funciona desde cualquier lugar de Chihuahua y México. Las placas se identifican por su entidad emisora, pero la consulta es desde un sistema federal único."
+          "q": "¿La consulta por placa es válida para motocicletas?",
+          "a": "Sí, motos y autos comparten la misma base. Ingresá la placa de la moto sin guiones. Ver <a href='/repuve-motos/'>REPUVE motos</a>."
         },
         {
-          "q": "¿Es seguro ingresar la placa de mi auto en la consulta REPUVE?",
-          "a": "Sí. La consulta es anónima — no requiere registro ni datos personales. Solo verás información pública del vehículo. No se guardan datos sobre quién hace la consulta."
+          "q": "¿Qué hago si las placas del auto no coinciden con la factura?",
+          "a": "Es señal de posible fraude o irregularidad. <strong>No completes la compra</strong> y consultá tanto por placa como por NIV. Si los datos siguen sin coincidir, denuncia al Ministerio Público. Las placas se pueden cambiar legalmente solo por trámites oficiales en Control Vehicular del estado."
+        },
+        {
+          "q": "¿Necesito acudir a una oficina REPUVE en Chihuahua para consultar por placa?",
+          "a": "No. La consulta por placa es 100% en línea. Solo necesitás acudir a oficina para trámites presenciales (inscripción, regularización, alta/baja de placas). Ver <a href='/oficinas/'>oficinas REPUVE en {ESTADO}</a>."
+        },
+        {
+          "q": "¿Cuánto tiempo demora en aparecer un robo recién denunciado?",
+          "a": "Entre 24 y 72 horas tras la denuncia ministerial, dependiendo del estado y la fiscalía. Para casos urgentes (robo reciente), podés pedir al Ministerio Público que escale la actualización al REPUVE de inmediato."
+        },
+        {
+          "q": "¿Puedo descargar un PDF con el resultado de la consulta?",
+          "a": "El portal oficial del REPUVE no genera un PDF automático, pero podés hacer captura de pantalla con fecha visible. Para fines legales (por ejemplo, anexar a un contrato de compraventa), la captura sirve como evidencia del estatus al momento de la consulta."
+        },
+        {
+          "q": "¿La consulta queda registrada con mi nombre o IP?",
+          "a": "El portal oficial registra IPs y user-agents por seguridad, pero <strong>no requiere registro personal</strong> ni te identifica. La consulta es anónima desde el punto de vista del usuario."
         }
       ]
     },
     {
       "slug": "consulta-por-niv",
-      "h1": "Consulta REPUVE por NIV en Chihuahua",
-      "title": "Consultar Auto por NIV REPUVE Chihuahua - Verificación Vehicular Gratis",
-      "meta": "Consulta REPUVE por NIV (número de serie) en Chihuahua. Verifica el historial legal del vehículo. Servicio oficial y gratuito del Registro Público Vehicular.",
-      "category": "Consultas",
-      "status_chip": "Búsqueda por NIV (17 caracteres)",
-      "intro": "La <strong>consulta REPUVE por NIV</strong> es la forma más precisa de verificar un vehículo. El NIV (Número de Identificación Vehicular, también llamado VIN o número de serie) es único e irrepetible: cada auto tiene su propio NIV de 17 caracteres asignado por el fabricante. Esta consulta es ideal cuando vas a comprar un auto y quieres confirmar el historial sin depender de las placas (que pueden cambiar o falsificarse).",
+      "h1": "Consulta REPUVE por NIV en Chihuahua: Verifica por Número de Identificación Vehicular",
+      "title": "Consulta REPUVE por NIV/VIN Chihuahua 2026 - 17 Caracteres Únicos",
+      "meta": "Consulta REPUVE por NIV en Chihuahua: la verificación más confiable de cualquier vehículo. Tutorial paso a paso, dónde encontrar el NIV, errores comunes. Gratis 2026.",
+      "category": "Consulta",
+      "status_chip": "17 caracteres exactos · Único por vehículo",
+      "intro": "La <strong>consulta REPUVE por NIV</strong> (Número de Identificación Vehicular, también llamado VIN) es la verificación más confiable que existe para un vehículo. A diferencia de las placas — que pueden cambiarse con cualquier trámite de Control Vehicular — el NIV es <strong>único, irrepetible y permanente</strong> durante toda la vida del vehículo. Cualquier intento de alterarlo es un delito federal grave.<br><br>En Chihuahua y en todo México, antes de comprar un auto usado o realizar un trámite vehicular importante, <strong>siempre conviene consultar por NIV</strong>. Es el dato que el REPUVE usa para cruzar información con todas las bases nacionales y de seguridad.",
       "sections": [
         {
-          "heading": "Dónde encontrar el NIV en tu vehículo",
+          "heading": "Qué es el NIV y por qué es tan importante",
           "body": [
-            "<strong>Parabrisas (lado del conductor)</strong>: en la esquina inferior izquierda, visible desde afuera",
-            "<strong>Marco de la puerta del conductor</strong>: en una calcomanía o placa metálica",
-            "<strong>Compartimento del motor</strong>: estampado en una placa metálica",
-            "<strong>Chasis</strong>: cerca de la rueda del conductor",
-            "<strong>Tarjeta de circulación</strong>: aparece impreso",
-            "<strong>Factura del vehículo</strong>: también está registrado ahí",
-            "Si no lo encuentras, consulta nuestra guía: <a href='/donde-esta-niv/'>dónde está el NIV</a>"
+            "El <strong>NIV (Número de Identificación Vehicular)</strong> es un código único de <strong>17 caracteres alfanuméricos</strong> asignado al vehículo durante su fabricación. Es el equivalente del 'DNI' o 'huella digital' del auto. Cada NIV es único en todo el mundo — no existen dos vehículos con el mismo NIV.",
+            "El NIV sigue un estándar internacional (ISO 3779) y codifica información sobre el fabricante, el modelo, el año, la planta de ensamble y un número de serie único. Por ejemplo, los primeros 3 caracteres identifican el país y fabricante, los siguientes 6 describen el vehículo, y los últimos 8 son el número de serie.",
+            "<strong>El NIV no contiene las letras I, O ni Q</strong>: esto es deliberado, para evitar confusión con los números 1 y 0. Si crees ver una de esas letras, en realidad es 1, 0 o 0.",
+            "<strong>Por qué el NIV es la verificación más confiable:</strong> mientras las placas pueden cambiarse, las facturas pueden falsificarse y los nombres de propietarios cambian con cada venta, el NIV es <strong>físicamente grabado en el chasis y otras partes del vehículo</strong>. Alterarlo requiere intervención mecánica y es un delito federal."
           ]
         },
         {
-          "heading": "Cómo consultar por NIV paso a paso",
+          "heading": "Cómo hacer la consulta REPUVE por NIV paso a paso",
           "body": [
-            "<strong>1.</strong> Ingresa a <a href='https://www2.repuve.gob.mx:8443/ciudadania/' target='_blank' rel='noopener'>la consulta REPUVE oficial</a>",
-            "<strong>2.</strong> Selecciona <strong>Búsqueda por NIV</strong>",
-            "<strong>3.</strong> Ingresa los 17 caracteres del NIV sin espacios",
-            "<strong>4.</strong> Resuelve el captcha de seguridad",
-            "<strong>5.</strong> Da clic en <strong>Buscar</strong> y obtén la respuesta inmediata"
+            "<strong>1. Conseguí el NIV del vehículo.</strong> Lo encontrás en varios lugares (ver siguiente sección). Asegurate de tener los 17 caracteres exactos en orden.",
+            "<strong>2. Ingresá al portal oficial</strong>: <a href='https://www2.repuve.gob.mx:8443/ciudadania/'>www2.repuve.gob.mx:8443/ciudadania/</a>. Es la única URL oficial. No uses sitios de terceros que cobren.",
+            "<strong>3. Elegí la opción 'Consulta por NIV'</strong> en el formulario.",
+            "<strong>4. Escribí el NIV exactamente como aparece en el vehículo.</strong> Todo en mayúsculas, sin guiones ni espacios. Ejemplo: <code>3VWFE21C04M000001</code>.",
+            "<strong>5. Resolvé el captcha</strong> de validación.",
+            "<strong>6. Pulsá 'Buscar'</strong>. El sistema responde en 5-60 segundos.",
+            "<strong>7. Verificá los datos devueltos.</strong> El resultado debe coincidir 100% con el vehículo que tenés frente a vos (marca, modelo, año, color, número de motor). Si algo no coincide, hay fraude o irregularidad."
           ]
         },
         {
-          "heading": "Por qué la consulta por NIV es más confiable",
+          "heading": "Dónde encontrar el NIV en el vehículo",
           "body": [
-            "<strong>Identificación única</strong>: no hay dos vehículos con el mismo NIV en el mundo",
-            "<strong>No se puede cambiar</strong>: a diferencia de placas, el NIV es permanente",
-            "<strong>Detecta fraudes</strong>: si un auto tiene placas distintas a su NIV original, lo notas",
-            "<strong>Útil para autos sin placas</strong>: vehículos importados, en trámite o con placas perdidas"
+            "El NIV está grabado en varios lugares del vehículo. Los principales son:",
+            "<strong>1. Parabrisas (lado del conductor):</strong> visible desde afuera, en la esquina inferior izquierda del parabrisas. Hay una pequeña placa metálica con el NIV grabado. Es la ubicación más fácil de revisar al ver un auto.",
+            "<strong>2. Puerta del piloto:</strong> en el marco interior de la puerta (visible al abrirla), hay una etiqueta del fabricante con el NIV, fecha de fabricación, modelo, etc.",
+            "<strong>3. Tarjeta de circulación:</strong> el NIV aparece impreso en la tarjeta como dato del vehículo.",
+            "<strong>4. Factura original:</strong> debe coincidir 100% con el NIV del vehículo. Si no coincide, es señal de fraude.",
+            "<strong>5. Motor (algunas marcas):</strong> algunos fabricantes graban el NIV también en el bloque del motor.",
+            "<strong>6. Chasis (grabado físico):</strong> el NIV original viene grabado físicamente en el bastidor (chasis) del vehículo. En autos importados regularizados se verifica este número durante el trámite.",
+            "<strong>Tip de verificación:</strong> compará el NIV del parabrisas, de la puerta y de la factura. Los 3 deben ser idénticos. Si alguno difiere, hay alteración o el vehículo es producto de 'cortar y pegar' partes de varios autos. Ver <a href='/donde-esta-niv/'>guía completa de ubicación del NIV</a>."
           ]
         },
         {
-          "heading": "Estructura del NIV: qué significa cada parte",
+          "heading": "Errores comunes al consultar por NIV",
           "body": [
-            "Los <strong>primeros 3 caracteres</strong> identifican al fabricante (WMI - World Manufacturer Identifier)",
-            "Los caracteres <strong>4 al 9</strong> describen el vehículo: modelo, motor, carrocería",
-            "El carácter <strong>10</strong> indica el año modelo",
-            "El carácter <strong>11</strong> identifica la planta de ensamble",
-            "Los <strong>últimos 6 caracteres</strong> son el número de serie único de producción",
-            "Saber leer el NIV te ayuda a detectar inconsistencias entre el auto físico y los documentos"
+            "<strong>Confundir letras con números:</strong> el NIV no usa I, O ni Q. Si en el parabrisas ves lo que parece una I, es un 1; lo que parece una O es 0. Si seguís dudando, mirá la factura.",
+            "<strong>Faltar o sobrar caracteres:</strong> el NIV tiene exactamente 17 caracteres. Si escribís 16 o 18, el sistema te lo rechaza. Contá dos veces antes de buscar.",
+            "<strong>Espacios o guiones:</strong> el NIV se escribe todo junto. Sin espacios, guiones ni puntos.",
+            "<strong>Minúsculas:</strong> el portal acepta solo mayúsculas. Si pegás un NIV de un Excel o WhatsApp, fijate que esté todo en mayúsculas.",
+            "<strong>NIV truncado o ilegible en el parabrisas:</strong> en autos viejos o accidentados, la placa del parabrisas puede estar deteriorada. Verificá en la tarjeta de circulación o en la factura.",
+            "<strong>El sistema dice 'sin información' aunque el NIV es legítimo:</strong> puede ser que el vehículo sea muy nuevo (recién importado o recién comprado) y aún no esté indexado, o que sea un auto chocolate sin regularizar. En este último caso, hacelo regularizar antes de comprar. Ver <a href='/regularizacion-autos-chocolate/'>regularización</a>."
+          ]
+        },
+        {
+          "heading": "Qué información devuelve la consulta por NIV",
+          "body": [
+            "Una consulta exitosa por NIV te devuelve datos completos del vehículo:",
+            "<strong>Identificación:</strong> NIV (los 17 caracteres), número de motor, número de serie, placa actual (si está vinculada).",
+            "<strong>Datos técnicos:</strong> marca, modelo, año, color, tipo de carrocería (sedán, SUV, pickup, motocicleta, camión), número de puertas, capacidad de pasajeros, cilindrada, número de cilindros.",
+            "<strong>Origen y fabricación:</strong> país de origen, planta de ensamble, fecha de fabricación.",
+            "<strong>Registro nacional:</strong> fecha de inscripción al REPUVE, entidad federativa de emplacado, fecha de expedición de placas actuales, último movimiento administrativo (cambio de propietario, baja, etc.).",
+            "<strong>Estatus legal (el dato más crítico):</strong> 'sin reporte', 'con reporte de robo' o 'recuperado'.",
+            "<strong>NCI:</strong> número de constancia de inscripción al REPUVE.",
+            "<strong>Datos que NO aparecen por privacidad:</strong> nombre del propietario actual, dirección registrada, historial de propietarios anteriores."
           ]
         }
       ],
       "faqs": [
         {
-          "q": "¿El NIV y el número de serie son lo mismo?",
-          "a": "Sí. NIV (Número de Identificación Vehicular), VIN (Vehicle Identification Number en inglés) y número de serie son tres nombres para lo mismo: el código único de 17 caracteres del vehículo. Antes de 1981 los autos tenían números más cortos."
+          "q": "¿Cuál es la diferencia entre NIV y VIN?",
+          "a": "Ninguna técnica. <strong>NIV</strong> es el término en español ('Número de Identificación Vehicular') y <strong>VIN</strong> es la abreviatura en inglés ('Vehicle Identification Number'). Son exactamente lo mismo: el código único de 17 caracteres del vehículo."
         },
         {
-          "q": "¿Qué hago si el NIV en el parabrisas y en la tarjeta de circulación no coinciden?",
-          "a": "<strong>Es una señal grave de fraude</strong>. No hagas la compra. Repórtalo a la Fiscalía General del Estado de Chihuahua al 614 429 3300 y a la Procuraduría General de la República. Puede tratarse de un vehículo robado con NIV adulterado."
+          "q": "¿El NIV cambia si cambio el motor del auto?",
+          "a": "No. El NIV identifica el chasis del vehículo, no el motor. Si cambias el motor, el NIV sigue siendo el mismo, pero deberías actualizar el número de motor en Control Vehicular para mantener la concordancia documental."
         },
         {
-          "q": "¿La consulta por NIV detecta autos chocolate o no regularizados?",
-          "a": "Detecta cualquier vehículo registrado en el sistema, incluyendo los <a href='/regularizacion-autos-chocolate/'>autos chocolate ya regularizados</a>. Si un auto chocolate no ha sido regularizado, no aparecerá en el sistema porque nunca fue inscrito en el REPUVE."
+          "q": "¿Dónde encuentro el NIV en una motocicleta?",
+          "a": "En motocicletas el NIV se ubica en el cuello del manillar (cerca del eje de dirección) o en el chasis cerca del motor. También en la tarjeta de circulación y factura. Ver <a href='/donde-esta-niv/'>guía completa</a>."
+        },
+        {
+          "q": "¿Qué pasa si el NIV del auto está alterado o ilegible?",
+          "a": "Es una <strong>señal de alarma grave</strong>. La alteración de NIV es delito federal. Si comprás un auto con NIV alterado, podrías quedar como cómplice. <strong>No compres y denuncia.</strong> Si el NIV está ilegible por deterioro natural (no alteración), debés acudir a perito de Control Vehicular para que dictamine."
+        },
+        {
+          "q": "¿Sirve para consultar autos importados de Estados Unidos?",
+          "a": "Sí, si están <strong>regularizados</strong> en México. Los autos chocolate sin regularizar no aparecen en REPUVE porque no están inscritos. Una vez regularizados ($2,500 MXN, ver <a href='/regularizacion-autos-chocolate/'>regularización</a>), figuran normalmente."
+        },
+        {
+          "q": "¿Puedo conseguir el NIV de un auto sin verlo físicamente?",
+          "a": "Solo si el vendedor te lo proporciona (por foto, WhatsApp, etc.) o aparece en la factura/tarjeta de circulación. Idealmente, antes de comprar, <strong>verificá el NIV físicamente</strong> en el parabrisas y la puerta del piloto al ver el vehículo."
+        },
+        {
+          "q": "¿El consulado o aseguradora pueden hacer la consulta REPUVE por mí?",
+          "a": "Sí, pero no es necesario porque la consulta ciudadana es 100% gratuita. Cualquier intermediario que te cobre por hacerla está cobrando por algo que vos podés hacer gratis en 2 minutos."
+        },
+        {
+          "q": "¿Qué hago si la consulta por NIV no devuelve nada pero el auto es legal?",
+          "a": "Posibles causas: (1) auto recién registrado, aún no indexado; (2) auto importado sin regularizar; (3) error en el NIV ingresado; (4) caída temporal del sistema. Reintentá en 30 minutos. Si persiste, llamá al 800 REPUVE 1 (800 737 8831) o acudí a una oficina REPUVE."
         }
       ]
     },
     {
       "slug": "agendar-cita",
-      "h1": "Agendar Cita REPUVE Chihuahua",
-      "title": "Agendar Cita REPUVE Chihuahua 2026 - Trámite Online y Presencial",
-      "meta": "Cómo agendar tu cita en REPUVE Chihuahua. Trámites de inscripción, regularización y consulta presencial. Sistema oficial de citas paso a paso.",
-      "category": "Citas",
-      "status_chip": "Sistema de citas en línea",
-      "intro": "Para realizar trámites presenciales en las oficinas REPUVE de Chihuahua — como inscripción de vehículos, regularización de autos chocolate o cambio de propietario — es necesario <strong>agendar cita previa</strong>. La consulta ciudadana NO requiere cita. Esta guía te muestra cómo sacar tu cita paso a paso, qué documentos llevar y qué opciones tienes en cada oficina del estado.",
+      "h1": "Agendar Cita REPUVE en Chihuahua: Cómo Reservar Online en 2026",
+      "title": "Cita REPUVE Chihuahua 2026 - Cómo Agendar Online en 5 Minutos",
+      "meta": "Cómo agendar tu cita REPUVE en Chihuahua paso a paso. Plataforma oficial, requisitos, qué hacer si no hay cupo. Citas para regularización, inscripción y chip vehicular. Guía 2026.",
+      "category": "Tramite",
+      "status_chip": "Cita previa obligatoria · Online · Gratis",
+      "intro": "Agendar una <strong>cita REPUVE en Chihuahua</strong> es el paso obligatorio antes de acudir a cualquier oficina para hacer trámites presenciales. Sin cita previa, no te atenderán. La plataforma oficial es <strong>regularizaauto.sspc.gob.mx</strong> (para regularización de autos chocolate) y está disponible 24/7.<br><br>En Chihuahua, las citas se reservan principalmente para 3 tipos de trámites: <strong>regularización de autos chocolate</strong> (el más demandado, especialmente en Ciudad Juárez por ser frontera), <strong>inscripción al REPUVE</strong> de vehículos nuevos o usados, y <strong>instalación/reposición del chip REPUVE</strong>. Las consultas ciudadanas son online y no requieren cita.<br><br>Las citas se llenan rápido — especialmente en módulos itinerantes — por lo que conviene agendar apenas se abra cada periodo.",
       "sections": [
         {
-          "heading": "Cómo agendar tu cita en línea",
+          "heading": "Plataforma oficial para agendar citas REPUVE en Chihuahua",
           "body": [
-            "<strong>1.</strong> Ingresa al portal oficial: <a href='https://citas.repuve.gob.mx' target='_blank' rel='noopener'>citas.repuve.gob.mx</a>",
-            "<strong>2.</strong> Selecciona el <strong>estado: Chihuahua</strong>",
-            "<strong>3.</strong> Elige la <strong>oficina más cercana</strong> (Chihuahua capital, Ciudad Juárez, Cuauhtémoc, Delicias, etc.)",
-            "<strong>4.</strong> Selecciona el <strong>tipo de trámite</strong> que vas a realizar",
-            "<strong>5.</strong> Escoge <strong>fecha y horario</strong> disponibles",
-            "<strong>6.</strong> Captura tus datos personales y los del vehículo",
-            "<strong>7.</strong> Descarga e <strong>imprime el comprobante</strong> de cita"
+            "Para <strong>regularización de autos chocolate</strong>, la plataforma oficial es <a href='https://regularizaauto.sspc.gob.mx' rel='noopener nofollow'>regularizaauto.sspc.gob.mx</a>, operada por la Secretaría de Seguridad y Protección Ciudadana (SSPC) del Gobierno Federal. Es donde generás tu línea de captura ($2,500 MXN) y agendás cita en el módulo de tu preferencia.",
+            "Para <strong>inscripción al REPUVE de vehículos nuevos o usados</strong>, el proceso varía: si comprás auto nuevo en agencia, la propia agencia hace el alta. Si es usado y querés inscribirlo, podés acudir a la oficina REPUVE más cercana — en Chihuahua tenemos 7 oficinas — o llamar al <a href='tel:8007378831'>800 737 8831</a> para coordinar.",
+            "Para <strong>chip REPUVE</strong>, la instalación se hace en módulo. No siempre requiere cita previa formal (algunos módulos atienden por orden de llegada en horarios específicos), pero conviene llamar antes para confirmar.",
+            "<strong>Tip importante:</strong> el portal del REPUVE oficial principal (<a href='https://www2.repuve.gob.mx:8443/ciudadania/'>www2.repuve.gob.mx:8443/ciudadania/</a>) es solo para CONSULTAS gratuitas, no para agendar citas presenciales. Para citas, usá regularizaauto.sspc.gob.mx o llamá a la línea nacional."
           ]
         },
         {
-          "heading": "Trámites que requieren cita previa",
+          "heading": "Cómo agendar tu cita paso a paso",
           "body": [
-            "<strong>Inscripción vehicular</strong> en el REPUVE",
-            "<strong>Regularización de autos chocolate</strong> (procedencia extranjera)",
-            "<strong>Cambio de propietario</strong>",
-            "<strong>Reposición de chip</strong> REPUVE dañado o perdido",
-            "<strong>Trámites de motocicletas</strong>",
-            "<strong>Baja vehicular</strong>"
+            "<strong>1. Entrá a regularizaauto.sspc.gob.mx</strong> (para regularización) o llamá al 800 REPUVE 1 (para otros trámites). Si es regularización, creá tu cuenta con CURP, correo electrónico y teléfono.",
+            "<strong>2. Llenás el formulario con datos del vehículo:</strong> NIV (17 caracteres), marca, modelo, año, color, placas si tiene. Datos personales: nombre completo, CURP, ID oficial, comprobante de domicilio.",
+            "<strong>3. Generá la línea de captura</strong> ($2,500 MXN si es regularización; otros trámites pueden ser gratuitos). Te aparece una referencia bancaria.",
+            "<strong>4. Pagá en banco autorizado:</strong> HSBC, Banamex, Banorte, BBVA, Santander, Scotiabank. Podés pagar en sucursal, app o transferencia. <strong>Conservá el comprobante de pago</strong> — lo necesitás el día de la cita.",
+            "<strong>5. Elegí el módulo donde vas a acudir</strong>: en Chihuahua podés elegir entre Chihuahua capital, Ciudad Juárez (varios módulos), Cuauhtémoc, Delicias, Parral, Nuevo Casas Grandes o Camargo. Cuidado: no todos los módulos están operativos todo el año (los itinerantes abren por temporadas).",
+            "<strong>6. Seleccioná fecha y hora.</strong> El sistema muestra solo los slots disponibles. <strong>Las citas se llenan rápido</strong>, especialmente en Ciudad Juárez.",
+            "<strong>7. Confirmá la cita.</strong> Recibís un correo con los detalles. <strong>Imprimí el comprobante</strong> o guardalo en tu celular — lo presentarás el día del trámite."
           ]
         },
         {
-          "heading": "Trámites que NO requieren cita",
+          "heading": "Documentos que llevar el día de la cita",
           "body": [
-            "<a href='/consulta-ciudadana/'><strong>Consulta ciudadana</strong></a> (en línea o telefónica)",
-            "<a href='/consulta-por-placa/'><strong>Consulta por placa</strong></a>",
-            "<a href='/consulta-por-niv/'><strong>Consulta por NIV</strong></a>",
-            "Reporte de vehículo robado (acudir a Fiscalía, no a REPUVE)"
+            "<strong>Identificación oficial vigente</strong> del propietario: INE o pasaporte mexicano. Si sos extranjero residente, FM2/FM3 o tarjeta de residente.",
+            "<strong>CURP</strong> del propietario (impreso o digital del portal renapo.gob.mx).",
+            "<strong>Comprobante de domicilio</strong> reciente: recibo de luz, agua, gas, predial o teléfono fijo. No mayor a 3 meses.",
+            "<strong>Factura original del vehículo</strong>: para autos nacionales, factura del fabricante o de la agencia. Para autos importados regularizados, título original del país de origen (Title en autos de EE.UU.).",
+            "<strong>Tarjeta de circulación</strong> vigente (si el auto ya tenía placas).",
+            "<strong>Para regularización de autos chocolate</strong>: manifiesto firmado en tinta azul + 2 fotografías del vehículo (parabrisas con NIV visible y puerta del piloto).",
+            "<strong>Comprobante de pago bancario</strong> ($2,500 MXN para regularización) — el original sellado por el banco o la confirmación de transferencia.",
+            "<strong>Cita previa impresa o en celular</strong> — con el folio claramente visible.",
+            "<strong>El vehículo físicamente</strong> debes presentarlo. Si llegas sin auto el módulo te rechaza el trámite."
           ]
         },
         {
-          "heading": "Agendar por teléfono",
+          "heading": "Qué hacer si no hay cupo disponible en tu ciudad",
           "body": [
-            "Si no puedes hacerlo en línea, llama al <strong>800 737 8831</strong> (800-REPUVE) de lunes a viernes de 9:00 a 18:00 horas. Ten lista tu CURP, NIV del vehículo y código postal de domicilio.",
-            "Para citas en Ciudad Juárez también puedes contactar al módulo directo: 656 737 0000."
+            "Las citas en Chihuahua, especialmente en Ciudad Juárez, se llenan rápido por el alto volumen de regularización de autos chocolate. Si no encontrás cupo, hay varias opciones:",
+            "<strong>1. Revisá otros módulos del estado.</strong> Si vivís en Ciudad Juárez pero podés desplazarte 200 km, en Cuauhtémoc o Chihuahua capital suele haber más disponibilidad. Ver <a href='/oficinas/'>oficinas REPUVE en Chihuahua</a>.",
+            "<strong>2. Esperá a que liberen cupos por cancelaciones.</strong> El sistema libera cupos cuando alguien cancela. Refrescá la página varias veces al día — especialmente lunes por la mañana y viernes a la tarde.",
+            "<strong>3. Esperá apertura de nuevo periodo.</strong> Los módulos itinerantes abren periodos de 2-4 semanas y luego cierran. Cuando se abre uno nuevo, los cupos se liberan masivamente — estate atento al sitio oficial.",
+            "<strong>4. Considerá un módulo itinerante en municipio cercano.</strong> En temporadas de alta demanda, el gobierno federal abre módulos temporales en otros municipios para descongestionar. Verificá el calendario oficial.",
+            "<strong>5. Llamá al <a href='tel:8007378831'>800 737 8831</a></strong> para preguntar por opciones extraordinarias."
+          ]
+        },
+        {
+          "heading": "Cancelar o reagendar una cita REPUVE",
+          "body": [
+            "Si no podés acudir a tu cita confirmada, <strong>cancelala con anticipación</strong>. No solo evitás 'quemar' tu lugar (que podría ser ocupado por otra persona que lo necesita), sino que también evitás que el sistema te marque como 'no show' (lo cual puede dificultar futuras citas).",
+            "<strong>Cancelar cita de regularización:</strong> ingresá a regularizaauto.sspc.gob.mx con tu cuenta, andá a 'Mis citas' y elegí 'Cancelar'. El sistema te confirma la cancelación. Tu línea de captura sigue vigente (no perdés el pago), podés reagendar con la misma referencia.",
+            "<strong>Reagendar cita:</strong> después de cancelar, podés reagendar inmediatamente eligiendo nueva fecha. Si no hay cupo en el módulo original, probá en otros municipios. Ver <a href='/cancelar-cita/'>cómo cancelar paso a paso</a>.",
+            "<strong>Si no se cancela y faltás:</strong> el sistema te marca como 'no show'. Algunos módulos restringen tu capacidad de agendar nuevas citas por un periodo (típicamente 30-60 días).",
+            "<strong>Si el módulo cierra antes de tu cita:</strong> algunas veces el gobierno cierra módulos itinerantes antes de la fecha programada. En ese caso, te notifican por correo y te ofrecen reagendar en otro módulo automáticamente."
           ]
         }
       ],
       "faqs": [
         {
-          "q": "¿Cuánto tiempo de anticipación debo agendar mi cita?",
-          "a": "Recomendamos al menos <strong>7 a 14 días</strong> de anticipación, especialmente en las oficinas de Ciudad Juárez y Chihuahua capital donde la demanda es alta. En meses pico (enero-marzo y septiembre-octubre) puede haber espera de 3-4 semanas."
+          "q": "¿Necesito cita para hacer la consulta ciudadana REPUVE en Chihuahua?",
+          "a": "No. Las consultas (verificar placa o NIV) son 100% en línea y gratuitas, sin cita previa. Solo las trámites presenciales (regularización, chip, inscripción) requieren cita."
         },
         {
-          "q": "¿Puedo cambiar la fecha de mi cita una vez agendada?",
-          "a": "Sí. Tienes la opción de <a href='/cancelar-cita/'>cancelar y reagendar tu cita</a> sin penalización, siempre que lo hagas con al menos 24 horas de anticipación al horario programado."
+          "q": "¿Puedo agendar cita para otra persona (familiar, amigo)?",
+          "a": "Sí, pero el día de la cita debe asistir la persona titular con su identificación oficial. La cita está vinculada al CURP del propietario del vehículo, no al de quien la agendó."
+        },
+        {
+          "q": "¿Cuánto tiempo dura el trámite presencial el día de la cita?",
+          "a": "Entre 1 y 2 horas si el módulo está poco saturado. En Cd. Juárez en horarios pico puede ser 3-4 horas. <strong>Llegá con 30 minutos de anticipación.</strong>"
         },
         {
           "q": "¿Qué pasa si llego tarde a mi cita?",
-          "a": "La tolerancia es de <strong>15 minutos</strong>. Pasado ese tiempo perderás tu turno y tendrás que volver a agendar. Te recomendamos llegar 15 minutos antes con todos tus documentos en orden."
+          "a": "Tolerancia típica: 15-30 minutos. Si llegás después, el módulo puede rechazarte y deberías reagendar. Llamá al módulo antes si vas tarde."
+        },
+        {
+          "q": "¿Es gratis agendar la cita en Chihuahua?",
+          "a": "<strong>Agendar la cita es gratis</strong>. El costo va por el trámite específico: regularización $2,500 MXN, inscripción/chip generalmente sin costo. Pago es a través de línea de captura bancaria."
+        },
+        {
+          "q": "¿Puedo cambiar de módulo después de agendar?",
+          "a": "Sí. Andá a 'Mis citas' en la plataforma, cancelá la cita original y agendá nueva en el módulo de tu preferencia. Tu pago se mantiene vigente con la misma línea de captura."
+        },
+        {
+          "q": "¿Atienden citas los fines de semana?",
+          "a": "Algunos módulos sí, otros no. En Chihuahua capital, sábados de 8:00 a 13:00 (variable). Ciudad Juárez tiene módulos abiertos sábado. Confirmá horario al agendar — el sistema solo muestra slots disponibles."
+        },
+        {
+          "q": "¿Puedo agendar para alguien que vive en otro estado pero el auto se va a regularizar en Chihuahua?",
+          "a": "Sí. El propietario puede ser de cualquier estado, lo importante es que asista a la cita en el módulo elegido en Chihuahua. La residencia del propietario no limita en qué módulo regularizar."
         }
       ]
     },
@@ -727,152 +887,259 @@
     },
     {
       "slug": "requisitos",
-      "h1": "Requisitos REPUVE Chihuahua",
-      "title": "Requisitos REPUVE Chihuahua 2026 - Documentos para Todos los Trámites",
-      "meta": "Requisitos completos para trámites REPUVE en Chihuahua. Documentos para consulta, inscripción, regularización y cambio de propietario. Lista actualizada 2026.",
-      "category": "Trámites",
-      "status_chip": "Documentos requeridos por trámite",
-      "intro": "Cada trámite en el REPUVE Chihuahua tiene su propia lista de <strong>requisitos y documentos</strong>. Aquí te damos el listado completo organizado por tipo de gestión, para que llegues a tu cita con todo en orden y no tengas que regresar. La mayoría de trámites requieren documentos en <strong>original y copia</strong> y no se aceptan documentos vencidos.",
+      "h1": "Requisitos REPUVE Chihuahua 2026: Documentos para Cada Trámite",
+      "title": "Requisitos REPUVE Chihuahua 2026 - Documentos Necesarios por Trámite",
+      "meta": "Documentos requeridos para trámites REPUVE en Chihuahua 2026: regularización, inscripción, cambio propietario, baja vehicular. Listas completas + tips para no perder el viaje. Guía oficial.",
+      "category": "Tramite",
+      "status_chip": "Lista verificada 2026 · Por trámite",
+      "intro": "Saber exactamente <strong>qué documentos llevar al módulo REPUVE en Chihuahua</strong> es la diferencia entre completar tu trámite en 1 hora o perder un día entero. Cada trámite tiene requisitos específicos, y la mayoría exige documentación original (no fotocopias). Si te falta uno solo, el módulo te rechaza y tenés que reagendar — perdiendo tu lugar.<br><br>En esta guía actualizada a 2026 te detallamos los requisitos para los <strong>6 trámites más comunes</strong> en Chihuahua: regularización de autos chocolate, inscripción al REPUVE, cambio de propietario, alta de placas, baja vehicular y reposición de chip. Compará tu carpeta con esta lista antes de salir de tu casa.",
       "sections": [
         {
-          "heading": "Requisitos para consulta ciudadana",
+          "heading": "Requisitos para regularización de autos chocolate",
           "body": [
-            "<strong>Para consulta en línea (gratis)</strong>: no necesitas documentos, solo el dato del vehículo (placa o NIV).",
-            "<strong>Para consulta presencial</strong>: identificación oficial vigente (INE, pasaporte, cartilla)."
+            "El trámite más solicitado en Chihuahua por ser estado fronterizo. Aplica solo para vehículos importados al país <strong>antes del 19 de octubre de 2021</strong>.",
+            "<strong>Documentos del propietario:</strong>",
+            "&bull; Identificación oficial vigente (INE, pasaporte o cédula profesional).",
+            "&bull; CURP impreso (del portal renapo.gob.mx).",
+            "&bull; Comprobante de domicilio reciente (luz, agua, gas, predial), no mayor a 3 meses.",
+            "&bull; Correo electrónico activo y teléfono.",
+            "<strong>Documentos del vehículo:</strong>",
+            "&bull; Título original del país de origen (Title de EE.UU.).",
+            "&bull; Manifiesto firmado en tinta azul (formato disponible en el portal regularizaauto.sspc.gob.mx).",
+            "&bull; 2 fotografías del vehículo: una del parabrisas con NIV visible, otra de la puerta del piloto.",
+            "&bull; Pedimento de internación temporal (si lo tenés).",
+            "<strong>Pago:</strong>",
+            "&bull; Línea de captura por <strong>$2,500 MXN</strong>, pagada en banco autorizado.",
+            "&bull; Comprobante bancario original con sello del banco o confirmación de transferencia.",
+            "<strong>Cita previa:</strong> obligatoria en regularizaauto.sspc.gob.mx con el folio impreso o en celular.",
+            "Ver <a href='/regularizacion-autos-chocolate/'>guía completa de regularización</a>."
           ]
         },
         {
-          "heading": "Requisitos para inscripción de vehículo",
+          "heading": "Requisitos para inscripción al REPUVE (vehículos nuevos o usados)",
           "body": [
-            "<strong>Factura original</strong> del vehículo (con todos los endosos si es usado)",
-            "<strong>Pedimento de importación</strong> (solo autos importados)",
-            "<strong>INE vigente</strong> del propietario (original y copia)",
-            "<strong>CURP</strong> impresa",
-            "<strong>Comprobante de domicilio</strong> reciente: luz, agua, teléfono (máx. 3 meses)",
-            "<strong>Tarjeta de circulación</strong> vigente",
-            "<strong>Comprobante de pago</strong> de derechos vehiculares estatales",
-            "<strong>Constancia de no adeudo</strong> de tenencia (si aplica)"
-          ]
-        },
-        {
-          "heading": "Requisitos para regularización de auto chocolate",
-          "body": [
-            "<strong>CURP</strong> del propietario",
-            "<strong>Comprobante de domicilio</strong> en Chihuahua",
-            "<strong>INE vigente</strong>",
-            "<strong>Manifiesto del vehículo</strong> llenado en tinta azul",
-            "<strong>Título de propiedad</strong> del país de origen (USA en la mayoría)",
-            "<strong>2 fotografías</strong>: una de la serie/NIV y otra del vidrio frontal con NIV visible",
-            "<strong>Línea de captura</strong> del SAT con pago de $2,500 MXN realizado en banco",
-            "<strong>Cita impresa</strong> del sistema en línea",
-            "El <strong>vehículo físicamente</strong> (no se puede tramitar por terceros sin el auto presente)"
+            "Si comprás un auto nuevo en agencia, la agencia hace la inscripción automáticamente. Si es usado o querés re-inscribirlo, llevá:",
+            "<strong>Del propietario:</strong> INE vigente, CURP, comprobante de domicilio reciente.",
+            "<strong>Del vehículo:</strong> factura original (con endoso si fue traspasada), tarjeta de circulación vigente (si tiene), pedimento de importación (si es vehículo importado regularizado).",
+            "<strong>Pago:</strong> generalmente gratuito. Si hay costo administrativo es menor a $200 MXN.",
+            "<strong>El vehículo físicamente</strong> — el módulo verifica el NIV grabado en el chasis.",
+            "<strong>Tip:</strong> verificá que el NIV de la factura coincida con el grabado en el parabrisas y la puerta antes de acudir. Si no coincide, el módulo rechaza el trámite y deberías investigar la procedencia del vehículo."
           ]
         },
         {
           "heading": "Requisitos para cambio de propietario",
           "body": [
-            "<strong>Factura endosada</strong> a nombre del nuevo propietario",
-            "<strong>INE</strong> del comprador y del vendedor",
-            "<strong>Comprobante de domicilio</strong> del comprador",
-            "<strong>Tarjeta de circulación</strong> vigente",
-            "<strong>Comprobante de pago</strong> de derechos por cambio de propietario",
-            "<strong>Constancia de no adeudo</strong> de tenencia y multas"
+            "Trámite obligatorio dentro de los 30 días posteriores a una compraventa de auto usado en Chihuahua.",
+            "<strong>Documentos del comprador (nuevo propietario):</strong>",
+            "&bull; INE vigente.",
+            "&bull; CURP.",
+            "&bull; Comprobante de domicilio reciente en Chihuahua.",
+            "<strong>Documentos del vendedor:</strong>",
+            "&bull; INE vigente (puede ir con el comprador o entregar copia certificada).",
+            "&bull; Firma en el endoso de la factura.",
+            "<strong>Documentos del vehículo:</strong>",
+            "&bull; <strong>Factura original con endoso completo</strong> (nombre del comprador, fecha, firma del vendedor en el reverso).",
+            "&bull; Tarjeta de circulación vigente.",
+            "&bull; Constancia REPUVE (gratis online).",
+            "&bull; Refrendo vehicular al corriente (sin adeudos).",
+            "&bull; Pago de derechos de cambio de propietario ($1,500-$2,200 MXN según modelo).",
+            "Ver <a href='/cambio-propietario/'>guía completa de cambio de propietario</a>."
           ]
         },
         {
-          "heading": "Requisitos para reposición de constancia o chip",
+          "heading": "Requisitos para alta de placas (vehículo nuevo)",
           "body": [
-            "<strong>Acta levantada</strong> ante notario por pérdida o robo del documento (si aplica)",
-            "<strong>INE</strong> del propietario",
-            "<strong>Tarjeta de circulación</strong>",
-            "<strong>Pago de derechos</strong> por reposición"
+            "Cuando comprás auto nuevo en agencia, los requisitos para emplacar en Chihuahua son:",
+            "<strong>Factura original</strong> del vehículo (de la agencia o fabricante).",
+            "<strong>Identificación oficial</strong> vigente del propietario.",
+            "<strong>CURP</strong> y <strong>comprobante de domicilio</strong> en Chihuahua.",
+            "<strong>Constancia de inscripción al REPUVE</strong> (gratuita, online).",
+            "<strong>Pago de derechos</strong>: aproximadamente $1,800 a $2,500 MXN dependiendo del modelo, año y tipo de vehículo.",
+            "<strong>Verificación vehicular vigente</strong> (si aplica para vehículos comerciales).",
+            "<strong>El vehículo físicamente</strong> en la oficina de Control Vehicular del estado."
+          ]
+        },
+        {
+          "heading": "Requisitos para baja vehicular",
+          "body": [
+            "Cuando vas a dar de baja un auto por robo, siniestro total, exportación o desuso:",
+            "<strong>Documento causal:</strong> según el motivo: denuncia ministerial (robo), constancia de siniestro total de la aseguradora, pedimento de exportación, etc.",
+            "<strong>Tarjeta de circulación original</strong> (excepto en caso de robo, donde la denuncia sustituye).",
+            "<strong>Placas físicas</strong> (excepto en robo).",
+            "<strong>Factura original</strong>.",
+            "<strong>INE</strong> y <strong>CURP</strong> del propietario.",
+            "<strong>Comprobante de domicilio</strong>.",
+            "<strong>Refrendo y multas al corriente</strong>: si hay adeudos, deben pagarse antes de la baja.",
+            "<strong>Pago de derechos de baja</strong>: $250-$400 MXN aproximadamente.",
+            "Ver <a href='/baja-vehicular/'>guía completa</a>."
+          ]
+        },
+        {
+          "heading": "Requisitos para chip REPUVE",
+          "body": [
+            "El chip REPUVE es gratuito y se instala en módulo. Requisitos:",
+            "<strong>Constancia de inscripción al REPUVE</strong> (si el auto no está inscrito, primero hacé la <a href='/inscribir-vehiculo/'>inscripción</a>).",
+            "<strong>Tarjeta de circulación vigente</strong>.",
+            "<strong>Identificación oficial</strong> del propietario.",
+            "<strong>El vehículo físicamente</strong>.",
+            "<strong>Para reposición</strong> (chip dañado o cambio de parabrisas): mismos requisitos + evidencia del daño (fotografía o el chip dañado).",
+            "Ver <a href='/chip-repuve/'>guía completa del chip REPUVE</a>."
           ]
         }
       ],
       "faqs": [
         {
-          "q": "¿Aceptan documentos vencidos en REPUVE Chihuahua?",
-          "a": "No. Todos los documentos de identidad (INE, pasaporte) deben estar <strong>vigentes</strong>. Los comprobantes de domicilio no deben tener más de 3 meses. La tarjeta de circulación debe estar al día."
+          "q": "¿Aceptan fotocopias en lugar de originales?",
+          "a": "<strong>No.</strong> El módulo siempre exige documentos originales. Las copias se sacan en el módulo si las necesitan archivar. Lleva originales + 2 juegos de copias por las dudas."
         },
         {
-          "q": "¿Puedo hacer el trámite con un poder notarial si no puedo ir personalmente?",
-          "a": "Sí, con <strong>poder notarial especial</strong> para el trámite específico. El apoderado debe llevar su INE más el poder notarial original. Algunos trámites como verificación física del vehículo requieren que el auto esté presente."
+          "q": "¿El comprobante de domicilio puede estar a nombre de un familiar?",
+          "a": "Sí, pero deberías llevar también <strong>una declaración de domicilio firmada por el titular</strong> del recibo (carta simple manuscrita) y copia de su INE. Si estás casado, el comprobante a nombre del cónyuge es aceptado sin más."
         },
         {
-          "q": "¿Qué pasa si me falta un documento el día de mi cita?",
-          "a": "Tendrás que <a href='/cancelar-cita/'>reagendar tu cita</a>. La mayoría de los trámites NO se procesan con documentos incompletos. Verifica esta lista la noche antes y revisa que todo esté vigente."
+          "q": "¿Qué hago si perdí la factura del vehículo?",
+          "a": "Necesitás hacer <strong>reposición de factura</strong> antes de hacer cualquier trámite REPUVE. Se hace ante la agencia/fabricante donde se compró originalmente, o si fue importado, ante el agente aduanal. Es un trámite separado y puede tomar 4-8 semanas."
+        },
+        {
+          "q": "¿Qué pasa si llego al módulo sin uno de los documentos requeridos?",
+          "a": "El módulo te rechaza el trámite. <strong>No hay flexibilidad</strong>: debés reagendar cita y volver con todo completo. Por eso es vital revisar la lista antes de salir de casa."
+        },
+        {
+          "q": "¿Necesito CURP del cónyuge o solo del propietario titular?",
+          "a": "Solo del propietario que figurará en los documentos. Si la factura quedará a tu nombre, llevás solo tu CURP."
+        },
+        {
+          "q": "¿Los extranjeros residentes pueden hacer trámites REPUVE?",
+          "a": "Sí, con su <strong>tarjeta de residencia vigente</strong> (FM2/FM3 o tarjeta verde) en lugar del INE. Los demás requisitos son los mismos."
+        },
+        {
+          "q": "¿El comprobante de domicilio puede ser digital o necesita ser impreso?",
+          "a": "Impreso. Si tu recibo de luz/agua te llega solo por correo, descargalo del portal de la empresa, imprimilo y llevalo. El módulo necesita papel."
+        },
+        {
+          "q": "¿Cuánto tiempo de vigencia tienen los documentos?",
+          "a": "<strong>Identificación oficial:</strong> vigente al momento del trámite. <strong>Comprobante de domicilio:</strong> no mayor a 3 meses. <strong>Constancia REPUVE:</strong> sin caducidad pero verificá que esté actualizada. <strong>Verificación vehicular (si aplica):</strong> vigente al momento del trámite."
         }
       ]
     },
     {
       "slug": "costos",
-      "h1": "Costos REPUVE Chihuahua 2026",
-      "title": "Costos REPUVE Chihuahua 2026 - Precios Actualizados de Trámites",
-      "meta": "Costos actualizados de trámites REPUVE en Chihuahua 2026. Precios de inscripción, regularización, cambio de propietario y reposición. Información oficial.",
-      "category": "Información",
-      "status_chip": "Precios y derechos vehiculares",
-      "intro": "Los <strong>costos de trámites REPUVE en Chihuahua</strong> varían según el tipo de gestión y el municipio. La consulta ciudadana siempre es gratis, pero las inscripciones, regularizaciones y cambios de titular tienen costos federales y estatales. Esta guía te muestra los <strong>precios actualizados 2026</strong> para que sepas cuánto debes pagar y dónde hacer el pago antes de ir a tu cita.",
+      "h1": "Costos REPUVE Chihuahua 2026: Precios Actualizados por Trámite",
+      "title": "Costos REPUVE Chihuahua 2026 - Precios Trámites Vehiculares Actualizados",
+      "meta": "Costos actualizados de trámites REPUVE en Chihuahua 2026: regularización $2,500 MXN, cambio propietario, alta placas, baja, chip. Tabla completa de precios + dónde pagar.",
+      "category": "Tramite",
+      "status_chip": "Tabla 2026 · Pagos bancarios",
+      "intro": "Saber <strong>cuánto cuesta cada trámite vehicular en Chihuahua</strong> te permite presupuestar correctamente antes de iniciar. Algunos trámites del REPUVE son <strong>completamente gratuitos</strong> (consulta ciudadana, chip RFID, instalación), mientras que otros tienen costos que van desde $250 MXN (baja vehicular) hasta $2,500 MXN (regularización de autos chocolate).<br><br><strong>Cuidado con cobros no oficiales:</strong> si alguien te cobra por hacer la consulta ciudadana, agendar cita o instalar el chip REPUVE, está cometiendo fraude. Solo los trámites de Control Vehicular del Estado de Chihuahua y la regularización federal tienen costos legítimos.",
       "sections": [
         {
-          "heading": "Servicios gratuitos",
+          "heading": "Tabla resumen de costos REPUVE 2026",
           "body": [
-            "<strong>Consulta ciudadana</strong> (por placa, NIV o constancia): <strong>$0 MXN</strong>",
-            "<strong>Atención telefónica</strong> 800-REPUVE: <strong>$0 MXN</strong>",
-            "<strong>Reporte de vehículo robado</strong> a las autoridades: <strong>$0 MXN</strong>",
-            "<strong>Información presencial</strong> en oficinas: <strong>$0 MXN</strong>",
-            "Si alguien te cobra por estos servicios, es fraude. <strong>Reporta al 800 737 8831</strong>."
+            "<strong>Trámites gratuitos:</strong>",
+            "&bull; Consulta ciudadana REPUVE (por placa, NIV o folio): <strong>$0 MXN</strong>",
+            "&bull; Agendar cita en plataforma oficial: <strong>$0 MXN</strong>",
+            "&bull; Instalación del chip REPUVE: <strong>$0 MXN</strong>",
+            "&bull; Constancia de inscripción REPUVE (digital): <strong>$0 MXN</strong>",
+            "<strong>Trámites con costo (federal):</strong>",
+            "&bull; Regularización de auto chocolate: <strong>$2,500 MXN</strong>",
+            "&bull; Regularización de motocicleta chocolate: <strong>$2,500 MXN</strong>",
+            "<strong>Trámites con costo (estatal Chihuahua):</strong>",
+            "&bull; Alta de placas nuevas: <strong>$1,800-$2,500 MXN</strong>",
+            "&bull; Reposición de placa (una): <strong>$450 MXN</strong>",
+            "&bull; Reposición de juego de placas: <strong>$850 MXN</strong>",
+            "&bull; Cambio de propietario: <strong>$1,500-$2,200 MXN</strong>",
+            "&bull; Reposición de tarjeta de circulación: <strong>$250-$400 MXN</strong>",
+            "&bull; Baja vehicular: <strong>$250-$400 MXN</strong>",
+            "&bull; Refrendo anual: variable según valor del vehículo (~$500-$1,500 MXN)",
+            "<strong>Otros costos relacionados:</strong>",
+            "&bull; Verificación vehicular (solo comerciales): <strong>$200-$600 MXN</strong>",
+            "&bull; Tenencia vehicular: variable según modelo y año (Chihuahua actualmente la subsidia para autos particulares modelo ≤8 años).",
+            "<strong>Importante:</strong> los precios pueden tener pequeñas variaciones por municipio (Cd. Juárez vs Chihuahua capital). Confirmá el monto exacto al generar tu línea de captura."
           ]
         },
         {
-          "heading": "Costos de inscripción y cambios",
+          "heading": "Detalle: regularización de autos chocolate",
           "body": [
-            "<strong>Inscripción de auto nuevo</strong>: gratuito (incluido en pago de placas)",
-            "<strong>Inscripción de auto usado</strong> (alta inicial): <strong>$500 - $800 MXN</strong>",
-            "<strong>Cambio de propietario</strong>: <strong>$500 - $1,200 MXN</strong> según municipio",
-            "<strong>Cambio de placas</strong>: <strong>$1,500 - $2,500 MXN</strong>",
-            "<strong>Baja vehicular</strong>: <strong>$300 - $600 MXN</strong>"
+            "El trámite federal más caro pero también el más demandado en Chihuahua frontera. <strong>Costo único: $2,500 MXN</strong>.",
+            "<strong>Qué incluye:</strong> inscripción al REPUVE, asignación de NCI (Número de Constancia de Inscripción), instalación de chip RFID, regularización legal del vehículo en el padrón nacional.",
+            "<strong>Qué NO incluye:</strong> el alta de placas en Control Vehicular del estado (eso es un trámite estatal posterior, ~$1,800-$2,500 MXN adicionales), ni la tenencia/refrendo del estado.",
+            "<strong>Cómo pagar:</strong>",
+            "&bull; <strong>1.</strong> Generá la línea de captura en regularizaauto.sspc.gob.mx con tu CURP y datos del vehículo.",
+            "&bull; <strong>2.</strong> El sistema te devuelve una referencia bancaria.",
+            "&bull; <strong>3.</strong> Pagás en banco autorizado: HSBC, Banamex, Banorte, BBVA, Santander, Scotiabank.",
+            "&bull; <strong>4.</strong> Podés pagar en sucursal, app móvil, transferencia SPEI o ventanilla.",
+            "<strong>Tip:</strong> conservá el comprobante con sello del banco. Algunos módulos no aceptan comprobantes de app sin sello físico — confirmá antes."
           ]
         },
         {
-          "heading": "Costos de regularización de autos chocolate",
+          "heading": "Detalle: costos de alta y reposición de placas en Chihuahua",
           "body": [
-            "<strong>Cuota federal del decreto presidencial</strong>: <strong>$2,500 MXN</strong> (pago en banco con línea SAT)",
-            "<strong>Derechos estatales Chihuahua</strong>: alrededor de <strong>$1,200 - $1,800 MXN</strong>",
-            "<strong>Verificación vehicular</strong>: <strong>$300 - $500 MXN</strong>",
-            "<strong>Placas</strong>: <strong>$1,500 - $2,500 MXN</strong>",
-            "Total estimado del proceso completo: <strong>$5,500 - $7,300 MXN</strong>"
+            "<strong>Alta de placas nuevas (vehículo nuevo o usado primer empadrón en Chihuahua):</strong>",
+            "&bull; Auto particular nuevo: <strong>$1,800-$2,200 MXN</strong>",
+            "&bull; Auto particular usado: <strong>$2,000-$2,500 MXN</strong>",
+            "&bull; Motocicleta: <strong>$800-$1,200 MXN</strong>",
+            "&bull; Servicio público (taxi, transporte): variable, más caro.",
+            "<strong>Reposición por daño/pérdida:</strong>",
+            "&bull; Una placa: <strong>$450 MXN</strong>",
+            "&bull; Juego de placas: <strong>$850 MXN</strong>",
+            "&bull; Tarjeta de circulación: <strong>$250-$400 MXN</strong>",
+            "<strong>Refrendo anual:</strong> variable según valor catastral del vehículo. Para un auto modelo 2020 valor $200,000 MXN, refrendo típico es $700-$900 MXN/año.",
+            "<strong>Multas por refrendo atrasado:</strong> 5% mensual sobre el monto pendiente. Si pasaste 3 meses sin pagar, ya tenés 15% extra.",
+            "<strong>Dónde pagar:</strong> Recaudación de Rentas del Estado de Chihuahua, oficinas físicas o portal en línea <a href='https://www.chihuahua.gob.mx' rel='noopener nofollow'>chihuahua.gob.mx</a>. Métodos: SPEI, tarjeta de débito/crédito, OXXO, transferencia."
           ]
         },
         {
-          "heading": "Costos de reposición y duplicados",
+          "heading": "Cómo pagar tus trámites: métodos aceptados",
           "body": [
-            "<strong>Reposición de chip REPUVE</strong>: <strong>$300 - $500 MXN</strong>",
-            "<strong>Reposición de constancia de inscripción</strong>: <strong>$200 - $400 MXN</strong>",
-            "<strong>Duplicado de tarjeta de circulación</strong>: <strong>$400 - $700 MXN</strong>",
-            "<strong>Duplicado de placas</strong> (pérdida o robo): <strong>$800 - $1,500 MXN</strong>"
+            "<strong>Pago en banco (más común):</strong> el portal oficial te genera una línea de captura con código de barras. Llevás esa línea (impresa o en celular) a una sucursal bancaria autorizada. HSBC, Banamex, Banorte, BBVA, Santander, Scotiabank son los principales.",
+            "<strong>Pago en línea (SPEI/transferencia):</strong> desde tu app bancaria, ingresá la línea de captura como referencia y hacés transferencia interbancaria. Inmediato.",
+            "<strong>Pago en convenio (OXXO, 7-Eleven):</strong> algunos trámites estatales se pueden pagar en tiendas de conveniencia. Verificá si tu línea de captura es compatible.",
+            "<strong>Tarjeta de crédito/débito en oficina:</strong> en Recaudación de Rentas Chihuahua aceptan tarjetas. En módulos federales (REPUVE) generalmente solo pago previo bancario.",
+            "<strong>NUNCA pagues en efectivo a un 'gestor' que diga ser del REPUVE.</strong> El REPUVE oficial NO cobra en efectivo, nunca. Si alguien te pide dinero directo para 'agilizar' un trámite, es fraude. Llamá al <a href='tel:8007378831'>800 737 8831</a> para denunciar."
           ]
         },
         {
-          "heading": "Dónde y cómo pagar",
+          "heading": "Costos ocultos a tener en cuenta",
           "body": [
-            "<strong>Línea de captura SAT</strong>: para regularización de autos chocolate, pagas en cualquier banco autorizado (Banamex, BBVA, Santander, HSBC, etc.) o en tiendas como OXXO con línea de captura.",
-            "<strong>Recaudación de Rentas del Estado</strong> (Chihuahua): para derechos vehiculares estatales. Pago en oficinas, en línea o en bancos autorizados.",
-            "<strong>NO pagues a gestores no oficiales</strong>. Todos los pagos legítimos generan recibo oficial con folio."
+            "<strong>Comisiones bancarias:</strong> algunos bancos cobran $20-$50 MXN por gestionar el pago de línea de captura. Banamex y BBVA suelen no cobrar.",
+            "<strong>Adeudos previos al cambio de propietario:</strong> si el vendedor te traspasa un auto con multas o refrendos atrasados, vos los heredás al hacer el cambio. <strong>Antes de comprar, exigí al vendedor que pague todo lo pendiente.</strong>",
+            "<strong>Diferencia entre municipios:</strong> Cd. Juárez puede tener pequeñas variaciones de precios respecto a Chihuahua capital. Generalmente diferencias de $50-$200 MXN.",
+            "<strong>Refrendo prorrateado al cambiar de propietario:</strong> si el vendedor ya pagó el refrendo del año en curso, generalmente el comprador no paga nuevamente — pero confirmá esto al hacer el trámite.",
+            "<strong>Servicios de gestor (opcionales):</strong> si contratás un gestor para hacer el trámite por vos, costará entre $500 y $2,000 MXN adicionales según complejidad. <strong>No es obligatorio</strong> contratar gestor — el trámite lo podés hacer vos."
           ]
         }
       ],
       "faqs": [
         {
-          "q": "¿Los precios son iguales en todas las oficinas de Chihuahua?",
-          "a": "Los <strong>costos federales</strong> (REPUVE, regularización) son iguales en todo México. Los <strong>derechos estatales</strong> son los mismos en todo Chihuahua. Lo que varía son ciertos cargos municipales menores entre Ciudad Juárez, Chihuahua capital y otros municipios."
+          "q": "¿Por qué algunos sitios cobran por la consulta REPUVE si es gratis?",
+          "a": "Es fraude. La consulta ciudadana del REPUVE es 100% gratuita en el portal oficial. Los sitios que cobran están aprovechándose de gente que no sabe dónde acceder al servicio oficial. Denuncia esos sitios al 800 REPUVE 1."
         },
         {
-          "q": "¿Hay descuentos o subsidios disponibles?",
-          "a": "En algunos periodos del año hay <strong>jornadas de regularización gratuita o con descuento</strong> impulsadas por el gobierno estatal o municipal. Síguelas en redes sociales oficiales. También hay descuentos para adultos mayores y personas con discapacidad."
+          "q": "¿El costo de $2,500 de regularización es por vehículo o por persona?",
+          "a": "Por vehículo. Si querés regularizar 2 autos, pagás $5,000 MXN en total. Cada vehículo genera su propia línea de captura."
         },
         {
-          "q": "¿Cuánto cuesta hacer todo el trámite con un gestor?",
-          "a": "Los gestores cobran entre <strong>$500 y $2,000 MXN</strong> adicionales sobre el costo oficial del trámite. No es necesario contratar gestor — todos los trámites se pueden hacer directamente y los pasos están en esta guía."
+          "q": "¿Puedo pagar el refrendo y multas con tarjeta de crédito?",
+          "a": "Sí, en Recaudación de Rentas Chihuahua aceptan tarjeta. También por el portal en línea chihuahua.gob.mx con métodos de pago electrónico."
+        },
+        {
+          "q": "¿Hay descuentos por pago anticipado del refrendo?",
+          "a": "Sí, en Chihuahua hay descuentos por pago anticipado del refrendo durante los primeros meses del año (enero-marzo típicamente). Verificá en el portal oficial del estado el calendario y porcentaje de descuento vigente."
+        },
+        {
+          "q": "¿El costo de cambio de propietario incluye placas nuevas?",
+          "a": "Depende. En algunos casos se mantienen las placas (más barato), en otros se cambian (más caro, ~$2,200 MXN). El sistema determina automáticamente cuál aplica según la antigüedad de las placas."
+        },
+        {
+          "q": "¿Cuánto cuesta hacer todo el trámite completo si compré un auto chocolate y quiero emplacarlo?",
+          "a": "Aproximadamente: <strong>$2,500 (regularización federal) + $2,000 (alta de placas Chihuahua) + $700 (refrendo año actual) = ~$5,200 MXN</strong>. Más cualquier multa pendiente del estado de origen del vehículo."
+        },
+        {
+          "q": "¿Las motos tienen el mismo costo de regularización que los autos?",
+          "a": "Sí, el costo de regularización federal es $2,500 MXN para ambos. El costo estatal de placas para motos es más bajo (~$800-$1,200 MXN)."
+        },
+        {
+          "q": "¿Puedo deducir los gastos REPUVE en mi declaración fiscal?",
+          "a": "Solo si es un vehículo registrado a tu nombre con fines comerciales (empresa, taxi, repartos). Para autos particulares de uso personal no son deducibles. Consultá con tu contador."
         }
       ]
     },
@@ -1690,74 +1957,138 @@
     },
     {
       "slug": "regularizacion-autos-chocolate",
-      "h1": "Regularizacion de Autos Chocolate en Chihuahua 2026",
-      "title": "Regularizacion de Autos Chocolate Chihuahua 2026 - Costos y Requisitos",
-      "meta": "Como regularizar tu auto chocolate de procedencia extranjera en Chihuahua. Modulos REPUVE, requisitos, costo $2,500 MXN, plazos y oficinas en Ciudad Juarez y Chihuahua capital.",
+      "h1": "Regularización de Autos Chocolate en Chihuahua 2026: Guía Completa Paso a Paso",
+      "title": "Regularización Autos Chocolate Chihuahua 2026 - $2,500 MXN Paso a Paso",
+      "meta": "Cómo regularizar tu auto chocolate en Chihuahua 2026: requisitos, costo $2,500 MXN, módulos en Ciudad Juárez, Chihuahua, Cuauhtémoc. Guía completa del Decreto Federal.",
       "category": "Tramite",
-      "status_chip": "$2,500 MXN - Tramite federal",
-      "intro": "La <strong>regularizacion de autos chocolate en Chihuahua</strong> es uno de los tramites mas solicitados en el estado por su condicion fronteriza con Estados Unidos. Si tienes un vehiculo de procedencia extranjera (USA) ingresado al pais antes del 19 de octubre de 2021, puedes regularizarlo de forma legal pagando $2,500 MXN mediante los modulos del REPUVE habilitados en Chihuahua capital, Ciudad Juarez y otros municipios. En esta guia te explicamos paso a paso como hacerlo, que necesitas y donde acudir.",
+      "status_chip": "$2,500 MXN · Trámite federal · Cita previa",
+      "intro": "La <strong>regularización de autos chocolate en Chihuahua</strong> es el trámite más demandado del estado, especialmente en Ciudad Juárez por su condición fronteriza con El Paso, Texas. Si tenés un vehículo de procedencia extranjera ingresado al país <strong>antes del 19 de octubre de 2021</strong>, podés legalizarlo de forma federal pagando <strong>$2,500 MXN</strong> en los módulos REPUVE habilitados en Chihuahua.<br><br>El Decreto de Regularización fue publicado por el Gobierno Federal y es operado por la Secretaría de Seguridad y Protección Ciudadana (SSPC). Te da <strong>seguridad jurídica</strong>, permite emplacar legalmente en Chihuahua, evita decomisos en retenes y te permite circular en todo el país sin riesgo legal.<br><br>En esta guía completa te explicamos desde cero: qué es un auto chocolate, si tu vehículo califica, qué documentos necesitás, cómo pagar, dónde acudir y cómo emplacar después.",
       "sections": [
         {
-          "heading": "Que es un auto chocolate y por que regularizarlo",
+          "heading": "Qué es un auto chocolate y por qué regularizarlo en Chihuahua",
           "body": [
-            "Un <strong>auto chocolate</strong> es un vehiculo de procedencia extranjera (mayormente de Estados Unidos) que circula en Mexico sin estar legalmente importado ni registrado en el padron vehicular nacional. En Chihuahua, por su condicion fronteriza con El Paso, TX y otras ciudades estadounidenses, existen miles de vehiculos en esta situacion.",
-            "Regularizar tu auto chocolate te da: <strong>certeza juridica</strong> sobre la propiedad, posibilidad de emplacar con placas mexicanas, evitar decomisos en retenes, poder transitar libremente por todo el pais sin riesgos legales, y obtener seguro de cobertura amplia.",
-            "El Gobierno Federal habilito un Decreto de Regularizacion que aplica para autos ingresados al pais <strong>antes del 19 de octubre de 2021</strong>. Vehiculos posteriores a esa fecha no son elegibles para este programa."
+            "Un <strong>auto chocolate</strong> es un vehículo de procedencia extranjera (la mayoría de Estados Unidos) que circula en México sin haber sido legalmente importado. No está registrado en el padrón vehicular nacional, no tiene placas mexicanas oficiales, y técnicamente está en una situación irregular.",
+            "En Chihuahua, por la cercanía con la frontera (El Paso, Las Cruces, Albuquerque), <strong>se estima que hay más de 200,000 autos chocolate</strong>. La mayoría están en Ciudad Juárez (1.5M habitantes) y zonas aledañas, donde el cruce fronterizo es habitual.",
+            "<strong>Por qué regularizar:</strong>",
+            "&bull; <strong>Seguridad jurídica:</strong> tenés certeza legal sobre la propiedad del vehículo. Antes de regularizar, si tu auto es robado o accidentado, no podés reclamar legalmente porque 'no existe' en el padrón.",
+            "&bull; <strong>Posibilidad de emplacar:</strong> sin regularización no podés conseguir placas mexicanas legales. Con regularización, podés emplacar en Chihuahua y circular legalmente.",
+            "&bull; <strong>Evitar decomisos:</strong> los retenes federales (Guardia Nacional, INE) y estatales pueden decomisarte el auto si circula irregular. Una vez regularizado, ya no te pueden detener por ese motivo.",
+            "&bull; <strong>Tránsito libre por todo el país:</strong> hoy muchos autos chocolate solo pueden circular cerca de la frontera (zona libre). Regularizados, podés ir a cualquier punto de México.",
+            "&bull; <strong>Acceso a seguros:</strong> las aseguradoras solo aseguran vehículos legales. Sin regularización no tenés cobertura amplia."
           ]
         },
         {
-          "heading": "Requisitos para regularizar tu auto chocolate",
+          "heading": "¿Tu auto califica? Requisitos de elegibilidad",
           "body": [
-            "<strong>Documentos del propietario:</strong> CURP, identificacion oficial vigente (INE), comprobante de domicilio no mayor a 3 meses (luz, agua, gas), correo electronico activo.",
-            "<strong>Documentos del vehiculo:</strong> titulo original del pais de origen (Title de USA), manifiesto firmado en tinta azul, 2 fotografias (vidrio frontal con NIV visible y puerta del piloto).",
-            "<strong>Pago:</strong> linea de captura por $2,500 MXN pagada en banco autorizado (HSBC, Banamex, Banorte, BBVA, Santander, Scotiabank).",
-            "<strong>Cita previa:</strong> obligatoria, agendada en <a href='https://regularizaauto.sspc.gob.mx' rel='noopener'>regularizaauto.sspc.gob.mx</a>.",
-            "<strong>El vehiculo fisicamente</strong> debes presentarlo el dia de la cita en el modulo seleccionado."
+            "El Decreto de Regularización tiene <strong>condiciones específicas de elegibilidad</strong>. No todos los autos importados pueden regularizarse bajo este programa.",
+            "<strong>1. Fecha de ingreso al país:</strong> el vehículo debe haber ingresado a México <strong>antes del 19 de octubre de 2021</strong>. Vehículos posteriores a esa fecha NO califican y deberían pasar por importación definitiva regular con agente aduanal (proceso mucho más caro, $50,000-$150,000 MXN).",
+            "<strong>2. Tipo de vehículo:</strong> califican autos particulares, motocicletas y pickups de uso particular. Vehículos pesados, autobuses y maquinaria especial tienen otros procesos.",
+            "<strong>3. Año modelo:</strong> sin restricción de año modelo bajo el Decreto vigente. Aplica para autos de cualquier antigüedad.",
+            "<strong>4. Estado físico:</strong> el vehículo debe estar operativo y presentarse físicamente al módulo. Autos en pérdida total o desarmados no califican.",
+            "<strong>5. NIV legible:</strong> el NIV de 17 caracteres debe estar legible en el parabrisas, puerta del piloto y chasis. Si está alterado o ilegible, deberías acudir a perito primero.",
+            "<strong>6. Sin reporte de robo:</strong> si el vehículo tiene reporte de robo en EE.UU. o México, no se puede regularizar. Antes de iniciar, verificá en el sitio de Carfax o equivalente que esté limpio.",
+            "<strong>7. Propietario residente en México:</strong> el propietario debe acreditar residencia legal en México (INE para mexicanos, tarjeta de residencia para extranjeros)."
           ]
         },
         {
-          "heading": "Modulos REPUVE para regularizacion en Chihuahua",
+          "heading": "Requisitos completos: qué documentos necesitás",
           "body": [
-            "<strong>Chihuahua capital:</strong> Av. Deportiva Sur 8403, Avalos. Atencion lunes a viernes de 8:00 a 15:00.",
-            "<strong>Ciudad Juarez:</strong> varios modulos itinerantes (El Punto, presidencia municipal, Modulo Mitla, Zaragoza). Mas detalles en <a href='/oficinas/ciudad-juarez/'>nuestra pagina de Ciudad Juarez</a>.",
-            "<strong>Otros municipios:</strong> Cuauhtemoc, Delicias, Parral, Nuevo Casas Grandes tienen modulos abiertos por temporadas. Consulta el calendario oficial en regularizaauto.sspc.gob.mx.",
-            "Los modulos itinerantes suelen abrir durante 2 a 4 semanas en cada ubicacion. Las citas se llenan rapido, por lo que conviene agendar apenas se abra el periodo."
+            "<strong>Documentos del propietario:</strong>",
+            "&bull; CURP impreso del portal renapo.gob.mx.",
+            "&bull; Identificación oficial vigente: INE para mexicanos, FM2/FM3/tarjeta de residencia para extranjeros.",
+            "&bull; Comprobante de domicilio reciente (no mayor a 3 meses): luz, agua, gas, predial, teléfono.",
+            "&bull; Correo electrónico activo y teléfono celular.",
+            "<strong>Documentos del vehículo:</strong>",
+            "&bull; <strong>Título original del país de origen</strong> (Title de EE.UU.). Debe estar a nombre del propietario o tener endoso firmado.",
+            "&bull; <strong>Manifiesto firmado en tinta azul</strong>: formato oficial disponible en regularizaauto.sspc.gob.mx. Imprimilo, llenalo a mano con tinta azul (no negra) y firmalo.",
+            "&bull; <strong>2 fotografías</strong> a color, una del vidrio frontal con NIV visible (incluir matrícula provisoria si tiene) y otra de la puerta del piloto.",
+            "<strong>Pago:</strong>",
+            "&bull; Línea de captura por <strong>$2,500 MXN</strong>.",
+            "&bull; Pagada en banco autorizado (HSBC, Banamex, Banorte, BBVA, Santander, Scotiabank).",
+            "&bull; Comprobante bancario con sello físico o confirmación de transferencia.",
+            "<strong>Cita previa:</strong>",
+            "&bull; Obligatoria, generada en regularizaauto.sspc.gob.mx.",
+            "&bull; Imprimí el comprobante o tenelo en el celular.",
+            "<strong>Vehículo físicamente:</strong> presentarlo el día de la cita en el módulo seleccionado. Sin auto, no hay trámite."
           ]
         },
         {
-          "heading": "Paso a paso para regularizar",
+          "heading": "Módulos REPUVE para regularización en Chihuahua",
           "body": [
-            "<strong>1.</strong> Entra a <a href='https://regularizaauto.sspc.gob.mx' rel='noopener'>regularizaauto.sspc.gob.mx</a> y crea tu cuenta con CURP.",
-            "<strong>2.</strong> Completa el formulario con datos del vehiculo (NIV de 17 caracteres) y datos personales.",
-            "<strong>3.</strong> Genera y descarga la linea de captura por $2,500 MXN.",
-            "<strong>4.</strong> Paga en banco autorizado (presencial o transferencia).",
-            "<strong>5.</strong> Agenda cita en el modulo de Chihuahua que prefieras (capital, Juarez, etc.).",
-            "<strong>6.</strong> El dia de la cita lleva tu vehiculo, documentos originales en folder, pago y la cita impresa.",
-            "<strong>7.</strong> Personal del REPUVE verificara los datos, instalara el chip y entregara la constancia.",
-            "<strong>8.</strong> Posteriormente acude a Control Vehicular del estado para emplacar."
+            "En Chihuahua hay módulos de regularización en las principales ciudades. Disponibilidad varía según el calendario federal:",
+            "<strong>Chihuahua capital:</strong> Av. Deportiva Sur 8403, Ávalos, CP 31074. Lunes a viernes de 8:00 a 15:00. Es el módulo permanente principal. <a href='/oficinas/chihuahua-capital/'>Ver detalles</a>.",
+            "<strong>Ciudad Juárez:</strong> el módulo de mayor demanda. Varios sub-módulos itinerantes (El Punto, presidencia municipal, Modulo Mitla, Zaragoza, Pronaf). Horarios variables. <a href='/oficinas/ciudad-juarez/'>Ver detalles</a>.",
+            "<strong>Cuauhtémoc, Delicias, Hidalgo del Parral, Nuevo Casas Grandes, Camargo:</strong> módulos itinerantes que abren por periodos de 2-4 semanas. Verificá calendario en regularizaauto.sspc.gob.mx.",
+            "<strong>Tip:</strong> en Ciudad Juárez los cupos se agotan en días. En módulos itinerantes de municipios chicos hay más disponibilidad. Si podés desplazarte 100-200 km, te ahorra semanas de espera."
+          ]
+        },
+        {
+          "heading": "Proceso paso a paso: del registro al emplacado",
+          "body": [
+            "<strong>1. Verificá elegibilidad (10 min):</strong> confirmá que tu auto ingresó al país antes del 19 oct 2021 y tiene Title original.",
+            "<strong>2. Creá cuenta en la plataforma (15 min):</strong> entrá a regularizaauto.sspc.gob.mx y registrate con CURP, correo, teléfono.",
+            "<strong>3. Llená el formulario (30 min):</strong> datos personales completos + datos del vehículo (NIV de 17 chars, marca, modelo, año, color, datos del motor).",
+            "<strong>4. Generá línea de captura (5 min):</strong> el sistema te devuelve una referencia bancaria de $2,500 MXN.",
+            "<strong>5. Pagá en banco (mismo día):</strong> presencial o por app. Guardá el comprobante.",
+            "<strong>6. Agendá cita (10 min):</strong> elegí el módulo (Cd. Juárez, Chihuahua capital, etc.) y fecha disponible. Imprimí el comprobante.",
+            "<strong>7. Preparate para la cita:</strong> imprimí manifiesto, sacá las 2 fotos del vehículo, reuní todos los documentos en una carpeta.",
+            "<strong>8. Día de la cita (1-3 horas):</strong> llegá 30 min antes con el vehículo. Personal del REPUVE: verifica documentos → inspecciona el vehículo (NIV físico) → cobra (si no pagaste antes) → instala chip → entrega constancia de inscripción.",
+            "<strong>9. Después de la regularización: emplacar en Chihuahua (1-2 semanas):</strong> con la constancia REPUVE, acudí a Control Vehicular del estado a tramitar placas chihuahuenses. Costo adicional: $1,800-$2,500 MXN.",
+            "<strong>10. Pagá refrendo del año:</strong> aproximadamente $700 MXN."
+          ]
+        },
+        {
+          "heading": "Errores comunes y cómo evitarlos",
+          "body": [
+            "<strong>Error 1: No tener el Title original.</strong> Si compraste un auto chocolate sin Title o solo con 'carta poder', NO podés regularizar. Necesitás el Title legítimo de EE.UU. con endoso a tu nombre o cadena de endosos clara desde el dueño en EE.UU.",
+            "<strong>Error 2: NIV alterado o ilegible.</strong> El módulo rechaza inmediatamente. Si tu NIV está deteriorado, acudí primero a un perito de la Fiscalía para que dictamine y emita un documento que respalde la identidad del vehículo.",
+            "<strong>Error 3: Pagar en efectivo a 'gestores'.</strong> Hay personas que ofrecen 'arreglar todo' por $4,000-$8,000 MXN incluyendo el trámite. Si pagás en efectivo a un tercero, no tenés garantía. El trámite real son $2,500 MXN al gobierno, pagados en banco con línea de captura. Hacelo vos.",
+            "<strong>Error 4: No pagar antes de la cita.</strong> El módulo no procesa sin el comprobante bancario previo. Pagá con 24-48h de anticipación para asegurar acreditación.",
+            "<strong>Error 5: Llegar tarde a la cita.</strong> Tolerancia típica 15-30 min. Después de ese tiempo perdés el lugar y debés reagendar — y si el módulo es itinerante, puede haber cerrado para cuando consigas nueva cita.",
+            "<strong>Error 6: Olvidar el manifiesto firmado.</strong> Es el documento más olvidado. Imprímilo, firmalo en tinta azul y revisalo antes de salir de casa."
           ]
         }
       ],
       "faqs": [
         {
-          "q": "Puedo regularizar un auto ingresado despues de octubre 2021?",
-          "a": "No. El Decreto solo aplica para vehiculos importados al pais antes del 19 de octubre de 2021. Vehiculos posteriores deben pasar por importacion definitiva regular con agente aduanal."
+          "q": "¿Sigue vigente el Decreto de Regularización en 2026?",
+          "a": "Sí, el Decreto sigue vigente para vehículos ingresados al país antes del 19 de octubre de 2021. El programa ha tenido prórrogas sucesivas. Confirmá fecha de cierre actualizada en regularizaauto.sspc.gob.mx."
         },
         {
-          "q": "Cuanto tiempo tarda el tramite?",
-          "a": "El dia de la cita el tramite presencial dura entre 1 y 2 horas. El proceso total desde agendar cita hasta emplacar puede tomar de 2 semanas a 3 meses dependiendo de la disponibilidad de citas en tu modulo y de Control Vehicular."
+          "q": "¿Qué pasa si mi auto ingresó después del 19 de octubre de 2021?",
+          "a": "<strong>No califica</strong> para este programa de regularización. Tu opción es la <strong>importación definitiva con agente aduanal</strong>, que es mucho más cara ($50,000-$150,000 MXN) e implica pago de impuestos de importación, ISAN, IVA, etc. Es viable solo para autos de alto valor."
         },
         {
-          "q": "Que pasa si pierdo la cita?",
-          "a": "Pierdes el lugar y la linea de captura sigue vigente. Debes volver a agendar cita en la plataforma. Te recomendamos llegar con 30 minutos de anticipacion el dia programado."
+          "q": "¿Cuánto tiempo total desde el inicio hasta tener placas chihuahuenses?",
+          "a": "<strong>4-8 semanas en promedio</strong>: 1-2 semanas para conseguir cita y completar regularización federal, 1-2 semanas para emplacar en Control Vehicular del estado. En zonas con alta demanda (Cd. Juárez) puede tardar más."
         },
         {
-          "q": "Puedo regularizar una motocicleta chocolate?",
-          "a": "Si, las motocicletas estan incluidas en el programa con el mismo costo de $2,500 MXN y los mismos requisitos. Ver <a href='/repuve-motos/'>REPUVE Motos Chihuahua</a> para detalles."
+          "q": "¿El chip REPUVE viene incluido en los $2,500 MXN?",
+          "a": "Sí. El día de la cita, después de verificar tus documentos y el vehículo, el módulo instala el chip RFID en tu parabrisas sin costo adicional. Forma parte del proceso de regularización."
         },
         {
-          "q": "Que pasa si mi auto no tiene NIV legible?",
-          "a": "Si el NIV (Numero de Identificacion Vehicular) esta desgastado o no es legible, el modulo puede rechazar el tramite. En ese caso debes acudir a un perito para que dictamine y emita un documento que respalde la identidad del vehiculo."
+          "q": "¿Puedo regularizar una motocicleta chocolate con el mismo trámite?",
+          "a": "Sí. Las motocicletas tienen el mismo proceso, mismo costo ($2,500 MXN) y mismos requisitos. El módulo realiza la inspección y la instalación del chip de la misma manera."
+        },
+        {
+          "q": "¿Qué pasa si compré el auto chocolate sin Title?",
+          "a": "Tu opción es <strong>recuperar el Title original</strong>. Contactá al DMV del estado donde fue emplacado el auto originalmente en EE.UU. y solicitá una reposición. Demora 4-8 semanas. Sin Title no podés regularizar."
+        },
+        {
+          "q": "¿Después de regularizar puedo circular en cualquier estado?",
+          "a": "Sí. Una vez regularizado y emplacado en Chihuahua, podés circular libremente en cualquier estado de México sin restricciones. El REPUVE es base federal."
+        },
+        {
+          "q": "¿Si vivo en Ciudad Juárez puedo hacer el trámite en otro módulo de Chihuahua?",
+          "a": "Sí. No hay restricción geográfica dentro del estado. Si Cd. Juárez está saturado, podés agendar en Chihuahua capital, Cuauhtémoc o cualquier otro módulo abierto. Solo necesitás trasladarte el día de la cita."
+        },
+        {
+          "q": "¿Hay riesgo de que el auto sea decomisado durante el trámite?",
+          "a": "Mientras tengas el comprobante de cita confirmada y la línea de captura pagada, podés mostrar esos documentos en caso de retén. Las autoridades suelen respetar trámites en proceso. Una vez que tenés la constancia REPUVE, ya estás regularizado."
+        },
+        {
+          "q": "¿Puedo vender el auto inmediatamente después de regularizarlo?",
+          "a": "Sí, pero los compradores generalmente pagan más por autos ya con placas mexicanas. Conviene completar también el emplacado en Control Vehicular antes de vender."
         }
       ]
     },

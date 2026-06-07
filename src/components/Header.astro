@@ -19,7 +19,7 @@ const isActive = (prefix) => path === prefix || path.startsWith(prefix);
     <nav class="main-nav" aria-label="Navegacion principal">
       <ul>
         <li><a href="/consulta-ciudadana/" class={isActive('/consulta-ciudadana') ? 'active' : ''}>Consultar</a></li>
-        <li><a href="/oficinas/chihuahua-capital/" class={isActive('/oficinas') ? 'active' : ''}>Oficinas</a></li>
+        <li><a href="/oficinas/" class={isActive('/oficinas') ? 'active' : ''}>Oficinas</a></li>
         <li><a href="/agendar-cita/" class={isActive('/agendar-cita') ? 'active' : ''}>Agendar Cita</a></li>
         <li><a href="/requisitos/" class={isActive('/requisitos') ? 'active' : ''}>Requisitos</a></li>
         <li><a href="/preguntas-frecuentes/" class={isActive('/preguntas-frecuentes') ? 'active' : ''}>FAQs</a></li>

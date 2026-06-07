@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ConsultaForm from '../components/ConsultaForm.astro';
 import { pagesCentrales, getPageBySlug, getRelatedPages, site, iconForCategory } from '../data/datos.js';
 
 export function getStaticPaths() {
@@ -12,6 +13,139 @@ export function getStaticPaths() {
 
 const { page } = Astro.props;
 const related = getRelatedPages(page.slug, 7);
+
+// Slugs donde queremos mostrar el formulario de consulta al inicio del article-main
+const SLUGS_CON_FORM = ['consulta-ciudadana', 'consulta-por-placa', 'consulta-por-niv'];
+const showForm = SLUGS_CON_FORM.includes(page.slug);
+
+// Tab por defecto según el slug
+const defaultTab = page.slug === 'consulta-por-niv' ? 'niv' : 'placa';
+
+// "Próximos pasos" — varían por intención (slug o categoría)
+const NEXT_STEPS_BY_SLUG: Record<string, { title: string, items: { label: string, href: string, icon: string, desc: string }[] }> = {
+  'consulta-ciudadana': {
+    title: '¿Qué hacer después de consultar?',
+    items: [
+      { label: 'Si aparece con reporte de robo', href: '/auto-robado/', icon: 'fa-triangle-exclamation', desc: 'No compres y denuncia' },
+      { label: 'Si está limpio y vas a comprarlo', href: '/pasos-comprar-auto-usado/', icon: 'fa-list-check', desc: 'Checklist completo de compra' },
+      { label: 'Cambio de propietario', href: '/cambio-propietario/', icon: 'fa-id-card', desc: 'Trámite legal al comprar' },
+    ]
+  },
+  'consulta-por-placa': {
+    title: 'Próximos pasos',
+    items: [
+      { label: 'Consulta también por NIV', href: '/consulta-por-niv/', icon: 'fa-barcode', desc: 'Verificación cruzada' },
+      { label: 'Si compras el auto', href: '/pasos-comprar-auto-usado/', icon: 'fa-list-check', desc: 'Guía paso a paso' },
+      { label: 'Historial vehicular completo', href: '/historial-vehicular/', icon: 'fa-clock-rotate-left', desc: 'Cómo obtenerlo' },
+    ]
+  },
+  'consulta-por-niv': {
+    title: 'Próximos pasos',
+    items: [
+      { label: '¿Dónde encontrar el NIV?', href: '/donde-esta-niv/', icon: 'fa-search', desc: 'Ubicación en el vehículo' },
+      { label: '¿Qué significa cada estatus?', href: '/auto-no-aparece-repuve/', icon: 'fa-circle-question', desc: 'Posibles resultados' },
+      { label: 'Pasos para comprar usado', href: '/pasos-comprar-auto-usado/', icon: 'fa-list-check', desc: 'Guía completa' },
+    ]
+  },
+  'agendar-cita': {
+    title: 'Después de agendar tu cita',
+    items: [
+      { label: 'Ver requisitos a llevar', href: '/requisitos/', icon: 'fa-folder-open', desc: 'Documentos necesarios' },
+      { label: 'Costos del trámite', href: '/costos/', icon: 'fa-coins', desc: 'Pagos y montos 2026' },
+      { label: '¿Cómo llegar?', href: '/como-llegar/', icon: 'fa-route', desc: 'Transporte y mapa' },
+    ]
+  },
+  'requisitos': {
+    title: 'Próximos pasos',
+    items: [
+      { label: 'Agendá tu cita', href: '/agendar-cita/', icon: 'fa-calendar-check', desc: 'Reservá turno online' },
+      { label: 'Conocé los costos', href: '/costos/', icon: 'fa-coins', desc: 'Precios actualizados 2026' },
+      { label: 'Encontrá la oficina más cercana', href: '/oficinas/', icon: 'fa-location-dot', desc: '7 oficinas en Chihuahua' },
+    ]
+  },
+  'costos': {
+    title: 'Próximos pasos',
+    items: [
+      { label: 'Documentos necesarios', href: '/requisitos/', icon: 'fa-folder-open', desc: 'Qué llevar a la oficina' },
+      { label: 'Agendá tu cita', href: '/agendar-cita/', icon: 'fa-calendar-check', desc: 'Reservá turno online' },
+      { label: 'Adeudos vehiculares', href: '/adeudos-vehiculares/', icon: 'fa-money-bill-wave', desc: 'Verificá pendientes' },
+    ]
+  },
+  'auto-robado': {
+    title: 'Si te robaron el auto',
+    items: [
+      { label: 'Reporte de robo paso a paso', href: '/reporte-robo-vehicular/', icon: 'fa-file-shield', desc: 'Denuncia + REPUVE' },
+      { label: 'Verificá si tu auto fue recuperado', href: '/vehiculos-recuperados/', icon: 'fa-car-side', desc: 'Lista de recuperados' },
+      { label: 'Consulta REPUVE', href: '/consulta-ciudadana/', icon: 'fa-magnifying-glass', desc: 'Verificá el estatus' },
+    ]
+  },
+  'regularizacion-autos-chocolate': {
+    title: 'Próximos pasos',
+    items: [
+      { label: 'Oficina más cercana', href: '/oficinas/ciudad-juarez/', icon: 'fa-location-dot', desc: 'Cd. Juárez (frontera)' },
+      { label: 'Documentos requeridos', href: '/requisitos/', icon: 'fa-folder-open', desc: 'Lista completa' },
+      { label: 'Chip REPUVE', href: '/chip-repuve/', icon: 'fa-microchip', desc: 'Después de regularizar' },
+    ]
+  },
+  'inscribir-vehiculo': {
+    title: 'Próximos pasos',
+    items: [
+      { label: 'Documentos requeridos', href: '/requisitos/', icon: 'fa-folder-open', desc: 'Lista completa' },
+      { label: 'Costos del trámite', href: '/costos/', icon: 'fa-coins', desc: 'Precios 2026' },
+      { label: 'Chip REPUVE', href: '/chip-repuve/', icon: 'fa-microchip', desc: 'Instalación gratuita' },
+    ]
+  },
+  'cambio-propietario': {
+    title: 'Próximos pasos',
+    items: [
+      { label: 'Antes: consultá el REPUVE', href: '/consulta-ciudadana/', icon: 'fa-magnifying-glass', desc: 'Verificá el vehículo' },
+      { label: 'Verificá adeudos', href: '/adeudos-vehiculares/', icon: 'fa-money-bill-wave', desc: 'Multas y refrendos' },
+      { label: 'Documentos necesarios', href: '/requisitos/', icon: 'fa-folder-open', desc: 'Factura, INE, CURP' },
+    ]
+  },
+  'que-es-niv': {
+    title: 'Próximos pasos',
+    items: [
+      { label: '¿Dónde está el NIV en mi auto?', href: '/donde-esta-niv/', icon: 'fa-search', desc: 'Ubicaciones típicas' },
+      { label: 'Consultá por NIV', href: '/consulta-por-niv/', icon: 'fa-magnifying-glass', desc: 'Verificación REPUVE' },
+      { label: 'Historial vehicular', href: '/historial-vehicular/', icon: 'fa-clock-rotate-left', desc: 'Reporte completo' },
+    ]
+  },
+};
+
+// Default next steps por categoría si no hay slug-specific
+const NEXT_STEPS_BY_CATEGORY: Record<string, { title: string, items: { label: string, href: string, icon: string, desc: string }[] }> = {
+  'Tramite': {
+    title: 'Próximos pasos',
+    items: [
+      { label: 'Documentos requeridos', href: '/requisitos/', icon: 'fa-folder-open', desc: 'Qué llevar a la oficina' },
+      { label: 'Costos actualizados', href: '/costos/', icon: 'fa-coins', desc: 'Precios 2026' },
+      { label: 'Oficinas en Chihuahua', href: '/oficinas/', icon: 'fa-location-dot', desc: '7 sedes en el estado' },
+    ]
+  },
+  'Consulta': {
+    title: 'Próximos pasos',
+    items: [
+      { label: 'Pasos para comprar usado', href: '/pasos-comprar-auto-usado/', icon: 'fa-list-check', desc: 'Guía completa' },
+      { label: 'Cambio de propietario', href: '/cambio-propietario/', icon: 'fa-id-card', desc: 'Trámite legal' },
+      { label: 'Si aparece con reporte', href: '/auto-robado/', icon: 'fa-triangle-exclamation', desc: 'Qué hacer' },
+    ]
+  },
+  'Informacion': {
+    title: 'Relacionado',
+    items: [
+      { label: 'Consulta REPUVE gratis', href: '/consulta-ciudadana/', icon: 'fa-magnifying-glass', desc: 'En 2 minutos' },
+      { label: 'Oficinas en Chihuahua', href: '/oficinas/', icon: 'fa-location-dot', desc: '7 sedes disponibles' },
+      { label: 'Preguntas frecuentes', href: '/preguntas-frecuentes/', icon: 'fa-circle-question', desc: 'Dudas comunes' },
+    ]
+  },
+};
+
+const nextSteps = NEXT_STEPS_BY_SLUG[page.slug] || NEXT_STEPS_BY_CATEGORY[page.category] || NEXT_STEPS_BY_CATEGORY['Informacion'];
+
+// Punto medio del contenido para insertar CTA intermedio
+const sectionsCount = page.sections ? page.sections.length : 0;
+const ctaInsertAt = Math.floor(sectionsCount / 2);
 
 // Build FAQ schema if has faqs
 const schemas = [];
@@ -78,13 +212,79 @@ const breadcrumbs = [
 
     <div class="article-grid">
       <article class="article-main">
-        {page.sections && page.sections.map(s => (
-          <section>
-            <h2>{s.heading}</h2>
-            {s.body && s.body.map(p => (
-              <p set:html={p} />
-            ))}
-          </section>
+        {showForm && (
+          <div style="margin-bottom: var(--space-7)">
+            <ConsultaForm defaultTab={defaultTab} bg="light" />
+          </div>
+        )}
+
+        <!-- DATOS CLAVE CARD (visible al inicio, mobile-friendly) -->
+        <div class="key-info-card">
+          <h3 class="key-info-title">
+            <i class="fa-solid fa-circle-info"></i> Datos clave
+          </h3>
+          <div class="key-info-grid">
+            <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`} class="key-info-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <div class="key-info-label">Línea REPUVE</div>
+                <div class="key-info-value">{site.phone_repuve}</div>
+              </div>
+            </a>
+            <a href="/agendar-cita/" class="key-info-item">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div>
+                <div class="key-info-label">Agendar cita</div>
+                <div class="key-info-value">En línea, 24/7</div>
+              </div>
+            </a>
+            <a href="/oficinas/" class="key-info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <div class="key-info-label">Oficinas en Chihuahua</div>
+                <div class="key-info-value">7 sedes</div>
+              </div>
+            </a>
+            <a href="/consulta-ciudadana/" class="key-info-item">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <div>
+                <div class="key-info-label">Consulta REPUVE</div>
+                <div class="key-info-value">Gratis · Online</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {page.sections && page.sections.map((s, idx) => (
+          <>
+            <section>
+              <h2>{s.heading}</h2>
+              {s.body && s.body.map(p => (
+                <p set:html={p} />
+              ))}
+            </section>
+
+            {/* CTA intermedio en el punto medio del contenido */}
+            {idx === ctaInsertAt && sectionsCount >= 3 && (
+              <div class="cta-mid">
+                <div class="cta-mid-icon">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="cta-mid-body">
+                  <div class="cta-mid-title">¿Querés actuar ahora?</div>
+                  <p class="cta-mid-desc">Consultá el REPUVE gratis o agendá tu cita en línea sin moverte de donde estás.</p>
+                  <div class="cta-mid-actions">
+                    <a href="/consulta-ciudadana/" class="btn btn-primary">
+                      <i class="fa-solid fa-magnifying-glass"></i> Consultar gratis
+                    </a>
+                    <a href="/agendar-cita/" class="btn btn-accent">
+                      <i class="fa-solid fa-calendar-check"></i> Agendar cita
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
         ))}
 
         {page.faqs && page.faqs.length > 0 && (
@@ -100,6 +300,26 @@ const breadcrumbs = [
             </div>
           </section>
         )}
+
+        <!-- PRÓXIMOS PASOS — varía según intención de la página -->
+        <section class="next-steps">
+          <h2>{nextSteps.title}</h2>
+          <div class="next-steps-grid">
+            {nextSteps.items.map((step, i) => (
+              <a href={step.href} class="next-step-card">
+                <div class="next-step-num">{i + 1}</div>
+                <div class="next-step-content">
+                  <div class="next-step-label">
+                    <i class={`fa-solid ${step.icon}`}></i>
+                    <strong>{step.label}</strong>
+                  </div>
+                  <div class="next-step-desc">{step.desc}</div>
+                </div>
+                <i class="fa-solid fa-chevron-right next-step-arrow"></i>
+              </a>
+            ))}
+          </div>
+        </section>
 
         <div class="tip-box" style="margin-top:2.5rem">
           <p>
@@ -151,6 +371,7 @@ const breadcrumbs = [
             <li><a href="/oficinas/cuauhtemoc/"><span>Cuauhtémoc</span><i class="fa-solid fa-chevron-right"></i></a></li>
             <li><a href="/oficinas/delicias/"><span>Delicias</span><i class="fa-solid fa-chevron-right"></i></a></li>
             <li><a href="/oficinas/hidalgo-del-parral/"><span>Hidalgo del Parral</span><i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="/oficinas/"><span><strong>Ver todas las oficinas</strong></span><i class="fa-solid fa-chevron-right"></i></a></li>
           </ul>
         </div>
       </aside>
@@ -167,4 +388,315 @@ const breadcrumbs = [
       </div>
     </section>
   </div>
+
+  <!-- Sticky bottom CTA mobile-only -->
+  <div class="sticky-bottom-cta">
+    <a href="/consulta-ciudadana/#consultar" class="sticky-cta-btn sticky-cta-btn-primary" aria-label="Consultar gratis">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>Consultar</span>
+    </a>
+    <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`} class="sticky-cta-btn" aria-label="Llamar REPUVE">
+      <i class="fa-solid fa-phone"></i>
+      <span>Llamar</span>
+    </a>
+    <a href="/oficinas/" class="sticky-cta-btn" aria-label="Ver oficinas">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Oficinas</span>
+    </a>
+  </div>
 </Base>
+
+<style>
+  /* Datos clave card (al inicio del artículo) */
+  .key-info-card {
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, #faf6e8 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+  }
+
+  .key-info-title {
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .key-info-title i {
+    color: var(--color-accent);
+  }
+
+  .key-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-3);
+  }
+
+  .key-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all 0.18s ease;
+  }
+
+  .key-info-item:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-text);
+  }
+
+  .key-info-item i {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .key-info-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--color-text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+  }
+
+  .key-info-value {
+    font-size: 0.92rem;
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  /* CTA intermedio (entre sections) */
+  .cta-mid {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    background: linear-gradient(135deg, #fef9e7 0%, #fff9e0 100%);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: var(--space-5);
+    margin: var(--space-6) 0;
+  }
+
+  .cta-mid-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .cta-mid-body {
+    flex: 1;
+  }
+
+  .cta-mid-title {
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+
+  .cta-mid-desc {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .cta-mid-actions {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  /* Próximos pasos */
+  .next-steps {
+    margin-top: var(--space-7);
+    padding-top: var(--space-6);
+    border-top: 2px solid var(--color-border);
+  }
+
+  .next-steps h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-5);
+  }
+
+  .next-steps-grid {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .next-step-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all 0.18s ease;
+  }
+
+  .next-step-card:hover {
+    border-color: var(--color-primary);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+    color: var(--color-text);
+  }
+
+  .next-step-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .next-step-content {
+    flex: 1;
+  }
+
+  .next-step-label {
+    color: var(--color-text);
+    font-size: 1rem;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .next-step-label i {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+  }
+
+  .next-step-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .next-step-arrow {
+    color: var(--color-text-soft);
+    transition: color 0.18s ease;
+  }
+
+  .next-step-card:hover .next-step-arrow {
+    color: var(--color-primary);
+  }
+
+  /* Sticky bottom bar mobile (mobile-first) */
+  .sticky-bottom-cta {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .sticky-bottom-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+      padding: var(--space-2);
+      gap: var(--space-2);
+    }
+
+    .sticky-cta-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-2);
+      text-decoration: none;
+      color: var(--color-text);
+      font-size: 0.72rem;
+      font-weight: 600;
+      gap: 4px;
+      border-radius: var(--radius-sm);
+      transition: background 0.15s ease;
+    }
+
+    .sticky-cta-btn:active {
+      background: var(--color-bg-alt);
+    }
+
+    .sticky-cta-btn i {
+      font-size: 1.15rem;
+      color: var(--color-accent);
+    }
+
+    .sticky-cta-btn-primary {
+      background: var(--color-primary);
+      color: white !important;
+    }
+
+    .sticky-cta-btn-primary i {
+      color: white;
+    }
+
+    .sticky-cta-btn-primary:active {
+      background: var(--color-primary-hover);
+    }
+
+    main {
+      padding-bottom: 80px;
+    }
+
+    /* CTA intermedio: stack vertical en mobile */
+    .cta-mid {
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .cta-mid-actions {
+      flex-direction: column;
+    }
+
+    .cta-mid-actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* Próximos pasos: ajustes mobile */
+    .next-step-card {
+      gap: var(--space-3);
+      padding: var(--space-4);
+    }
+
+    .next-step-num {
+      width: 30px;
+      height: 30px;
+      font-size: 0.85rem;
+    }
+  }
+</style>

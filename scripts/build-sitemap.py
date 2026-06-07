@@ -29,7 +29,12 @@ for p in data['pages_centrales']:
         'changefreq': 'monthly'
     })
 
-# Oficinas (7)
+# Oficinas (7) + índice /oficinas/
+urls.append({
+    'loc': f'{domain}/oficinas/',
+    'priority': '0.9',
+    'changefreq': 'monthly'
+})
 for o in data['oficinas']:
     urls.append({
         'loc': f"{domain}/oficinas/{o['slug']}/",

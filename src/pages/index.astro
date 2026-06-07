@@ -70,8 +70,65 @@ const faqSchema = {
         Encuentra oficinas, horarios, requisitos, costos y trámites del Registro Público Vehicular en toda la entidad.
       </p>
       <div class="hero-buttons">
-        <a href="/consulta-ciudadana/" class="btn btn-white"><i class="fa-solid fa-magnifying-glass"></i> Consultar ahora</a>
+        <a href="#consultar" class="btn btn-white"><i class="fa-solid fa-magnifying-glass"></i> Consultar ahora</a>
         <a href="/agendar-cita/" class="btn btn-secondary" style="color:white;border-color:white"><i class="fa-solid fa-calendar-check"></i> Agendar cita</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANZADOR DE CONSULTA (distribuye tráfico a páginas internas, no form directo) -->
+  <section class="section section-bg-alt" id="consultar" style="padding-top: var(--space-7); padding-bottom: var(--space-7)">
+    <div class="container">
+      <div class="consulta-launcher">
+        <div class="consulta-launcher-header">
+          <span class="consulta-launcher-badge">
+            <i class="fa-solid fa-shield-halved"></i> Consulta segura y gratuita
+          </span>
+          <h2 class="consulta-launcher-title">Consultá el REPUVE de tu vehículo en 2 minutos</h2>
+          <p class="consulta-launcher-subtitle">
+            Verificá el estatus legal de cualquier vehículo en Chihuahua: reporte de robo, datos oficiales, historial.
+            Elegí cómo querés consultar:
+          </p>
+        </div>
+
+        <div class="consulta-launcher-options">
+          <a href="/consulta-por-placa/" class="consulta-launcher-option">
+            <div class="option-icon">
+              <i class="fa-solid fa-square"></i>
+            </div>
+            <div class="option-body">
+              <div class="option-title">Consultar por <strong>placa</strong></div>
+              <div class="option-desc">El dato más fácil de obtener. 5 a 7 caracteres alfanuméricos.</div>
+              <div class="option-cta">
+                Empezar consulta <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="/consulta-por-niv/" class="consulta-launcher-option">
+            <div class="option-icon">
+              <i class="fa-solid fa-barcode"></i>
+            </div>
+            <div class="option-body">
+              <div class="option-title">Consultar por <strong>NIV / VIN</strong></div>
+              <div class="option-desc">Verificación más confiable. 17 caracteres únicos del vehículo.</div>
+              <div class="option-cta">
+                Empezar consulta <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="consulta-launcher-features">
+          <span><i class="fa-solid fa-check"></i> 100% gratuito</span>
+          <span><i class="fa-solid fa-check"></i> Sin registro</span>
+          <span><i class="fa-solid fa-check"></i> Datos oficiales REPUVE</span>
+          <span><i class="fa-solid fa-check"></i> 2 minutos</span>
+        </div>
+
+        <p class="consulta-launcher-help">
+          ¿No sabés qué dato usar? <a href="/consulta-ciudadana/">Lee la guía completa de la consulta ciudadana</a>
+        </p>
       </div>
     </div>
   </section>
@@ -327,3 +384,186 @@ const faqSchema = {
     </div>
   </section>
 </Base>
+
+<style>
+  /* Lanzador de consulta del home (distribuye tráfico, no procesa) */
+  .consulta-launcher {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-7) var(--space-6);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .consulta-launcher-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+  }
+
+  .consulta-launcher-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: #d4edda;
+    color: #155724;
+    padding: var(--space-2) var(--space-4);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-4);
+  }
+
+  .consulta-launcher-title {
+    color: var(--color-text);
+    font-size: clamp(1.5rem, 3vw, 1.95rem);
+    margin-bottom: var(--space-3);
+  }
+
+  .consulta-launcher-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin: 0;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .consulta-launcher-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+
+  .consulta-launcher-option {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: var(--color-bg-alt);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all 0.2s ease;
+  }
+
+  .consulta-launcher-option:hover {
+    border-color: var(--color-primary);
+    background: var(--color-surface);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    color: var(--color-text);
+  }
+
+  .option-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .consulta-launcher-option:hover .option-icon {
+    transform: scale(1.08);
+  }
+
+  .option-body {
+    flex: 1;
+  }
+
+  .option-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+    font-weight: 500;
+  }
+
+  .option-title strong {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .option-desc {
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+    line-height: 1.5;
+  }
+
+  .option-cta {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: gap 0.2s ease;
+  }
+
+  .consulta-launcher-option:hover .option-cta {
+    gap: var(--space-3);
+  }
+
+  .consulta-launcher-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .consulta-launcher-features span {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .consulta-launcher-features i {
+    color: var(--color-success);
+  }
+
+  .consulta-launcher-help {
+    text-align: center;
+    margin-top: var(--space-4);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .consulta-launcher-help a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 700px) {
+    .consulta-launcher {
+      padding: var(--space-5) var(--space-4);
+    }
+
+    .consulta-launcher-options {
+      grid-template-columns: 1fr;
+    }
+
+    .consulta-launcher-option {
+      padding: var(--space-4);
+    }
+  }
+</style>

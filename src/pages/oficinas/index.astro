@@ -1,0 +1,298 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { oficinas, site } from '../../data/datos.js';
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Oficinas REPUVE' }
+];
+
+// Schema: ItemList con todas las oficinas
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Oficinas REPUVE en Chihuahua",
+  "description": "Directorio completo de oficinas del Registro Público Vehicular en el estado de Chihuahua",
+  "numberOfItems": oficinas.length,
+  "itemListElement": oficinas.map((o, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "GovernmentOffice",
+      "name": `REPUVE ${o.ciudad_completa}`,
+      "url": `https://${site.domain}/oficinas/${o.slug}/`,
+      "telephone": o.telefono,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": o.direccion_corta,
+        "addressLocality": o.ciudad,
+        "addressRegion": "Chihuahua",
+        "postalCode": o.cp,
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": o.latitude,
+        "longitude": o.longitude
+      }
+    }
+  }))
+};
+
+const title = "Oficinas REPUVE en Chihuahua: Direcciones, Mapas y Horarios";
+const description = "Directorio completo de las 7 oficinas REPUVE en el estado de Chihuahua: Chihuahua capital, Ciudad Juárez, Cuauhtémoc, Delicias, Hidalgo del Parral, Nuevo Casas Grandes y Camargo. Direcciones, mapas y teléfonos.";
+---
+
+<Base title={title} description={description} schema={itemListSchema}>
+  <div class="container">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="page-header">
+      <div class="eyebrow">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        Directorio completo
+      </div>
+      <h1>Oficinas REPUVE en Chihuahua</h1>
+      <p class="lede">
+        Encontrá la oficina del Registro Público Vehicular más cercana en el estado de Chihuahua.
+        Direcciones exactas, mapas, teléfonos y horarios actualizados para los <strong>7 municipios</strong>
+        con sede operativa.
+      </p>
+
+      <div class="cta-row">
+        <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`} class="btn btn-primary">
+          <i class="fa-solid fa-phone"></i> Línea nacional: {site.phone_repuve}
+        </a>
+        <a href="/agendar-cita/" class="btn btn-accent">
+          <i class="fa-solid fa-calendar-check"></i> Agendar cita
+        </a>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top: 0">
+      <div class="oficinas-grid">
+        {oficinas.map(o => (
+          <article class="oficina-card">
+            <div class="oficina-card-map">
+              <iframe
+                src={o.gmaps_embed_pb
+                  ? `https://www.google.com/maps/embed?pb=${o.gmaps_embed_pb}`
+                  : `https://www.google.com/maps?q=${o.latitude},${o.longitude}&z=14&output=embed`}
+                title={`Mapa de REPUVE ${o.ciudad}`}
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="oficina-card-body">
+              <div class="oficina-card-eyebrow">
+                {o.es_capital && <span class="badge badge-primary"><i class="fa-solid fa-star"></i> Capital del estado</span>}
+                {o.es_frontera && <span class="badge badge-accent"><i class="fa-solid fa-passport"></i> Frontera EE.UU.</span>}
+                {!o.es_capital && !o.es_frontera && <span class="badge badge-muted">Municipio</span>}
+              </div>
+              <h2 class="oficina-card-title">{o.ciudad_completa}</h2>
+              <p class="oficina-card-population">
+                <i class="fa-solid fa-users"></i> Población: {o.poblacion} habitantes
+              </p>
+              <p class="oficina-card-address">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>{o.direccion_corta}, CP {o.cp}</span>
+              </p>
+              <p class="oficina-card-phone">
+                <i class="fa-solid fa-phone"></i>
+                <a href={`tel:${o.telefono.replace(/\s/g,'')}`}>{o.telefono}</a>
+              </p>
+              <div class="oficina-card-actions">
+                <a href={`/oficinas/${o.slug}/`} class="btn btn-primary">
+                  Ver detalles <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href={`https://www.google.com/maps?q=${o.latitude},${o.longitude}`} target="_blank" rel="noopener" class="btn btn-secondary">
+                  <i class="fa-solid fa-route"></i> Cómo llegar
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section section-bg-alt">
+      <div class="container container-narrow">
+        <h2 class="section-title">¿No encontrás tu municipio?</h2>
+        <p class="section-subtitle">
+          Si tu localidad no tiene oficina REPUVE propia, podés acudir a la <strong>oficina más cercana</strong>.
+          La consulta ciudadana en línea funciona para todo el estado de Chihuahua sin importar dónde vivas.
+        </p>
+
+        <div class="info-cards-grid">
+          <div class="info-card">
+            <div class="icon-wrap"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3>Consulta online gratis</h3>
+            <p>Verificá cualquier vehículo en Chihuahua desde tu casa, sin acudir a oficina.</p>
+            <a href="/consulta-ciudadana/" class="btn btn-primary">Consultar</a>
+          </div>
+          <div class="info-card">
+            <div class="icon-wrap"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3>Agendar cita</h3>
+            <p>Reservá turno online para trámites presenciales en cualquier oficina del estado.</p>
+            <a href="/agendar-cita/" class="btn btn-primary">Agendar</a>
+          </div>
+          <div class="info-card">
+            <div class="icon-wrap"><i class="fa-solid fa-phone"></i></div>
+            <h3>Línea telefónica</h3>
+            <p>Atención nacional gratuita las 24 horas, todos los días del año.</p>
+            <a href={`tel:${site.phone_repuve.replace(/\s/g,'')}`} class="btn btn-primary">{site.phone_repuve}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <h2>Antes de acudir a una oficina, consultá gratis</h2>
+        <p>La mayoría de los trámites requieren cita previa. Consultá el estatus de tu vehículo en línea primero.</p>
+        <a href="/consulta-ciudadana/" class="btn btn-white btn-large">
+          <i class="fa-solid fa-magnifying-glass"></i> Consultar REPUVE ahora
+        </a>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .oficinas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: var(--space-5);
+    margin-top: var(--space-5);
+  }
+
+  .oficina-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .oficina-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .oficina-card-map {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-alt);
+  }
+
+  .oficina-card-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .oficina-card-body {
+    padding: var(--space-5);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .oficina-card-eyebrow {
+    margin-bottom: var(--space-3);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-radius: 999px;
+  }
+
+  .badge-primary {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+  }
+
+  .badge-accent {
+    background: #fed7aa;
+    color: #9a3412;
+  }
+
+  .badge-muted {
+    background: var(--color-bg-alt);
+    color: var(--color-text-soft);
+  }
+
+  .oficina-card-title {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .oficina-card-population,
+  .oficina-card-address,
+  .oficina-card-phone {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+    line-height: 1.5;
+  }
+
+  .oficina-card-population i,
+  .oficina-card-address i,
+  .oficina-card-phone i {
+    color: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .oficina-card-phone a {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  .oficina-card-phone a:hover {
+    color: var(--color-primary);
+  }
+
+  .oficina-card-actions {
+    margin-top: auto;
+    padding-top: var(--space-4);
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .oficina-card-actions .btn {
+    flex: 1;
+    min-width: 130px;
+    font-size: 0.88rem;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  @media (max-width: 600px) {
+    .oficinas-grid {
+      grid-template-columns: 1fr;
+    }
+    .oficina-card-map {
+      height: 180px;
+    }
+  }
+</style>

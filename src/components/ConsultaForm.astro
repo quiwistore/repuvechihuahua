@@ -1,0 +1,733 @@
+---
+// ConsultaForm.astro - Formulario reutilizable de consulta REPUVE
+// Al submit copia la placa/NIV al clipboard y redirige al portal oficial
+// en la MISMA pestaña, con un mensaje claro al usuario.
+//
+// Props:
+//   - compact?: boolean — versión compacta para hero (menos texto explicativo)
+//   - defaultTab?: 'placa' | 'niv' — tab inicial activo
+//   - bg?: 'light' | 'dark' — fondo del form (claro o oscuro/transparente para usar sobre hero rojo)
+
+interface Props {
+  compact?: boolean;
+  defaultTab?: 'placa' | 'niv';
+  bg?: 'light' | 'dark';
+}
+
+const { compact = false, defaultTab = 'placa', bg = 'light' } = Astro.props;
+const OFICIAL_URL = 'https://www2.repuve.gob.mx:8443/ciudadania/';
+const OFICIAL_INFO_URL = 'https://www.gob.mx/sesnsp/acciones-y-programas/consulta-ciudadana-del-registro-publico-vehicular-repuve';
+---
+
+<div class={`consulta-form-wrap ${bg === 'dark' ? 'on-dark' : ''}`}>
+  <div class="consulta-form" data-default-tab={defaultTab} data-oficial-url={OFICIAL_URL}>
+    {!compact && (
+      <div class="consulta-header">
+        <span class="consulta-badge">
+          <i class="fa-solid fa-shield-halved"></i> Consulta segura y gratuita
+        </span>
+        <h2 class="consulta-title">Consultá el estatus REPUVE de tu vehículo</h2>
+        <p class="consulta-subtitle">
+          Ingresá la <strong>placa</strong> o el <strong>NIV</strong> del vehículo y te llevamos al portal oficial del REPUVE
+          con los datos copiados para que solo resuelvas el captcha.
+        </p>
+      </div>
+    )}
+
+    {compact && (
+      <h3 class="consulta-title-compact">Consultá el REPUVE gratis</h3>
+    )}
+
+    <!-- Tabs -->
+    <div class="consulta-tabs" role="tablist">
+      <button class={`consulta-tab ${defaultTab === 'placa' ? 'active' : ''}`} data-tab="placa" type="button" role="tab" aria-selected={defaultTab === 'placa'}>
+        <i class="fa-solid fa-square"></i> Placa
+      </button>
+      <button class={`consulta-tab ${defaultTab === 'niv' ? 'active' : ''}`} data-tab="niv" type="button" role="tab" aria-selected={defaultTab === 'niv'}>
+        <i class="fa-solid fa-barcode"></i> NIV / VIN
+      </button>
+    </div>
+
+    <!-- Form Placa -->
+    <form class={`consulta-input-wrap consulta-pane ${defaultTab === 'placa' ? 'active' : ''}`} data-pane="placa" novalidate>
+      <input
+        type="text"
+        name="placa"
+        placeholder="ABC1234"
+        maxlength="7"
+        minlength="5"
+        pattern="[A-Z0-9]{5,7}"
+        autocomplete="off"
+        autocapitalize="characters"
+        spellcheck="false"
+        required
+      />
+      <div class="consulta-hint">Sin guiones ni espacios · 5 a 7 caracteres</div>
+      <div class="consulta-error" data-error="placa" hidden>
+        <i class="fa-solid fa-circle-exclamation"></i> La placa debe tener entre 5 y 7 caracteres alfanuméricos
+      </div>
+      <button type="submit" class="consulta-submit">
+        <span class="submit-idle"><i class="fa-solid fa-magnifying-glass"></i> Consultar gratis</span>
+        <span class="submit-loading">
+          <span class="spinner"></span>
+          Procesando consulta...
+        </span>
+      </button>
+    </form>
+
+    <!-- Form NIV -->
+    <form class={`consulta-input-wrap consulta-pane ${defaultTab === 'niv' ? 'active' : ''}`} data-pane="niv" novalidate>
+      <input
+        type="text"
+        name="niv"
+        placeholder="3VWFE21C04M000000"
+        maxlength="17"
+        minlength="17"
+        pattern="[A-HJ-NPR-Z0-9]{17}"
+        autocomplete="off"
+        autocapitalize="characters"
+        spellcheck="false"
+        required
+      />
+      <div class="consulta-hint">17 caracteres exactos · Lo encontrás en el parabrisas o tarjeta de circulación</div>
+      <div class="consulta-error" data-error="niv" hidden>
+        <i class="fa-solid fa-circle-exclamation"></i> El NIV/VIN debe tener exactamente 17 caracteres (sin letras I, O, Q)
+      </div>
+      <button type="submit" class="consulta-submit">
+        <span class="submit-idle"><i class="fa-solid fa-magnifying-glass"></i> Consultar gratis</span>
+        <span class="submit-loading">
+          <span class="spinner"></span>
+          Procesando consulta...
+        </span>
+      </button>
+    </form>
+
+    {!compact && (
+      <div class="consulta-features">
+        <span><i class="fa-solid fa-check"></i> Gratis</span>
+        <span><i class="fa-solid fa-check"></i> Sin registro</span>
+        <span><i class="fa-solid fa-check"></i> Datos oficiales del REPUVE</span>
+      </div>
+    )}
+  </div>
+
+  <!-- Modal de redirección -->
+  <div class="consulta-modal" data-modal>
+    <div class="consulta-modal-overlay" data-modal-close></div>
+    <div class="consulta-modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button type="button" class="consulta-modal-close" data-modal-close aria-label="Cerrar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="consulta-modal-icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3 id="modal-title">Tu consulta está lista</h3>
+      <p class="consulta-modal-text">
+        Hemos copiado tu <strong data-modal-field>placa</strong>
+        <code data-modal-value>ABC1234</code>
+        al portapapeles.
+      </p>
+      <div class="consulta-modal-steps">
+        <div class="modal-step">
+          <span class="step-num">1</span>
+          <span>Te llevamos al <strong>portal oficial REPUVE</strong></span>
+        </div>
+        <div class="modal-step">
+          <span class="step-num">2</span>
+          <span>Pegá con <kbd>Ctrl</kbd>+<kbd>V</kbd> (Mac: <kbd>⌘</kbd>+<kbd>V</kbd>) en el campo</span>
+        </div>
+        <div class="modal-step">
+          <span class="step-num">3</span>
+          <span>Resolvé el captcha del sitio oficial</span>
+        </div>
+        <div class="modal-step">
+          <span class="step-num">4</span>
+          <span>Recibí los datos oficiales en segundos</span>
+        </div>
+      </div>
+      <a href={OFICIAL_URL} class="btn btn-primary btn-large btn-block" data-modal-go>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Consultar en REPUVE oficial
+      </a>
+      <a href={OFICIAL_INFO_URL} class="consulta-modal-fallback">
+        ¿No carga? <strong>Visita la página informativa de gob.mx</strong>
+      </a>
+      <p class="consulta-modal-note">
+        El portal oficial es <code>repuve.gob.mx</code>, gestionado por el Gobierno de México.
+        La consulta es 100% gratuita y oficial.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .consulta-form-wrap {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* Variante oscura para usar sobre hero rojo */
+  .consulta-form-wrap.on-dark .consulta-form {
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(8px);
+  }
+
+  .consulta-form {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6) var(--space-5);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .consulta-header {
+    text-align: center;
+    margin-bottom: var(--space-5);
+  }
+
+  .consulta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: #d4edda;
+    color: #155724;
+    padding: var(--space-2) var(--space-4);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-4);
+  }
+
+  .consulta-title {
+    color: var(--color-text);
+    font-size: clamp(1.5rem, 3vw, 1.85rem);
+    margin-bottom: var(--space-3);
+  }
+
+  .consulta-title-compact {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--space-4);
+    font-size: 1.3rem;
+  }
+
+  .consulta-subtitle {
+    color: var(--color-text-muted);
+    font-size: 0.98rem;
+    margin: 0;
+  }
+
+  /* Tabs */
+  .consulta-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2);
+    background: var(--color-bg-alt);
+    padding: 6px;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-4);
+  }
+
+  .consulta-tab {
+    background: transparent;
+    border: 0;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.18s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  .consulta-tab i {
+    font-size: 0.85rem;
+  }
+
+  .consulta-tab:hover {
+    color: var(--color-text);
+  }
+
+  .consulta-tab.active {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+  }
+
+  /* Form panes */
+  .consulta-pane {
+    display: none;
+  }
+  .consulta-pane.active {
+    display: block;
+  }
+
+  .consulta-input-wrap input {
+    width: 100%;
+    padding: var(--space-4) var(--space-5);
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    color: var(--color-text);
+    transition: all 0.18s ease;
+  }
+
+  .consulta-input-wrap input::placeholder {
+    color: var(--color-text-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .consulta-input-wrap input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: var(--color-surface);
+    box-shadow: 0 0 0 4px rgba(185, 28, 28, 0.1);
+  }
+
+  .consulta-input-wrap input.error {
+    border-color: var(--color-danger);
+    background: #fff5f5;
+  }
+
+  .consulta-hint {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--color-text-soft);
+    margin-top: var(--space-3);
+  }
+
+  .consulta-error {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: #fee2e2;
+    color: var(--color-danger);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    margin-top: var(--space-3);
+  }
+
+  .consulta-submit {
+    width: 100%;
+    margin-top: var(--space-4);
+    background: var(--color-primary);
+    color: white;
+    border: 0;
+    padding: var(--space-4) var(--space-5);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.18s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  .consulta-submit:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .consulta-submit:active {
+    transform: translateY(0);
+  }
+
+  .consulta-submit:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
+
+  /* Estados del botón submit */
+  .submit-idle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .submit-loading {
+    display: none;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .consulta-submit.is-loading .submit-idle {
+    display: none;
+  }
+
+  .consulta-submit.is-loading .submit-loading {
+    display: inline-flex;
+  }
+
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .consulta-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-5);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .consulta-features span {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .consulta-features i {
+    color: var(--color-success);
+  }
+
+  /* Modal */
+  .consulta-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+  }
+
+  .consulta-modal.is-open {
+    display: flex;
+    animation: modalFadeIn 0.2s ease;
+  }
+
+  @keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .consulta-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(4px);
+  }
+
+  .consulta-modal-box {
+    position: relative;
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-7) var(--space-6) var(--space-6);
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    text-align: center;
+  }
+
+  @keyframes modalSlideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .consulta-modal-close {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    background: transparent;
+    border: 0;
+    color: var(--color-text-soft);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+  }
+
+  .consulta-modal-close:hover {
+    color: var(--color-text);
+    background: var(--color-bg-alt);
+  }
+
+  .consulta-modal-icon {
+    font-size: 3rem;
+    color: var(--color-success);
+    margin-bottom: var(--space-3);
+    animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+  @keyframes bounceIn {
+    0% { transform: scale(0); }
+    60% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  .consulta-modal-box h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-3);
+    font-size: 1.45rem;
+  }
+
+  .consulta-modal-text {
+    color: var(--color-text);
+    margin-bottom: var(--space-5);
+    font-size: 0.98rem;
+  }
+
+  .consulta-modal-text code {
+    display: inline-block;
+    background: var(--color-bg-alt);
+    color: var(--color-primary);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    margin: 0 4px;
+  }
+
+  .consulta-modal-steps {
+    text-align: left;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-5);
+    margin-bottom: var(--space-5);
+  }
+
+  .modal-step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+    font-size: 0.92rem;
+  }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  kbd {
+    display: inline-block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-strong);
+    border-bottom-width: 2px;
+    border-radius: 3px;
+    padding: 1px 6px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text);
+  }
+
+  .consulta-modal-note {
+    font-size: 0.82rem;
+    color: var(--color-text-soft);
+    margin: var(--space-4) 0 0;
+    line-height: 1.5;
+  }
+
+  .consulta-modal-note code {
+    background: transparent;
+    color: var(--color-text-muted);
+    padding: 0;
+    font-weight: 600;
+  }
+
+  /* Link de fallback secundario (página informativa gob.mx) */
+  .consulta-modal-fallback {
+    display: block;
+    text-align: center;
+    margin-top: var(--space-3);
+    padding: var(--space-2);
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+
+  .consulta-modal-fallback:hover {
+    color: var(--color-primary);
+  }
+
+  .consulta-modal-fallback strong {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--color-text);
+  }
+
+  .consulta-modal-fallback:hover strong {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 600px) {
+    .consulta-form {
+      padding: var(--space-5) var(--space-4);
+    }
+    .consulta-input-wrap input {
+      font-size: 1.05rem;
+    }
+    .consulta-modal-box {
+      padding: var(--space-6) var(--space-4) var(--space-5);
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.consulta-form-wrap').forEach(wrap => {
+    const root = wrap.querySelector('.consulta-form');
+    const tabs = wrap.querySelectorAll('.consulta-tab');
+    const panes = wrap.querySelectorAll('.consulta-pane');
+    const modal = wrap.querySelector('[data-modal]');
+    const modalField = wrap.querySelector('[data-modal-field]');
+    const modalValue = wrap.querySelector('[data-modal-value]');
+    const modalGo = wrap.querySelector('[data-modal-go]');
+    const modalCloses = wrap.querySelectorAll('[data-modal-close]');
+    const oficialUrl = root.dataset.oficialUrl;
+
+    // Tabs
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        tabs.forEach(t => {
+          t.classList.toggle('active', t === tab);
+          t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+        });
+        panes.forEach(p => p.classList.toggle('active', p.dataset.pane === target));
+      });
+    });
+
+    // Submit handlers
+    panes.forEach(pane => {
+      const form = pane;
+      const input = pane.querySelector('input');
+      const submit = pane.querySelector('.consulta-submit');
+      const errorEl = pane.querySelector('.consulta-error');
+      const paneType = pane.dataset.pane; // 'placa' o 'niv'
+
+      // Auto-uppercase y limpieza al escribir
+      input.addEventListener('input', () => {
+        const cleaned = input.value.replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+        if (cleaned !== input.value) input.value = cleaned;
+        input.classList.remove('error');
+        errorEl.hidden = true;
+      });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const value = input.value.trim();
+
+        // Validación
+        let valid = false;
+        if (paneType === 'placa') {
+          valid = /^[A-Z0-9]{5,7}$/.test(value);
+        } else {
+          valid = /^[A-HJ-NPR-Z0-9]{17}$/.test(value);
+        }
+
+        if (!valid) {
+          input.classList.add('error');
+          errorEl.hidden = false;
+          input.focus();
+          return;
+        }
+
+        // Loading state
+        submit.disabled = true;
+        submit.classList.add('is-loading');
+
+        // Copiar al portapapeles
+        let copied = false;
+        try {
+          await navigator.clipboard.writeText(value);
+          copied = true;
+        } catch (err) {
+          // Fallback: input temporal + execCommand
+          const ta = document.createElement('textarea');
+          ta.value = value;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand('copy');
+            copied = true;
+          } catch (e2) {
+            copied = false;
+          }
+          document.body.removeChild(ta);
+        }
+
+        // Pausa breve para el efecto visual
+        await new Promise(r => setTimeout(r, 800));
+
+        // Abrir modal
+        modalField.textContent = paneType === 'placa' ? 'placa' : 'NIV';
+        modalValue.textContent = value;
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+
+        // Reset botón
+        submit.disabled = false;
+        submit.classList.remove('is-loading');
+
+        // Si no se pudo copiar, mostrar nota distinta
+        if (!copied) {
+          modalValue.title = 'No se pudo copiar automáticamente. Copiá manualmente este valor.';
+        }
+      });
+    });
+
+    // Cerrar modal
+    const closeModal = () => {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    };
+
+    modalCloses.forEach(el => {
+      el.addEventListener('click', closeModal);
+    });
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+  });
+</script>
